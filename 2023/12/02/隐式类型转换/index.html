@@ -73,6 +73,21 @@ Web blog = 杜明清的个人博客 = 👻欢迎一起交流学习👻</title>
     <span class="text">发表于</span>
     <time itemprop="dateCreated datePublished" datetime="2023-12-02T12:24:04+08:00">2023-12-02</time>
   </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>1.7k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>2 分钟</span>
+  </span>
 </div>
 
 
@@ -104,12 +119,12 @@ Web blog = 杜明清的个人博客 = 👻欢迎一起交流学习👻</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://s3.uuu.ovh/imgs/2024/04/25/15ba2d11a4dda9ca.jpg"></li>
-          <li class="item" data-background-image="https://s3.uuu.ovh/imgs/2024/04/15/66e62db68b7b65eb.webp"></li>
-          <li class="item" data-background-image="https://s3.uuu.ovh/imgs/2024/04/04/25ef11a84cfafbef.jpg"></li>
-          <li class="item" data-background-image="https://s3.uuu.ovh/imgs/2024/04/28/b9f6c169ea5daebe.webp"></li>
-          <li class="item" data-background-image="https://s3.uuu.ovh/imgs/2024/04/13/c95fa1dc9a2ef7b0.jpg"></li>
-          <li class="item" data-background-image="https://s3.uuu.ovh/imgs/2024/04/06/a16303594a53d8d1.jpg"></li>
+          <li class="item" data-background-image="https://s3.uuu.ovh/imgs/2024/04/06/936b9e7ccd02d444.jpg"></li>
+          <li class="item" data-background-image="https://s3.uuu.ovh/imgs/2024/04/04/3149a0cc49823a9c.jpg"></li>
+          <li class="item" data-background-image="https://s3.uuu.ovh/imgs/2024/04/15/effaa43770a5e6bc.jpg"></li>
+          <li class="item" data-background-image="https://s3.uuu.ovh/imgs/2024/04/12/f63f09ff2084b1f3.jpg"></li>
+          <li class="item" data-background-image="https://s3.uuu.ovh/imgs/2024/04/15/3ad1c5ee17b91ba4.webp"></li>
+          <li class="item" data-background-image="https://s3.uuu.ovh/imgs/2024/04/05/f58f811a8b6cbdbb.jpg"></li>
         </ul>
       </div>
     </header>
@@ -155,34 +170,65 @@ Web blog = 杜明清的个人博客 = 👻欢迎一起交流学习👻</title>
   <div class="body md" itemprop="articleBody">
     
 
-    <h1 id="js隐式类型转换"><a class="anchor" href="#js隐式类型转换">#</a> JS 隐式类型转换</h1>
-<p>一、原始类型 -&gt; 数字：</p>
-<p><img data-src="/images/1.png" alt="" /></p>
-<p>二、所有转 boolean</p>
-<p><img data-src="/images/2.png" alt="" /></p>
-<p>三、原始类型</p>
-<p><img data-src="/images/3.png" alt="" /></p>
-<p>四、对象转原始类型</p>
-<p><img data-src="/images/4.png" alt="四、对象转原始类型" /></p>
-<h2 id="具体转换规则为"><a class="anchor" href="#具体转换规则为">#</a> 具体转换规则为：</h2>
+    <h1 id="隐式类型转换过程"><a href="#隐式类型转换过程" class="headerlink" title="隐式类型转换过程"></a>隐式类型转换过程</h1><p><img data-src="/images/%E9%9A%90%E5%BC%8F%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2.png" alt="隐式类型转换"></p>
 <ul>
-<li>
-<p>如果该值已经是原始数据类型（string、number、boolean），则直接返回该值。</p>
+<li>当进行一些操作时，JS会自动调用内部的函数进行隐式类型转换，例如：<code>==判断</code>，数据类型不同的<code>加减法操作</code>，数据前加+或-（<code>+new Date()</code>）或<code>$&#123;obj&#125;</code>等</li>
+<li>两个引用数据类型（对象）之间不会发生隐式类型转换，双等符号（&#x3D;&#x3D;）也会判断其栈中的地址</li>
+<li>隐式类型转换内部使用的函数有：ToNumber、ToString、ToBoolean、ToPrimitive（底层）等</li>
+<li>ToNumber对<code>引用数据类型</code>会先使用<code>ToPrimitive(&#39;number&#39;)</code>，然后使用<code>Number()</code>进行转换</li>
+<li>ToString对<code>引用数据类型</code>会先使用<code>ToPrimitive(&#39;string&#39;)</code>，然后使用<code>String()</code>进行转换</li>
+<li>ToBoolean对<code>null</code>，<code>undefined</code>，<code>false</code>，<code>NaN</code>，<code>&#39;&#39;</code> ，<code>0</code>，<code>-0</code>转换为<code>false</code>，其余都转换为<code>true</code></li>
+</ul>
+<blockquote>
+<p>当进行条件判断时，会调用<code>ToBoolean</code>方法。<br>当引用数据类型（对象）转换到<code>number</code>和<code>string</code>时，使用的<code>ToNumber</code>和<code>ToString</code>都会使用<code>ToPrimitive</code>算法，将对象尝试转为原始数据类型（转换失败会报错）<br>ToPrimitive接收一个<code>hint</code>参数，该参数只能取值：<code>string</code>、<code>number</code>或<code>default</code>。转换流程如下：</p>
+</blockquote>
+<ul>
+<li>存在[Symbol.toPrimitive]，则直接调用，不存在则走如下流程</li>
+<li>如果<code>hint</code>是<code>number</code>或者<code>default</code>，则先调用该对象的<code>valueOf</code>和<code>toString</code>，直到返回基本类型</li>
+<li>如果<code>hint</code>是<code>string</code>，则会依次调用该对象的<code>toString</code>和<code>valueOf</code>，直到返回基本类型</li>
+</ul>
+<h3 id="对象的-Symbol-toPrimitive-方法"><a href="#对象的-Symbol-toPrimitive-方法" class="headerlink" title="对象的[Symbol.toPrimitive]方法"></a>对象的[Symbol.toPrimitive]方法</h3><pre><code class="js">//修改Symbol.toPrimitive方法，改变其隐式类型转换
+const obj1 = &#123;&#125;;
+console.log(+obj1);     // NaN
+console.log(`$&#123;obj1&#125;`); // &quot;[object Object]&quot;
+console.log(obj1 + &quot;&quot;); // &quot;[object Object]&quot;
+// 接下面声明一个对象，手动赋予了Symbol.toPrimitive属性，再来查看输出结果
+const obj2 = &#123;
+  [Symbol.toPrimitive](hint) &#123;
+    if (hint == &quot;number&quot;) &#123;
+      return 10;
+    &#125;
+    if (hint == &quot;string&quot;) &#123;
+      return &quot;hello&quot;;
+    &#125;
+    return true;
+  &#125;
+&#125;;
+console.log(+obj2);     // 10      -- hint 参数值是 &quot;number&quot;
+console.log(`$&#123;obj2&#125;`); // &quot;hello&quot; -- hint 参数值是 &quot;string&quot;
+console.log(obj2 + &quot;&quot;); // &quot;true&quot;  -- hint 参数值是 &quot;default&quot;
+</code></pre>
+<h3 id=""><a href="#" class="headerlink" title="[]"></a>[]</h3><h1 id="快速记忆流程"><a href="#快速记忆流程" class="headerlink" title="快速记忆流程"></a>快速记忆流程</h1><p>一、原始类型 -&gt; 数字：</p>
+<p><img data-src="/images/1.png"></p>
+<p>二、所有转boolean</p>
+<p><img data-src="/images/2.png"></p>
+<p>三、原始类型</p>
+<p><img data-src="/images/3.png"></p>
+<p>四、对象转原始类型</p>
+<p><img data-src="/images/4.png" alt="四、对象转原始类型"></p>
+<h2 id="具体转换规则为："><a href="#具体转换规则为：" class="headerlink" title="具体转换规则为："></a>具体转换规则为：</h2><ul>
+<li><p>如果该值已经是原始数据类型（string、number、boolean），则直接返回该值。</p>
 </li>
-<li>
-<p>如果其中一项是字符串，那另一项值就会转换成对应的字符串类型。</p>
+<li><p>如果其中一项是字符串，那另一项值就会转换成对应的字符串类型。</p>
 </li>
-<li>
-<p>如果该值是对象（Object），则调用该对象的 valueOf () 方法，如果返回的结果是原始数据类型，则直接返回该值。</p>
+<li><p>如果该值是对象（Object），则调用该对象的 valueOf() 方法，如果返回的结果是原始数据类型，则直接返回该值。</p>
 </li>
-<li>
-<p>如果 <code>valueOf()</code>  方法的返回结果不是原始数据类型，则调用该对象的 toString () 方法，如果返回的结果是原始数据类型，则直接返回该值。</p>
+<li><p>如果<code>valueOf()</code>方法的返回结果不是原始数据类型，则调用该对象的 toString() 方法，如果返回的结果是原始数据类型，则直接返回该值。</p>
 </li>
-<li>
-<p>如果 <code>toString()</code>  方法的返回结果不是原始数据类型，则抛出 TypeError 异常。</p>
+<li><p>如果<code>toString()</code>方法的返回结果不是原始数据类型，则抛出 TypeError 异常。</p>
 </li>
 </ul>
-<p><img data-src="/images/Snipaste_2024-05-28_22-08-50.png" alt="images" /></p>
+<p><img data-src="/images/Snipaste_2024-05-28_22-08-50.png" alt="images"></p>
 
       <div class="tags">
           <a href="/tags/JS%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/" rel="tag"><i class="ic i-tag"></i> JS类型转换</a>
@@ -197,7 +243,7 @@ Web blog = 杜明清的个人博客 = 👻欢迎一起交流学习👻</title>
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">更新于</span>
-    <time title="修改时间：2024-07-09 13:16:59" itemprop="dateModified" datetime="2024-07-09T13:16:59+08:00">2024-07-09</time>
+    <time title="修改时间：2024-07-19 19:22:37" itemprop="dateModified" datetime="2024-07-19T19:22:37+08:00">2024-07-19</time>
   </span>
   <span id="2023/12/02/隐式类型转换/" class="item leancloud_visitors" data-flag-title="JS类型转换" title="阅读次数">
       <span class="icon">
@@ -255,20 +301,20 @@ Web blog = 杜明清的个人博客 = 👻欢迎一起交流学习👻</title>
     <div class="item left">
       
 
-  <a href="/2023/12/02/%E7%AE%97%E6%B3%95/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;s3.uuu.ovh&#x2F;imgs&#x2F;2024&#x2F;04&#x2F;12&#x2F;61baca9d80b5756d.jpg" title="算法与数据结构">
+  <a href="/2023/11/02/vue%E5%8E%9F%E7%90%86/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;s3.uuu.ovh&#x2F;imgs&#x2F;2024&#x2F;04&#x2F;06&#x2F;3b79311f42543632.jpg" title="vue源码解读">
   <span class="type">上一篇</span>
-  <span class="category"><i class="ic i-flag"></i> 算法</span>
-  <h3>算法与数据结构</h3>
+  <span class="category"><i class="ic i-flag"></i> vue</span>
+  <h3>vue源码解读</h3>
   </a>
 
     </div>
     <div class="item right">
       
 
-  <a href="/2023/12/02/%E6%95%B0%E6%8D%AE%E5%BA%93/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;s3.uuu.ovh&#x2F;imgs&#x2F;2024&#x2F;04&#x2F;06&#x2F;109323f5add23044.jpg" title="数据库">
+  <a href="/2023/12/02/%E7%AE%97%E6%B3%95/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;s3.uuu.ovh&#x2F;imgs&#x2F;2024&#x2F;04&#x2F;28&#x2F;a34792f58e340f69.webp" title="算法与数据结构">
   <span class="type">下一篇</span>
-  <span class="category"><i class="ic i-flag"></i> 数据库</span>
-  <h3>数据库</h3>
+  <span class="category"><i class="ic i-flag"></i> 算法</span>
+  <h3>算法与数据结构</h3>
   </a>
 
     </div>
@@ -287,7 +333,7 @@ Web blog = 杜明清的个人博客 = 👻欢迎一起交流学习👻</title>
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="文章目录">
-          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#js%E9%9A%90%E5%BC%8F%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-number">1.</span> <span class="toc-text"> JS 隐式类型转换</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B7%E4%BD%93%E8%BD%AC%E6%8D%A2%E8%A7%84%E5%88%99%E4%B8%BA"><span class="toc-number">1.1.</span> <span class="toc-text"> 具体转换规则为：</span></a></li></ol></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%9A%90%E5%BC%8F%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E8%BF%87%E7%A8%8B"><span class="toc-number">1.</span> <span class="toc-text">隐式类型转换过程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1%E7%9A%84-Symbol-toPrimitive-%E6%96%B9%E6%B3%95"><span class="toc-number">1.0.1.</span> <span class="toc-text">对象的[Symbol.toPrimitive]方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.2.</span> <span class="toc-text">[]</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BF%AB%E9%80%9F%E8%AE%B0%E5%BF%86%E6%B5%81%E7%A8%8B"><span class="toc-number">2.</span> <span class="toc-text">快速记忆流程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B7%E4%BD%93%E8%BD%AC%E6%8D%A2%E8%A7%84%E5%88%99%E4%B8%BA%EF%BC%9A"><span class="toc-number">2.1.</span> <span class="toc-text">具体转换规则为：</span></a></li></ol></li></ol>
       </div>
       <div class="related panel pjax" data-title="系列文章">
         <ul>
@@ -311,7 +357,7 @@ Web blog = 杜明清的个人博客 = 👻欢迎一起交流学习👻</title>
     </div>
     <div class="item categories">
       <a href="/categories/">
-        <span class="count">59</span>
+        <span class="count">61</span>
         <span class="name">分类</span>
       </a>
     </div>
@@ -378,12 +424,12 @@ Web blog = 杜明清的个人博客 = 👻欢迎一起交流学习👻</title>
 
   <ul id="quick">
     <li class="prev pjax">
-        <a href="/2023/12/02/%E7%AE%97%E6%B3%95/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+        <a href="/2023/11/02/vue%E5%8E%9F%E7%90%86/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
     </li>
     <li class="up"><i class="ic i-arrow-up"></i></li>
     <li class="down"><i class="ic i-arrow-down"></i></li>
     <li class="next pjax">
-        <a href="/2023/12/02/%E6%95%B0%E6%8D%AE%E5%BA%93/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+        <a href="/2023/12/02/%E7%AE%97%E6%B3%95/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
     </li>
     <li class="percent"></li>
   </ul>
@@ -405,10 +451,10 @@ Web blog = 杜明清的个人博客 = 👻欢迎一起交流学习👻</title>
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E6%B8%B2%E6%9F%93%E6%A8%A1%E5%BC%8F/" title="分类于 渲染模式">渲染模式</a>
+<a href="/categories/%E8%84%9A%E6%89%8B%E6%9E%B6%E5%BC%80%E5%8F%91/" title="分类于 脚手架开发">脚手架开发</a>
 </div>
 
-    <span><a href="/2023/05/17/%E6%B8%B2%E6%9F%93%E6%A8%A1%E5%BC%8F/" title="渲染模式">渲染模式</a></span>
+    <span><a href="/2024/04/12/%E8%84%9A%E6%89%8B%E6%9E%B6/" title="脚手架开发">脚手架开发</a></span>
   </li>
 
       
@@ -418,57 +464,7 @@ Web blog = 杜明清的个人博客 = 👻欢迎一起交流学习👻</title>
 <a href="/categories/JS/" title="分类于 JS">JS</a>
 </div>
 
-    <span><a href="/2023/07/02/forEach/" title="forEach">forEach</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/" title="分类于 自动化测试">自动化测试</a>
-</div>
-
-    <span><a href="/2024/03/02/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/" title="自动化测试">自动化测试</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" title="分类于 正则表达式">正则表达式</a>
-</div>
-
-    <span><a href="/2023/02/12/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" title="正则表达式">正则表达式</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/jQuery/" title="分类于 jQuery">jQuery</a>
-</div>
-
-    <span><a href="/2023/01/02/jQuery%E6%A1%86%E6%9E%B6%E5%BA%94%E7%94%A8/" title="jQuery">jQuery</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E6%9D%82%E8%AE%B0/" title="分类于 杂记">杂记</a>
-</div>
-
-    <span><a href="/2023/01/01/%E6%9D%82%E8%AE%B0/" title="杂记">杂记</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" title="分类于 正则表达式">正则表达式</a>
-</div>
-
-    <span><a href="/2023/02/12/%E4%B8%AD%E5%89%8D%E5%8F%B0%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" title="正则表达式">正则表达式</a></span>
+    <span><a href="/2023/10/02/33%E4%B8%AAJavascript%E6%A6%82%E5%BF%B5/" title="33个JavaScript概念">33个JavaScript概念</a></span>
   </li>
 
       
@@ -485,20 +481,70 @@ Web blog = 杜明清的个人博客 = 👻欢迎一起交流学习👻</title>
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/JS/" title="分类于 JS">JS</a>
+<a href="/categories/%E4%B8%9A%E5%8A%A1%E5%A4%84%E7%90%86/" title="分类于 业务处理">业务处理</a>
 </div>
 
-    <span><a href="/2023/12/02/%E9%9A%90%E5%BC%8F%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/" title="JS类型转换">JS类型转换</a></span>
+    <span><a href="/2024/03/29/%E6%9C%AC%E5%9C%B0%E9%A2%84%E8%A7%88%E5%9B%BE%E7%89%87/" title="本地预览图片">本地预览图片</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/three-js/" title="分类于 three.js">three.js</a>
+<a href="/categories/JS/" title="分类于 JS">JS</a>
 </div>
 
-    <span><a href="/2023/10/24/ThreeJS/" title="three.js">three.js</a></span>
+    <span><a href="/2023/09/02/ArrayBuffer/" title="ArrayBuffer">ArrayBuffer</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/" title="分类于 计算机组成原理">计算机组成原理</a>
+</div>
+
+    <span><a href="/2023/07/02/%E6%B5%AE%E7%82%B9%E6%95%B0%E5%AD%98%E5%82%A8/" title="浮点数存储">浮点数存储</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/ES6/" title="分类于 ES6">ES6</a>
+</div>
+
+    <span><a href="/2023/08/02/ES6/" title="ES6">ES6</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%B5%8F%E8%A7%88%E5%99%A8/" title="分类于 浏览器">浏览器</a>
+</div>
+
+    <span><a href="/2023/10/09/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%89%A7%E8%A1%8C%E5%8E%9F%E7%90%86/" title="浏览器执行原理">浏览器执行原理</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Linux/" title="分类于 Linux">Linux</a>
+</div>
+
+    <span><a href="/2023/01/22/linux%E6%9C%8D%E5%8A%A1%E5%99%A8/" title="Linux">Linux</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%AE%B9%E5%99%A8%E5%8C%96%E8%BF%90%E7%BB%B4%E6%93%8D%E4%BD%9C/" title="分类于 容器化运维操作">容器化运维操作</a>
+</div>
+
+    <span><a href="/2024/02/02/%E5%AE%B9%E5%99%A8%E5%8C%96%E8%BF%90%E7%BB%B4%E6%93%8D%E4%BD%9C/" title="容器化运维操作">容器化运维操作</a></span>
   </li>
 
   </ul>
@@ -512,12 +558,24 @@ Web blog = 杜明清的个人博客 = 👻欢迎一起交流学习👻</title>
         <div class="status">
   <div class="copyright">
     
-    &copy; 2010 – 
+    &copy; 2022 – 
     <span itemprop="copyrightYear">2024</span>
     <span class="with-love">
       <i class="ic i-sakura rotate"></i>
     </span>
     <span class="author" itemprop="copyrightHolder">dmq @ Web blog</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">809k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">12:16</span>
   </div>
   <div class="powered-by">
     基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>

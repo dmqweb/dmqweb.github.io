@@ -73,6 +73,21 @@ Web blog = 杜明清的个人博客 = 👻欢迎一起交流学习👻</title>
     <span class="text">发表于</span>
     <time itemprop="dateCreated datePublished" datetime="2023-12-07T12:24:04+08:00">2023-12-07</time>
   </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>756</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>1 分钟</span>
+  </span>
 </div>
 
 
@@ -104,12 +119,12 @@ Web blog = 杜明清的个人博客 = 👻欢迎一起交流学习👻</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://s3.uuu.ovh/imgs/2024/04/15/21b7a3f222ccbcb6.jpg"></li>
-          <li class="item" data-background-image="https://s3.uuu.ovh/imgs/2024/04/05/9c07b3ea7f1e2a1c.jpg"></li>
-          <li class="item" data-background-image="https://s3.uuu.ovh/imgs/2024/04/05/f09ce1d151936963.jpg"></li>
-          <li class="item" data-background-image="https://s3.uuu.ovh/imgs/2024/04/07/2600bb35f2cdf6cf.jpg"></li>
-          <li class="item" data-background-image="https://s3.uuu.ovh/imgs/2024/04/12/65788b6548e9e58f.jpg"></li>
-          <li class="item" data-background-image="https://s3.uuu.ovh/imgs/2024/03/29/5c162f03529c2f38.jpg"></li>
+          <li class="item" data-background-image="https://s3.uuu.ovh/imgs/2024/04/12/4508f1e9b6c8e047.jpg"></li>
+          <li class="item" data-background-image="https://s3.uuu.ovh/imgs/2024/04/04/e805d35284c2d7d5.jpg"></li>
+          <li class="item" data-background-image="https://s3.uuu.ovh/imgs/2024/04/12/b04c50f26fdc9c19.jpg"></li>
+          <li class="item" data-background-image="https://s3.uuu.ovh/imgs/2024/04/07/5a293b82670a4885.webp"></li>
+          <li class="item" data-background-image="https://s3.uuu.ovh/imgs/2024/04/06/109323f5add23044.jpg"></li>
+          <li class="item" data-background-image="https://s3.uuu.ovh/imgs/2024/04/12/35b09cafcea9fd29.webp"></li>
         </ul>
       </div>
     </header>
@@ -155,16 +170,15 @@ Web blog = 杜明清的个人博客 = 👻欢迎一起交流学习👻</title>
   <div class="body md" itemprop="articleBody">
     
 
-    <h1 id="blob"><a class="anchor" href="#blob">#</a> Blob:</h1>
-<p>Blob（Binary Large Object）对象是 JavaScript 中用来表示二进制数据的对象，通常用于存储和操作文件或其他类型的二进制数据。Blob 对象可以表示大型数据对象，比如图像、视频、音频文件等。</p>
-<p>Blob 对象通常由两部分组成：数据和数据的类型。数据部分包含实际的二进制数据，而类型部分描述了数据的 MIME 类型，例如 “image/png” 或 “application/pdf”。</p>
-<p>Blob 对象可以通过 new Blob () 构造函数创建，传入一个数组作为参数，数组中包含要存储的二进制数据。另外，你还可以通过传入一个可选的对象参数，来指定数据的 MIME 类型。例如：</p>
-<figure class="highlight js"><figcaption data-lang="JavaScript"></figcaption><table><tr><td data-num="1"></td><td><pre>javascriptCopy Codevar binaryData <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0x48</span><span class="token punctuation">,</span> <span class="token number">0x65</span><span class="token punctuation">,</span> <span class="token number">0x6c</span><span class="token punctuation">,</span> <span class="token number">0x6c</span><span class="token punctuation">,</span> <span class="token number">0x6f</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">// 用十六进制表示的字符串 "Hello"</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token keyword">var</span> blob <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Blob</span><span class="token punctuation">(</span><span class="token punctuation">[</span>binaryData<span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span> <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">"text/plain"</span> <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr></table></figure><p>在上面的例子中，我们使用 new Blob () 创建了一个包含 “Hello” 文本数据的 Blob 对象，并指定了它的 MIME 类型为 “text/plain”。</p>
+    <h1 id="Blob"><a href="#Blob" class="headerlink" title="Blob:"></a>Blob:</h1><p>Blob（Binary Large Object）对象是 JavaScript 中用来表示二进制数据的对象，通常用于存储和操作文件或其他类型的二进制数据。Blob 对象可以表示大型数据对象，比如图像、视频、音频文件等。</p>
+<p>Blob 对象通常由两部分组成：数据和数据的类型。数据部分包含实际的二进制数据，而类型部分描述了数据的 MIME 类型，例如 “image&#x2F;png” 或 “application&#x2F;pdf”。</p>
+<p>Blob 对象可以通过 new Blob() 构造函数创建，传入一个数组作为参数，数组中包含要存储的二进制数据。另外，你还可以通过传入一个可选的对象参数，来指定数据的 MIME 类型。例如：</p>
+<pre><code class="js">javascriptCopy Codevar binaryData = [0x48, 0x65, 0x6c, 0x6c, 0x6f]; // 用十六进制表示的字符串 &quot;Hello&quot;
+var blob = new Blob([binaryData], &#123; type: &quot;text/plain&quot; &#125;);
+</code></pre>
+<p>在上面的例子中，我们使用 new Blob() 创建了一个包含 “Hello” 文本数据的 Blob 对象，并指定了它的 MIME 类型为 “text&#x2F;plain”。</p>
 <p>Blob 对象可以被用于多种用途，比如：</p>
-<p>通过 URL.createObjectURL () 方法创建一个临时的 URL，用于在页面中显示或下载文件，一般配置 a 标签（download 属性）。<br />
-作为 XMLHttpRequest 的响应数据类型，用于接收和处理文件或二进制数据。<br />
-作为 FormData 对象的值，用于将二进制数据发送到服务器。<br />
-总之，Blob 对象在 JavaScript 中提供了一种方便的方式来处理和操作二进制数据，特别适合于文件操作和网络通信中的数据传输</p>
+<p>通过 URL.createObjectURL() 方法创建一个临时的 URL，用于在页面中显示或下载文件,一般配置a标签（download属性）。<br>作为 XMLHttpRequest 的响应数据类型，用于接收和处理文件或二进制数据。<br>作为 FormData 对象的值，用于将二进制数据发送到服务器。<br>总之，Blob 对象在 JavaScript 中提供了一种方便的方式来处理和操作二进制数据，特别适合于文件操作和网络通信中的数据传输</p>
 
       <div class="tags">
           <a href="/tags/JS/" rel="tag"><i class="ic i-tag"></i> JS</a>
@@ -238,7 +252,7 @@ Web blog = 杜明清的个人博客 = 👻欢迎一起交流学习👻</title>
     <div class="item left">
       
 
-  <a href="/2023/12/02/Travis%20CI%E5%92%8CDocker%E7%9A%84%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;s3.uuu.ovh&#x2F;imgs&#x2F;2024&#x2F;04&#x2F;12&#x2F;35b09cafcea9fd29.webp" title="Travis和Docker的持续集成">
+  <a href="/2023/12/02/Travis%20CI%E5%92%8CDocker%E7%9A%84%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;s3.uuu.ovh&#x2F;imgs&#x2F;2024&#x2F;03&#x2F;29&#x2F;b0675aed15ca0334.jpg" title="Travis和Docker的持续集成">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> Travis和Docker</span>
   <h3>Travis和Docker的持续集成</h3>
@@ -248,7 +262,7 @@ Web blog = 杜明清的个人博客 = 👻欢迎一起交流学习👻</title>
     <div class="item right">
       
 
-  <a href="/2023/12/08/NaN/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;s3.uuu.ovh&#x2F;imgs&#x2F;2024&#x2F;04&#x2F;15&#x2F;807885ba1421e9b4.jpg" title="NaN历史遗留问题">
+  <a href="/2023/12/08/NaN/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;s3.uuu.ovh&#x2F;imgs&#x2F;2024&#x2F;04&#x2F;06&#x2F;a16303594a53d8d1.jpg" title="NaN历史遗留问题">
   <span class="type">下一篇</span>
   <span class="category"><i class="ic i-flag"></i> JS</span>
   <h3>NaN历史遗留问题</h3>
@@ -270,7 +284,7 @@ Web blog = 杜明清的个人博客 = 👻欢迎一起交流学习👻</title>
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="文章目录">
-          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#blob"><span class="toc-number">1.</span> <span class="toc-text"> Blob:</span></a></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Blob"><span class="toc-number">1.</span> <span class="toc-text">Blob:</span></a></li></ol>
       </div>
       <div class="related panel pjax" data-title="系列文章">
         <ul>
@@ -294,7 +308,7 @@ Web blog = 杜明清的个人博客 = 👻欢迎一起交流学习👻</title>
     </div>
     <div class="item categories">
       <a href="/categories/">
-        <span class="count">59</span>
+        <span class="count">61</span>
         <span class="name">分类</span>
       </a>
     </div>
@@ -388,80 +402,40 @@ Web blog = 杜明清的个人博客 = 👻欢迎一起交流学习👻</title>
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/git/" title="分类于 git">git</a>
+<a href="/categories/node-js/" title="分类于 node.js">node.js</a>
 </div>
 
-    <span><a href="/2023/04/02/git%E5%92%8Cgithub/" title="git与github">git与github</a></span>
+    <span><a href="/2024/01/02/node.js%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97/" title="node.js内置模块">node.js内置模块</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/vue/" title="分类于 vue">vue</a>
+<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
 </div>
 
-    <span><a href="/2023/11/02/vue%E5%8E%9F%E7%90%86/" title="vue源码解读">vue源码解读</a></span>
+    <span><a href="/2023/12/02/%E7%AE%97%E6%B3%95/" title="算法与数据结构">算法与数据结构</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" title="分类于 正则表达式">正则表达式</a>
+<a href="/categories/JS%E6%89%8B%E5%86%99%E9%A2%98/" title="分类于 JS手写题">JS手写题</a>
 </div>
 
-    <span><a href="/2023/02/12/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" title="正则表达式">正则表达式</a></span>
+    <span><a href="/2023/06/02/JS%E6%89%8B%E5%86%99%E9%A2%98/" title="JS手写题">JS手写题</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/Sass/" title="分类于 Sass">Sass</a>
+<a href="/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/" title="分类于 面试题">面试题</a>
 </div>
 
-    <span><a href="/2023/01/10/Sass/" title="Sass笔记">Sass笔记</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/react/" title="分类于 react">react</a>
-</div>
-
-    <span><a href="/2023/12/02/react/" title="react笔记">react笔记</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/json-server/" title="分类于 json-server">json-server</a>
-</div>
-
-    <span><a href="/2023/01/09/json-server%E6%95%99%E7%A8%8B/" title="json-server">json-server</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/JS/" title="分类于 JS">JS</a>
-</div>
-
-    <span><a href="/2023/12/08/NaN/" title="NaN历史遗留问题">NaN历史遗留问题</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/gitlab-cicd/" title="分类于 gitlab cicd">gitlab cicd</a>
-</div>
-
-    <span><a href="/2024/07/07/gitlab-cicd/" title="gitlab cicd">gitlab cicd</a></span>
+    <span><a href="/2023/08/29/%E9%9D%A2%E8%AF%95%E9%A2%98/" title="面试题">面试题</a></span>
   </li>
 
       
@@ -478,10 +452,50 @@ Web blog = 杜明清的个人博客 = 👻欢迎一起交流学习👻</title>
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E4%B8%89%E6%96%B9%E5%BA%93/" title="分类于 三方库">三方库</a>
+<a href="/categories/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" title="分类于 正则表达式">正则表达式</a>
 </div>
 
-    <span><a href="/2024/04/16/%E4%B8%89%E6%96%B9%E5%8C%85/" title="三方库">三方库</a></span>
+    <span><a href="/2024/01/10/%E6%AD%A3%E5%88%99/" title="正则理念">正则理念</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/" title="分类于 自动化测试">自动化测试</a>
+</div>
+
+    <span><a href="/2024/03/02/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/" title="自动化测试">自动化测试</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/JS/" title="分类于 JS">JS</a>
+</div>
+
+    <span><a href="/2024/01/11/webworker/" title="webWorker">webWorker</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/vue/" title="分类于 vue">vue</a>
+</div>
+
+    <span><a href="/2023/11/02/vue%E5%8E%9F%E7%90%86/" title="vue源码解读">vue源码解读</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/git/" title="分类于 git">git</a>
+</div>
+
+    <span><a href="/2023/04/02/git%E5%92%8Cgithub/" title="git与github">git与github</a></span>
   </li>
 
   </ul>
@@ -495,12 +509,24 @@ Web blog = 杜明清的个人博客 = 👻欢迎一起交流学习👻</title>
         <div class="status">
   <div class="copyright">
     
-    &copy; 2010 – 
+    &copy; 2022 – 
     <span itemprop="copyrightYear">2024</span>
     <span class="with-love">
       <i class="ic i-sakura rotate"></i>
     </span>
     <span class="author" itemprop="copyrightHolder">dmq @ Web blog</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">809k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">12:16</span>
   </div>
   <div class="powered-by">
     基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
