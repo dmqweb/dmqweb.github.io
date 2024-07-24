@@ -1,0 +1,1731 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="杜明清的个人博客" href="https://dmqweb.cn/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="杜明清的个人博客" href="https://dmqweb.cn/atom.xml" />
+<link rel="alternate" type="application/json" title="杜明清的个人博客" href="https://dmqweb.cn/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="设计模式与设计原则" />
+
+
+<link rel="canonical" href="https://dmqweb.cn/2024/07/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%8E%9F%E5%88%99/">
+
+
+
+  <title>
+设计模式与设计原则 - 设计模式与设计原则 |
+Web blog = 杜明清的个人博客 = 👻欢迎一起交流学习👻</title>
+  <meta name="keywords" content="前端开发, HTML, CSS, JavaScript, 博客">
+  <meta name="description" content="探索前端开发的无限可能。本博客提供最新的前端知识库，以及实用的开发技巧和最佳实践。加入我们的社区，共同成长。">
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">设计模式与设计原则
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2024-07-07 14:26:39">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2024-07-07T14:26:39+08:00">2024-07-07</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>24k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>22 分钟</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">Web blog</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://s3.uuu.ovh/imgs/2024/04/15/effaa43770a5e6bc.jpg"></li>
+          <li class="item" data-background-image="https://s3.uuu.ovh/imgs/2024/04/15/64f47485ad1e6bed.jpg"></li>
+          <li class="item" data-background-image="https://s3.uuu.ovh/imgs/2024/04/25/3fe84aea28b256c7.jpg"></li>
+          <li class="item" data-background-image="https://s3.uuu.ovh/imgs/2024/04/25/d919179c20f6fc96.jpg"></li>
+          <li class="item" data-background-image="https://s3.uuu.ovh/imgs/2024/04/25/1276fcec5eb7990e.webp"></li>
+          <li class="item" data-background-image="https://s3.uuu.ovh/imgs/2024/04/05/ec66a7160398848b.webp"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B8%8E%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/" itemprop="item" rel="index" title="分类于 设计模式与设计原则"><span itemprop="name">设计模式与设计原则</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="https://dmqweb.cn/2024/07/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%8E%9F%E5%88%99/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="dmq">
+    <meta itemprop="description" content="👻欢迎一起交流学习👻, ">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="杜明清的个人博客">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <p>注：本教程总结自《设计模式之争》和《大话设计模式》，对设计模式感兴趣的同学强烈推荐这两本书。</p>
+<h1 id="23-种设计模式"><a href="#23-种设计模式" class="headerlink" title="23 种设计模式"></a>23 种设计模式</h1><h2 id="创建型"><a href="#创建型" class="headerlink" title="创建型"></a>创建型</h2><ul>
+<li><p>单例模式</p>
+</li>
+<li><p>原型模式</p>
+</li>
+<li><p>工厂模式</p>
+</li>
+<li><p>抽象工厂模式</p>
+</li>
+<li><p>建造者模式</p>
+</li>
+</ul>
+<h2 id="结构型"><a href="#结构型" class="headerlink" title="结构型"></a>结构型</h2><ul>
+<li><p>适配器模式</p>
+</li>
+<li><p>装饰器模式</p>
+</li>
+<li><p>代理模式</p>
+</li>
+<li><p>外观模式</p>
+</li>
+<li><p>桥接模式</p>
+</li>
+<li><p>组合模式</p>
+</li>
+<li><p>享元模式</p>
+</li>
+</ul>
+<h2 id="行为型"><a href="#行为型" class="headerlink" title="行为型"></a>行为型</h2><ul>
+<li><p>观察者模式</p>
+</li>
+<li><p>迭代器模式</p>
+</li>
+<li><p>策略模式</p>
+</li>
+<li><p>模板方法模式</p>
+</li>
+<li><p>职责链模式</p>
+</li>
+<li><p>命令模式</p>
+</li>
+<li><p>备忘录模式</p>
+</li>
+<li><p>状态模式</p>
+</li>
+<li><p>访问者模式</p>
+</li>
+<li><p>中介者模式</p>
+</li>
+<li><p>解释器模式</p>
+</li>
+</ul>
+<h1 id="工厂模式"><a href="#工厂模式" class="headerlink" title="工厂模式"></a>工厂模式</h1><p>工厂模式定义一个用于创建对象的接口，这个接口由子类决定实例化哪一个类。该模式使一个类的实例化延迟到了子类。而子类可以重写接口方法以便创建的时候指定自己的对象类型。</p>
+<pre><code class="js">class Product &#123;
+  constructor(name) &#123;
+    this.name = name;
+  &#125;
+  init() &#123;
+    console.log(&quot;init&quot;);
+  &#125;
+  fun() &#123;
+    console.log(&quot;fun&quot;);
+  &#125;
+&#125;
+class Factory &#123;
+  create(name) &#123;
+    return new Product(name);
+  &#125;
+&#125;
+// use
+let factory = new Factory();
+let p = factory.create(&quot;p1&quot;);
+p.init();
+p.fun();
+</code></pre>
+<ul>
+<li>适用场景</li>
+</ul>
+<p>如果你不想让某个子系统与较大的那个对象之间形成强耦合，而是想运行时从许多子系统中进行挑选的话，那么工厂模式是一个理想的选择<br>将 new 操作简单封装，遇到 new 的时候就应该考虑是否用工厂模式；<br>需要依赖具体环境创建不同实例，这些实例都有相同的行为,这时候我们可以使用工厂模式，简化实现的过程，同时也可以减少每种对象所需的代码量，有利于消除对象间的耦合，提供更大的灵活性</p>
+<ul>
+<li>优点</li>
+</ul>
+<p>创建对象的过程可能很复杂，但我们只需要关心创建结果。<br>构造函数和创建者分离, 符合“开闭原则”<br>一个调用者想创建一个对象，只要知道其名称就可以了。<br>扩展性高，如果想增加一个产品，只要扩展一个工厂类就可以。</p>
+<ul>
+<li>缺点</li>
+</ul>
+<p>添加新产品时，需要编写新的具体产品类,一定程度上增加了系统的复杂度<br>考虑到系统的可扩展性，需要引入抽象层，在客户端代码中均使用抽象层进行定义，增加了系统的抽象性和理解难度</p>
+<ul>
+<li>什么时候不用<br>当被应用到错误的问题类型上时,这一模式会给应用程序引入大量不必要的复杂性.除非为创建对象提供一个接口是我们编写的库或者框架的一个设计上目标,否则我会建议使用明确的构造器,以避免不必要的开销。<br>由于对象的创建过程被高效的抽象在一个接口后面的事实,这也会给依赖于这个过程可能会有多复杂的单元测试带来问题。<br>例子</li>
+</ul>
+<p>曾经我们熟悉的 JQuery 的$()就是一个工厂函数，它根据传入参数的不同创建元素或者去寻找上下文中的元素，创建成相应的 jQuery 对象</p>
+<pre><code class="js">class jQuery &#123;
+  constructor(selector) &#123;
+    super(selector);
+  &#125;
+  add() &#123;&#125;
+  // 此处省略若干 API
+&#125;
+window.$ = function (selector) &#123;
+  return new jQuery(selector);
+&#125;;
+</code></pre>
+<ul>
+<li>vue 的异步组件</li>
+</ul>
+<p>在大型应用中，我们可能需要将应用分割成小一些的代码块，并且只在需要的时候才从服务器加载一个模块。为了简化，Vue 允许你以一个工厂函数的方式定义你的组件，这个工厂函数会异步解析你的组件定义。Vue 只有在这个组件需要被渲染的时候才会触发该工厂函数，且会把结果缓存起来供未来重渲染。例如：</p>
+<pre><code class="js">Vue.component(&quot;async-example&quot;, function (resolve, reject) &#123;
+  setTimeout(function () &#123;
+    // 向 `resolve` 回调传递组件定义
+    resolve(&#123;
+      template: &quot;&lt;div&gt;I am async!&lt;/div&gt;&quot;,
+    &#125;);
+  &#125;, 1000);
+&#125;);
+</code></pre>
+<h1 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h1><p>一个类只有一个实例，并提供一个访问它的全局访问点。</p>
+<pre><code class="js">class LoginForm &#123;
+  constructor() &#123;
+    this.state = &quot;hide&quot;;
+  &#125;
+  show() &#123;
+    if (this.state === &quot;show&quot;) &#123;
+      alert(&quot;已经显示&quot;);
+      return;
+    &#125;
+    this.state = &quot;show&quot;;
+    console.log(&quot;登录框显示成功&quot;);
+  &#125;
+  hide() &#123;
+    if (this.state === &quot;hide&quot;) &#123;
+      alert(&quot;已经隐藏&quot;);
+      return;
+    &#125;
+    this.state = &quot;hide&quot;;
+    console.log(&quot;登录框隐藏成功&quot;);
+  &#125;
+&#125;
+LoginForm.getInstance = (function () &#123;
+  let instance;
+  return function () &#123;
+    if (!instance) &#123;
+      instance = new LoginForm();
+    &#125;
+    return instance;
+  &#125;;
+&#125;)();
+let obj1 = LoginForm.getInstance();
+obj1.show();
+
+let obj2 = LoginForm.getInstance();
+obj2.hide();
+console.log(obj1 === obj2);
+</code></pre>
+<ul>
+<li>优点</li>
+</ul>
+<p>划分命名空间，减少全局变量<br>增强模块性，把自己的代码组织在一个全局变量名下，放在单一位置，便于维护<br>且只会实例化一次。简化了代码的调试和维护</p>
+<ul>
+<li>缺点</li>
+</ul>
+<p>由于单例模式提供的是一种单点访问，所以它有可能导致模块间的强耦合 从而不利于单元测试。无法单独测试一个调用了来自单例的方法的类，而只能把它与那个单例作为一个单元一起测试。</p>
+<ul>
+<li>场景例子</li>
+</ul>
+<p>定义命名空间和实现分支型方法<br>登录框<br>vuex 和 redux 中的 store</p>
+<h1 id="适配器模式0"><a href="#适配器模式0" class="headerlink" title="适配器模式0"></a>适配器模式0</h1><p>将一个类的接口转化为另外一个接口，以满足用户需求，使类之间接口不兼容问题通过适配器得以解决。</p>
+<pre><code class="js">class Plug &#123;
+  getName() &#123;
+    return &quot;iphone 充电头&quot;;
+  &#125;
+&#125;
+class Target &#123;
+  constructor() &#123;
+    this.plug = new Plug();
+  &#125;
+  getName() &#123;
+    return this.plug.getName() + &quot; 适配器 Type-c 充电头&quot;;
+  &#125;
+&#125;
+let target = new Target();
+target.getName(); // iphone 充电头 适配器转 Type-c 充电头
+</code></pre>
+<ul>
+<li>优点</li>
+</ul>
+<p>可以让任何两个没有关联的类一起运行。<br>提高了类的复用。<br>适配对象，适配库，适配数据</p>
+<ul>
+<li>缺点</li>
+</ul>
+<p>额外对象的创建，非直接调用，存在一定的开销（且不像代理模式在某些功能点上可实现性能优化)<br>如果没必要使用适配器模式的话，可以考虑重构，如果使用的话，尽量把文档完善</p>
+<ul>
+<li>场景</li>
+</ul>
+<p>整合第三方 SDK<br>封装旧接口</p>
+<p>自己封装的 ajax， 使用方式如下</p>
+<pre><code class="js">ajax(&#123;
+  url: &quot;/getData&quot;,
+  type: &quot;Post&quot;,
+  dataType: &quot;json&quot;,
+  data: &#123;
+    test: 111,
+  &#125;,
+&#125;).done(function () &#123;&#125;);
+// 因为历史原因，代码中全都是：
+// $.ajax(&#123;....&#125;)
+
+// 做一层适配器
+var $ = &#123;
+  ajax: function (options) &#123;
+    return ajax(options);
+  &#125;,
+&#125;;
+</code></pre>
+<p>vue 的 computed</p>
+<pre><code class="vue">&lt;template&gt;
+  &lt;div id=&quot;example&quot;&gt;
+    &lt;p&gt;Original message: &quot;&#123;&#123; message &#125;&#125;&quot;&lt;/p&gt;
+    &lt;!-- Hello --&gt;
+    &lt;p&gt;Computed reversed message: &quot;&#123;&#123; reversedMessage &#125;&#125;&quot;&lt;/p&gt;
+    &lt;!-- olleH --&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+export default &#123;
+  name: &quot;demo&quot;,
+  data() &#123;
+    return &#123;
+      message: &quot;Hello&quot;,
+    &#125;;
+  &#125;,
+  computed: &#123;
+    reversedMessage: function () &#123;
+      return this.message.split(&quot;&quot;).reverse().join(&quot;&quot;);
+    &#125;,
+  &#125;,
+&#125;;
+&lt;/script&gt;
+</code></pre>
+<pre><code class="vue">&lt;script type=&quot;text/javascript&quot;&gt;
+export default &#123;
+  name: &quot;demo&quot;,
+  data() &#123;
+    return &#123;
+      message: &quot;Hello&quot;,
+    &#125;;
+  &#125;,
+  computed: &#123;
+    reversedMessage: function () &#123;
+      return this.message.split(&quot;&quot;).reverse().join(&quot;&quot;);
+    &#125;,
+  &#125;,
+&#125;;
+&lt;/script&gt;
+</code></pre>
+<p>原有 data 中的数据不满足当前的要求，通过计算属性的规则来适配成我们需要的格式，对原有数据并没有改变，只改变了原有数据的表现形式<br>不同点<br>适配器与代理模式相似</p>
+<p>适配器模式： 提供一个不同的接口（如不同版本的插头）<br>代理模式： 提供一模一样的接口</p>
+<h1 id="装饰者模式"><a href="#装饰者模式" class="headerlink" title="装饰者模式"></a>装饰者模式</h1><p>动态地给某个对象添加一些额外的职责，，是一种实现继承的替代方案<br>在不改变原对象的基础上，通过对其进行包装扩展，使原有对象可以满足用户的更复杂需求，而不会影响从这个类中派生的其他对象</p>
+<pre><code class="js">class Cellphone &#123;
+  create() &#123;
+    console.log(&quot;生成一个手机&quot;);
+  &#125;
+&#125;
+class Decorator &#123;
+  constructor(cellphone) &#123;
+    this.cellphone = cellphone;
+  &#125;
+  create() &#123;
+    this.cellphone.create();
+    this.createShell(cellphone);
+  &#125;
+  createShell() &#123;
+    console.log(&quot;生成手机壳&quot;);
+  &#125;
+&#125;
+// 测试代码
+let cellphone = new Cellphone();
+cellphone.create();
+
+console.log(&quot;------------&quot;);
+let dec = new Decorator(cellphone);
+dec.create();
+</code></pre>
+<ul>
+<li>场景例子</li>
+</ul>
+<p>比如现在有 4 种型号的自行车，我们为每种自行车都定义了一个单<br>独的类。现在要给每种自行车都装上前灯、尾<br>灯和铃铛这 3 种配件。如果使用继承的方式来给<br>每种自行车创建子类，则需要 4×3 &#x3D; 12 个子类。<br>但是如果把前灯、尾灯、铃铛这些对象动态组<br>合到自行车上面，则只需要额外增加 3 个类<br>ES7 Decorator 阮一峰<br>core-decorators</p>
+<ul>
+<li>优点</li>
+</ul>
+<p>装饰类和被装饰类都只关心自身的核心业务，实现了解耦。<br>方便动态的扩展功能，且提供了比继承更多的灵活性。</p>
+<ul>
+<li>缺点</li>
+</ul>
+<p>多层装饰比较复杂。<br>常常会引入许多小对象，看起来比较相似，实际功能大相径庭，从而使得我们的应用程序架构变得复杂起来</p>
+<h1 id="代理模式"><a href="#代理模式" class="headerlink" title="代理模式"></a>代理模式</h1><blockquote>
+<p>代理模式和中介者模式的区别在于：代理模式往往是一对一的，但中介模式往往是一对多。<br>是为一个对象提供一个代用品或占位符，以便控制对它的访问</p>
+</blockquote>
+<p>假设当 A 在心情好的时候收到花，小明表白成功的几率有<br>60%，而当 A 在心情差的时候收到花，小明表白的成功率无限趋近于 0。<br>小明跟 A 刚刚认识两天，还无法辨别 A 什么时候心情好。如果不合时宜地把花送给 A，花<br>被直接扔掉的可能性很大，这束花可是小明吃了 7 天泡面换来的。<br>但是 A 的朋友 B 却很了解 A，所以小明只管把花交给 B，B 会监听 A 的心情变化，然后选<br>择 A 心情好的时候把花转交给 A，代码如下：</p>
+<pre><code class="js">let Flower = function () &#123;&#125;;
+let xiaoming = &#123;
+  sendFlower: function (target) &#123;
+    let flower = new Flower();
+    target.receiveFlower(flower);
+  &#125;,
+&#125;;
+let B = &#123;
+  receiveFlower: function (flower) &#123;
+    A.listenGoodMood(function () &#123;
+      A.receiveFlower(flower);
+    &#125;);
+  &#125;,
+&#125;;
+let A = &#123;
+  receiveFlower: function (flower) &#123;
+    console.log(&quot;收到花&quot; + flower);
+  &#125;,
+  listenGoodMood: function (fn) &#123;
+    setTimeout(function () &#123;
+      fn();
+    &#125;, 1000);
+  &#125;,
+&#125;;
+xiaoming.sendFlower(B);
+</code></pre>
+<ul>
+<li>场景</li>
+</ul>
+<p>HTML 元 素事件代理</p>
+<pre><code class="vue">&lt;template&gt;
+  &lt;ul id=&quot;ul&quot;&gt;
+    &lt;li&gt;1&lt;/li&gt;
+    &lt;li&gt;2&lt;/li&gt;
+    &lt;li&gt;3&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/template&gt;
+&lt;script&gt;
+let ul = document.querySelector(&quot;#ul&quot;);
+ul.addEventListener(&quot;click&quot;, (event) =&gt; &#123;
+  console.log(event.target);
+&#125;);
+&lt;/script&gt;
+</code></pre>
+<p>ES6 的 proxy 阮一峰 Proxy<br>jQuery.proxy()方法</p>
+<ul>
+<li>优点</li>
+</ul>
+<p>代理模式能将代理对象与被调用对象分离，降低了系统的耦合度。代理模式在客户端和目标对象之间起到一个中介作用，这样可以起到保护目标对象的作用<br>代理对象可以扩展目标对象的功能；通过修改代理对象就可以了，符合开闭原则；</p>
+<ul>
+<li><p>缺点<br>处理请求速度可能有差别，非直接访问存在开销</p>
+</li>
+<li><p>不同点<br>装饰者模式实现上和代理模式类似</p>
+</li>
+</ul>
+<p>装饰者模式： 扩展功能，原有功能不变且可直接使用<br>代理模式： 显示原有功能，但是经过限制之后的</p>
+<h1 id="外观模式"><a href="#外观模式" class="headerlink" title="外观模式"></a>外观模式</h1><p>为子系统的一组接口提供一个一致的界面，定义了一个高层接口，这个接口使子系统更加容易使用<br>兼容浏览器事件绑定</p>
+<pre><code class="js">let addMyEvent = function (el, ev, fn) &#123;
+  if (el.addEventListener) &#123;
+    el.addEventListener(ev, fn, false);
+  &#125; else if (el.attachEvent) &#123;
+    el.attachEvent(&quot;on&quot; + ev, fn);
+  &#125; else &#123;
+    el[&quot;on&quot; + ev] = fn;
+  &#125;
+&#125;;
+
+// 封装接口
+let myEvent = &#123;
+  // ...
+  stop: (e) =&gt; &#123;
+    e.stopPropagation();
+    e.preventDefault();
+  &#125;,
+&#125;;
+</code></pre>
+<p>场景</p>
+<p>设计初期，应该要有意识地将不同的两个层分离，比如经典的三层结构，在数据访问层和业务逻辑层、业务逻辑层和表示层之间建立外观 Facade<br>在开发阶段，子系统往往因为不断的重构演化而变得越来越复杂，增加外观 Facade 可以提供一个简单的接口，减少他们之间的依赖。<br>在维护一个遗留的大型系统时，可能这个系统已经很难维护了，这时候使用外观 Facade 也是非常合适的，为系系统开发一个外观 Facade 类，为设计粗糙和高度复杂的遗留代码提供比较清晰的接口，让新系统和 Facade 对象交互，Facade 与遗留代码交互所有的复杂工作。</p>
+<p>参考： 大话设计模式</p>
+<ul>
+<li>优点</li>
+</ul>
+<p>减少系统相互依赖。<br>提高灵活性。<br>提高了安全性</p>
+<ul>
+<li>缺点</li>
+</ul>
+<p>不符合开闭原则，如果要改东西很麻烦，继承重写都不合适。</p>
+<p>观察者模式<br>定义了一种一对多的关系，让多个观察者对象同时监听某一个主题对象，这个主题对象的状态发生变化时就会通知所有的观察者对象，使它们能够自动更新自己，当一个对象的改变需要同时改变其它对象，并且它不知道具体有多少对象需要改变的时候，就应该考虑使用观察者模式。</p>
+<h1 id="发布-amp-订阅"><a href="#发布-amp-订阅" class="headerlink" title="发布 &amp; 订阅"></a>发布 &amp; 订阅</h1><ul>
+<li>一对多</li>
+</ul>
+<pre><code class="js">// 主题 保存状态，状态变化之后触发所有观察者对象
+class Subject &#123;
+  constructor() &#123;
+    this.state = 0;
+    this.observers = [];
+  &#125;
+  getState() &#123;
+    return this.state;
+  &#125;
+  setState(state) &#123;
+    this.state = state;
+    this.notifyAllObservers();
+  &#125;
+  notifyAllObservers() &#123;
+    this.observers.forEach((observer) =&gt; &#123;
+      observer.update();
+    &#125;);
+  &#125;
+  attach(observer) &#123;
+    this.observers.push(observer);
+  &#125;
+&#125;
+// 观察者
+class Observer &#123;
+  constructor(name, subject) &#123;
+    this.name = name;
+    this.subject = subject;
+    this.subject.attach(this);
+  &#125;
+  update() &#123;
+    console.log(`$&#123;this.name&#125; update, state: $&#123;this.subject.getState()&#125;`);
+  &#125;
+&#125;
+// 测试
+let s = new Subject();
+let o1 = new Observer(&quot;o1&quot;, s);
+let o2 = new Observer(&quot;02&quot;, s);
+
+s.setState(12);
+</code></pre>
+<ul>
+<li>场景</li>
+</ul>
+<p>DOM 事件</p>
+<pre><code class="js">document.body.addEventListener(&quot;click&quot;, function () &#123;
+  console.log(&quot;hello world!&quot;);
+&#125;);
+document.body.click();
+</code></pre>
+<p>vue 响应式</p>
+<ul>
+<li>优点</li>
+</ul>
+<p>支持简单的广播通信，自动通知所有已经订阅过的对象<br>目标对象与观察者之间的抽象耦合关系能单独扩展以及重用<br>增加了灵活性<br>观察者模式所做的工作就是在解耦，让耦合的双方都依赖于抽象，而不是依赖于具体。从而使得各自的变化都不会影响到另一边的变化。</p>
+<ul>
+<li>缺点<br>过度使用会导致对象与对象之间的联系弱化，会导致程序难以跟踪维护和理解</li>
+</ul>
+<h1 id="状态模式"><a href="#状态模式" class="headerlink" title="状态模式"></a>状态模式</h1><p>允许一个对象在其内部状态改变的时候改变它的行为，对象看起来似乎修改了它的类</p>
+<pre><code class="js">// 状态 （弱光、强光、关灯）
+class State &#123;
+  constructor(state) &#123;
+    this.state = state;
+  &#125;
+  handle(context) &#123;
+    console.log(`this is $&#123;this.state&#125; light`);
+    context.setState(this);
+  &#125;
+&#125;
+class Context &#123;
+  constructor() &#123;
+    this.state = null;
+  &#125;
+  getState() &#123;
+    return this.state;
+  &#125;
+  setState(state) &#123;
+    this.state = state;
+  &#125;
+&#125;
+// test
+let context = new Context();
+let weak = new State(&quot;weak&quot;);
+let strong = new State(&quot;strong&quot;);
+let off = new State(&quot;off&quot;);
+// 弱光
+weak.handle(context);
+console.log(context.getState());
+// 强光
+strong.handle(context);
+console.log(context.getState());
+// 关闭
+off.handle(context);
+console.log(context.getState());
+</code></pre>
+<p>场景</p>
+<p>一个对象的行为取决于它的状态，并且它必须在运行时刻根据状态改变它的行为<br>一个操作中含有大量的分支语句，而且这些分支语句依赖于该对象的状态</p>
+<ul>
+<li>优点</li>
+</ul>
+<p>定义了状态与行为之间的关系，封装在一个类里，更直观清晰，增改方便<br>状态与状态间，行为与行为间彼此独立互不干扰<br>用对象代替字符串来记录当前状态，使得状态的切换更加一目了然</p>
+<ul>
+<li>缺点</li>
+</ul>
+<p>会在系统中定义许多状态类<br>逻辑分散</p>
+<h1 id="迭代器模式"><a href="#迭代器模式" class="headerlink" title="迭代器模式"></a>迭代器模式</h1><p>提供一种方法顺序一个聚合对象中各个元素，而又不暴露该对象的内部表示。</p>
+<pre><code class="js">class Iterator &#123;
+  constructor(conatiner) &#123;
+    this.list = conatiner.list;
+    this.index = 0;
+  &#125;
+  next() &#123;
+    if (this.hasNext()) &#123;
+      return this.list[this.index++];
+    &#125;
+    return null;
+  &#125;
+  hasNext() &#123;
+    if (this.index &gt;= this.list.length) &#123;
+      return false;
+    &#125;
+    return true;
+  &#125;
+&#125;
+class Container &#123;
+  constructor(list) &#123;
+    this.list = list;
+  &#125;
+  getIterator() &#123;
+    return new Iterator(this);
+  &#125;
+&#125;
+// 测试代码
+let container = new Container([1, 2, 3, 4, 5]);
+let iterator = container.getIterator();
+while (iterator.hasNext()) &#123;
+  console.log(iterator.next());
+&#125;
+</code></pre>
+<ul>
+<li>场景例子</li>
+</ul>
+<p>Array.prototype.forEach<br>jQuery 中的$.each()<br>ES6 Iterator</p>
+<ul>
+<li>特点</li>
+</ul>
+<p>访问一个聚合对象的内容而无需暴露它的内部表示。<br>为遍历不同的集合结构提供一个统一的接口，从而支持同样的算法在不同的集合结构上进行操作</p>
+<ul>
+<li>总结<br>对于集合内部结果常常变化各异，不想暴露其内部结构的话，但又想让客户代码透明的访问其中的元素，可以使用迭代器模式</li>
+</ul>
+<h1 id="桥接模式"><a href="#桥接模式" class="headerlink" title="桥接模式"></a>桥接模式</h1><p>桥接模式（Bridge）将抽象部分与它的实现部分分离，使它们都可以独立地变化。</p>
+<pre><code class="js">class Color &#123;
+  constructor(name) &#123;
+    this.name = name;
+  &#125;
+&#125;
+class Shape &#123;
+  constructor(name, color) &#123;
+    this.name = name;
+    this.color = color;
+  &#125;
+  draw() &#123;
+    console.log(`$&#123;this.color.name&#125; $&#123;this.name&#125;`);
+  &#125;
+&#125;
+
+//测试
+let red = new Color(&quot;red&quot;);
+let yellow = new Color(&quot;yellow&quot;);
+let circle = new Shape(&quot;circle&quot;, red);
+circle.draw();
+let triangle = new Shape(&quot;triangle&quot;, yellow);
+triangle.draw();
+</code></pre>
+<ul>
+<li>优点</li>
+</ul>
+<p>有助于独立地管理各组成部分， 把抽象化与实现化解耦<br>提高可扩充性</p>
+<ul>
+<li>缺点</li>
+</ul>
+<p>大量的类将导致开发成本的增加，同时在性能方面可能也会有所减少。</p>
+<h1 id="组合模式"><a href="#组合模式" class="headerlink" title="组合模式"></a>组合模式</h1><p>将对象组合成树形结构，以表示“整体-部分”的层次结构。<br>通过对象的多态表现，使得用户对单个对象和组合对象的使用具有一致性。</p>
+<pre><code class="js">class TrainOrder &#123;
+  create() &#123;
+    console.log(&quot;创建火车票订单&quot;);
+  &#125;
+&#125;
+class HotelOrder &#123;
+  create() &#123;
+    console.log(&quot;创建酒店订单&quot;);
+  &#125;
+&#125;
+class TotalOrder &#123;
+  constructor() &#123;
+    this.orderList = [];
+  &#125;
+  addOrder(order) &#123;
+    this.orderList.push(order);
+    return this;
+  &#125;
+  create() &#123;
+    this.orderList.forEach((item) =&gt; &#123;
+      item.create();
+    &#125;);
+    return this;
+  &#125;
+&#125;
+// 可以在购票网站买车票同时也订房间
+let train = new TrainOrder();
+let hotel = new HotelOrder();
+let total = new TotalOrder();
+total.addOrder(train).addOrder(hotel).create();
+</code></pre>
+<ul>
+<li>场景</li>
+</ul>
+<p>表示对象-整体层次结构<br>希望用户忽略组合对象和单个对象的不同，用户将统一地使用组合结构中的所有对象（方法）</p>
+<ul>
+<li>缺点<br>如果通过组合模式创建了太多的对象，那么这些对象可能会让系统负担不起。</li>
+</ul>
+<h1 id="原型模式"><a href="#原型模式" class="headerlink" title="原型模式"></a>原型模式</h1><p>原型模式（prototype）是指用原型实例指向创建对象的种类，并且通过拷贝这些原型创建新的对象。</p>
+<pre><code class="js">class Person &#123;
+  constructor(name) &#123;
+    this.name = name;
+  &#125;
+  getName() &#123;
+    return this.name;
+  &#125;
+&#125;
+class Student extends Person &#123;
+  constructor(name) &#123;
+    super(name);
+  &#125;
+  sayHello() &#123;
+    console.log(`Hello， My name is $&#123;this.name&#125;`);
+  &#125;
+&#125;
+let student = new Student(&quot;xiaoming&quot;);
+student.sayHello();
+</code></pre>
+<p>原型模式，就是创建一个共享的原型，通过拷贝这个原型来创建新的类，用于创建重复的对象，带来性能上的提升。</p>
+<h1 id="策略模式"><a href="#策略模式" class="headerlink" title="策略模式"></a>策略模式</h1><p>定义一系列的算法，把它们一个个封装起来，并且使它们可以互相替换</p>
+<pre><code class="html">&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;策略模式-校验表单&lt;/title&gt;
+    &lt;meta content=&quot;text/html; charset=utf-8&quot; http-equiv=&quot;Content-Type&quot; /&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+    &lt;form id=&quot;registerForm&quot; method=&quot;post&quot; action=&quot;http://xxxx.com/api/register&quot;&gt;
+      用户名：&lt;input type=&quot;text&quot; name=&quot;userName&quot; /&gt; 密码：&lt;input
+        type=&quot;text&quot;
+        name=&quot;password&quot;
+      /&gt;
+      手机号码：&lt;input type=&quot;text&quot; name=&quot;phoneNumber&quot; /&gt;
+      &lt;button type=&quot;submit&quot;&gt;提交&lt;/button&gt;
+    &lt;/form&gt;
+    &lt;script type=&quot;text/javascript&quot;&gt;
+      // 策略对象
+      const strategies = &#123;
+        isNoEmpty: function (value, errorMsg) &#123;
+          if (value === &quot;&quot;) &#123;
+            return errorMsg;
+          &#125;
+        &#125;,
+        isNoSpace: function (value, errorMsg) &#123;
+          if (value.trim() === &quot;&quot;) &#123;
+            return errorMsg;
+          &#125;
+        &#125;,
+        minLength: function (value, length, errorMsg) &#123;
+          if (value.trim().length &lt; length) &#123;
+            return errorMsg;
+          &#125;
+        &#125;,
+        maxLength: function (value, length, errorMsg) &#123;
+          if (value.length &gt; length) &#123;
+            return errorMsg;
+          &#125;
+        &#125;,
+        isMobile: function (value, errorMsg) &#123;
+          if (
+            !/^(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|17[7]|18[0|1|2|3|5|6|7|8|9])\d&#123;8&#125;$/.test(
+              value
+            )
+          ) &#123;
+            return errorMsg;
+          &#125;
+        &#125;,
+      &#125;;
+      // 验证类
+      class Validator &#123;
+        constructor() &#123;
+          this.cache = [];
+        &#125;
+        add(dom, rules) &#123;
+          for (let i = 0, rule; (rule = rules[i++]); ) &#123;
+            let strategyAry = rule.strategy.split(&quot;:&quot;);
+            let errorMsg = rule.errorMsg;
+            this.cache.push(() =&gt; &#123;
+              let strategy = strategyAry.shift();
+              strategyAry.unshift(dom.value);
+              strategyAry.push(errorMsg);
+              return strategies[strategy].apply(dom, strategyAry);
+            &#125;);
+          &#125;
+        &#125;
+        start() &#123;
+          for (let i = 0, validatorFunc; (validatorFunc = this.cache[i++]); ) &#123;
+            let errorMsg = validatorFunc();
+            if (errorMsg) &#123;
+              return errorMsg;
+            &#125;
+          &#125;
+        &#125;
+      &#125;
+      // 调用代码
+      let registerForm = document.getElementById(&quot;registerForm&quot;);
+      let validataFunc = function () &#123;
+        let validator = new Validator();
+        validator.add(registerForm.userName, [
+          &#123;
+            strategy: &quot;isNoEmpty&quot;,
+            errorMsg: &quot;用户名不可为空&quot;,
+          &#125;,
+          &#123;
+            strategy: &quot;isNoSpace&quot;,
+            errorMsg: &quot;不允许以空白字符命名&quot;,
+          &#125;,
+          &#123;
+            strategy: &quot;minLength:2&quot;,
+            errorMsg: &quot;用户名长度不能小于2位&quot;,
+          &#125;,
+        ]);
+        validator.add(registerForm.password, [
+          &#123;
+            strategy: &quot;minLength:6&quot;,
+            errorMsg: &quot;密码长度不能小于6位&quot;,
+          &#125;,
+        ]);
+        validator.add(registerForm.phoneNumber, [
+          &#123;
+            strategy: &quot;isMobile&quot;,
+            errorMsg: &quot;请输入正确的手机号码格式&quot;,
+          &#125;,
+        ]);
+        return validator.start();
+      &#125;;
+
+      registerForm.onsubmit = function () &#123;
+        let errorMsg = validataFunc();
+        if (errorMsg) &#123;
+          alert(errorMsg);
+          return false;
+        &#125;
+      &#125;;
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<ul>
+<li>场景例子<br>如果在一个系统里面有许多类，它们之间的区别仅在于它们的’行为’，那么使用策略模式可以动态地让一个对象在许多行为中选择一种行为。<br>一个系统需要动态地在几种算法中选择一种。<br>表单验证</li>
+<li>优点<br>利用组合、委托、多态等技术和思想，可以有效的避免多重条件选择语句<br>提供了对开放-封闭原则的完美支持，将算法封装在独立的 strategy 中，使得它们易于切换，理解，易于扩展<br>利用组合和委托来让 Context 拥有执行算法的能力，这也是继承的一种更轻便的代替方案</li>
+<li>缺点<br>会在程序中增加许多策略类或者策略对象<br>要使用策略模式，必须了解所有的 strategy，必须了解各个 strategy 之间的不同点，这样才能选择一个合适的 strategy</li>
+</ul>
+<h1 id="享元模式"><a href="#享元模式" class="headerlink" title="享元模式"></a>享元模式</h1><p>运用共享技术有效地支持大量细粒度对象的复用。系统只使用少量的对象，而这些对象都很相似，状态变化很小，可以实现对象的多次复用。由于享元模式要求能够共享的对象必须是细粒度对象，因此它又称为轻量级模式，它是一种对象结构型模式</p>
+<pre><code class="js">let examCarNum = 0 // 驾考车总数
+// /_ 驾考车对象 _/
+class ExamCar &#123;
+constructor(carType) &#123;
+examCarNum++
+this.carId = examCarNum
+this.carType = carType ? &#39;手动档&#39; : &#39;自动档&#39;
+this.usingState = false // 是否正在使用
+&#125;
+/* 在本车上考试 */
+examine(candidateId) &#123;
+    return new Promise((resolve =&gt; &#123;
+        this.usingState = true
+        console.log(`考生- $&#123; candidateId &#125; 开始在$&#123; this.carType &#125;驾考车- $&#123; this.carId &#125; 上考试`)
+        setTimeout(() =&gt; &#123;
+            this.usingState = false
+            console.log(`%c考生- $&#123; candidateId &#125; 在$&#123; this.carType &#125;驾考车- $&#123; this.carId &#125; 上考试完毕`, &#39;color:#f40&#39;)
+            resolve()                       // 0~2秒后考试完毕
+        &#125;, Math.random() * 2000)
+    &#125;))
+&#125;&#125;
+// /_ 手动档汽车对象池 _/
+ManualExamCarPool = &#123;
+\_pool: [], // 驾考车对象池
+\_candidateQueue: [], // 考生队列
+/* 注册考生 ID 列表 */
+registCandidates(candidateList) &#123;
+  candidateList.forEach(candidateId =&gt; this.registCandidate(candidateId))
+&#125;,
+/* 注册手动档考生 */
+registCandidate(candidateId) &#123;
+  const examCar = this.getManualExamCar()    // 找一个未被占用的手动档驾考车
+  if (examCar) &#123;
+      examCar.examine(candidateId)           // 开始考试，考完了让队列中的下一个考生开始考试
+        .then(() =&gt; &#123;
+            const nextCandidateId = this._candidateQueue.length &amp;&amp; this._candidateQueue.shift()
+            nextCandidateId &amp;&amp; this.registCandidate(nextCandidateId)
+        &#125;)
+  &#125; else this._candidateQueue.push(candidateId)
+&#125;,
+/* 注册手动档车 */
+initManualExamCar(manualExamCarNum) &#123;
+  for (let i = 1; i &lt;= manualExamCarNum; i++) &#123;
+      this._pool.push(new ExamCar(true))
+  &#125;
+&#125;,
+/* 获取状态为未被占用的手动档车 */
+getManualExamCar() &#123;
+  return this._pool.find(car =&gt; !car.usingState)
+&#125;
+ManualExamCarPool.initManualExamCar(3) // 一共有 3 个驾考车
+ManualExamCarPool.registCandidates([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) // 10 个考生来考试
+&#125;
+</code></pre>
+<ul>
+<li>场景例子<br>文件上传需要创建多个文件实例的时候<br>如果一个应用程序使用了大量的对象，而这些大量的对象造成了很大的存储开销时就应该考虑使用享元模式</li>
+<li>优点<br>大大减少对象的创建，降低系统的内存，使效率提高。</li>
+<li>缺点</li>
+</ul>
+<p>提高了系统的复杂度，需要分离出外部状态和内部状态，而且外部状态具有固有化的性质，<br>不应该随着内部状态的变化而变化，否则会造成系统的混乱</p>
+<h1 id="模板方法模式"><a href="#模板方法模式" class="headerlink" title="模板方法模式"></a>模板方法模式</h1><p>模板方法模式由两部分结构组成，第一部分是抽象父类，第二部分是具体的实现子类。通常在抽象父类中封装了子类的算法框架，包括实现一些公共方法和封装子类中所有方法的执行顺序。子类通过继承这个抽象类，也继承了整个算法结构，并且可以选择重写父类的方法。</p>
+<pre><code class="js">class Beverage &#123;
+  constructor(&#123; brewDrink, addCondiment &#125;) &#123;
+    this.brewDrink = brewDrink;
+    this.addCondiment = addCondiment;
+  &#125;
+  // /_ 烧开水，共用方法 _/
+  boilWater() &#123;
+    console.log(&quot;水已经煮沸=== 共用&quot;);
+  &#125;
+  // /_ 倒杯子里，共用方法 _/
+  pourCup() &#123;
+    console.log(&quot;倒进杯子里===共用&quot;);
+  &#125;
+  // /_ 模板方法 _/
+  init() &#123;
+    this.boilWater();
+    this.brewDrink();
+    this.pourCup();
+    this.addCondiment();
+  &#125;
+&#125;
+/_ 咖啡 _/;
+const coffee = new Beverage(&#123;
+  // /_ 冲泡咖啡，覆盖抽象方法 _/
+  brewDrink: function () &#123;
+    console.log(&quot;冲泡咖啡&quot;);
+  &#125;,
+  // /_ 加调味品，覆盖抽象方法 _/
+  addCondiment: function () &#123;
+    console.log(&quot;加点奶和糖&quot;);
+  &#125;,
+&#125;);
+coffee.init();
+</code></pre>
+<ul>
+<li>场景例子<br>一次性实现一个算法的不变的部分，并将可变的行为留给子类来实现<br>子类中公共的行为应被提取出来并集中到一个公共父类中的避免代码重复</li>
+<li>优点<br>提取了公共代码部分，易于维护</li>
+<li>缺点<br>增加了系统复杂度，主要是增加了的抽象类和类间联系</li>
+</ul>
+<h1 id="职责链模式"><a href="#职责链模式" class="headerlink" title="职责链模式"></a>职责链模式</h1><p>使多个对象都有机会处理请求，从而避免请求的发送者和接受者之间的耦合关系，将这些对象连成一条链，并沿着这条链传递该请求，直到有一个对象处理它为止</p>
+<pre><code class="js">// 请假审批，需要组长审批、经理审批、总监审批
+class Action &#123;
+  constructor(name) &#123;
+    this.name = name;
+    this.nextAction = null;
+  &#125;
+  setNextAction(action) &#123;
+    this.nextAction = action;
+  &#125;
+  handle() &#123;
+    console.log(`$&#123;this.name&#125; 审批`);
+    if (this.nextAction != null) &#123;
+      this.nextAction.handle();
+    &#125;
+  &#125;
+&#125;
+let a1 = new Action(&quot;组长&quot;);
+let a2 = new Action(&quot;经理&quot;);
+let a3 = new Action(&quot;总监&quot;);
+a1.setNextAction(a2);
+a2.setNextAction(a3);
+a1.handle();
+</code></pre>
+<ul>
+<li>场景例子<br>JS 中的事件冒泡<br>作用域链<br>原型链</li>
+<li>优点<br>降低耦合度。它将请求的发送者和接收者解耦。<br>简化了对象。使得对象不需要知道链的结构<br>增强给对象指派职责的灵活性。通过改变链内的成员或者调动它们的次序，允许动态地新增或者删除责任<br>增加新的请求处理类很方便。</li>
+<li>缺点<br>不能保证某个请求一定会被链中的节点处理，这种情况可以在链尾增加一个保底的接受者节点来处理这种即将离开链尾的请求。<br>使程序中多了很多节点对象，可能再一次请求的过程中，大部分的节点并没有起到实质性的作用。他们的作用仅仅是让请求传递下去，从性能当面考虑，要避免过长的职责链到来的性能损耗。</li>
+</ul>
+<h1 id="命令模式"><a href="#命令模式" class="headerlink" title="命令模式"></a>命令模式</h1><p>将一个请求封装成一个对象，从而让你使用不同的请求把客户端参数化，对请求排队或者记录请求日志，可以提供命令的撤销和恢复功能。</p>
+<pre><code class="js">// 接收者类
+class Receiver &#123;
+  execute() &#123;
+    console.log(&quot;接收者执行请求&quot;);
+  &#125;
+&#125;
+// 命令者
+class Command &#123;
+  constructor(receiver) &#123;
+    this.receiver = receiver;
+  &#125;
+  execute() &#123;
+    console.log(&quot;命令&quot;);
+    this.receiver.execute();
+  &#125;
+&#125;
+// 触发者
+class Invoker &#123;
+  constructor(command) &#123;
+    this.command = command;
+  &#125;
+  invoke() &#123;
+    console.log(&quot;开始&quot;);
+    this.command.execute();
+  &#125;
+&#125;
+// 仓库
+const warehouse = new Receiver();
+// 订单
+const order = new Command(warehouse);
+// 客户
+const client = new Invoker(order);
+client.invoke();
+</code></pre>
+<ul>
+<li>优点<br>对命令进行封装，使命令易于扩展和修改<br>命令发出者和接受者解耦，使发出者不需要知道命令的具体执行过程即可执行</li>
+<li>缺点<br>使用命令模式可能会导致某些系统有过多的具体命令类。</li>
+</ul>
+<h1 id="备忘录模式"><a href="#备忘录模式" class="headerlink" title="备忘录模式"></a>备忘录模式</h1><p>在不破坏封装性的前提下，捕获一个对象的内部状态，并在该对象之外保存这个状态。这样以后就可将该对象恢复到保存的状态。</p>
+<pre><code class="js">//备忘类
+class Memento &#123;
+  constructor(content) &#123;
+    this.content = content;
+  &#125;
+  getContent() &#123;
+    return this.content;
+  &#125;
+&#125;
+// 备忘列表
+class CareTaker &#123;
+  constructor() &#123;
+    this.list = [];
+  &#125;
+  add(memento) &#123;
+    this.list.push(memento);
+  &#125;
+  get(index) &#123;
+    return this.list[index];
+  &#125;
+&#125;
+// 编辑器
+class Editor &#123;
+  constructor() &#123;
+    this.content = null;
+  &#125;
+  setContent(content) &#123;
+    this.content = content;
+  &#125;
+  getContent() &#123;
+    return this.content;
+  &#125;
+  saveContentToMemento() &#123;
+    return new Memento(this.content);
+  &#125;
+  getContentFromMemento(memento) &#123;
+    this.content = memento.getContent();
+  &#125;
+&#125;
+
+//测试代码
+let editor = new Editor();
+let careTaker = new CareTaker();
+editor.setContent(&quot;111&quot;);
+editor.setContent(&quot;222&quot;);
+careTaker.add(editor.saveContentToMemento());
+editor.setContent(&quot;333&quot;);
+careTaker.add(editor.saveContentToMemento());
+editor.setContent(&quot;444&quot;);
+console.log(editor.getContent()); //444
+editor.getContentFromMemento(careTaker.get(1));
+console.log(editor.getContent()); //333
+editor.getContentFromMemento(careTaker.get(0));
+console.log(editor.getContent()); //222
+</code></pre>
+<ul>
+<li>场景例子<br>分页控件<br>撤销组件</li>
+<li>优点<br>给用户提供了一种可以恢复状态的机制，可以使用户能够比较方便地回到某个历史的状态</li>
+<li>缺点<br>消耗资源。如果类的成员变量过多，势必会占用比较大的资源，而且每一次保存都会消耗一定的内存。</li>
+</ul>
+<h1 id="中介者模式"><a href="#中介者模式" class="headerlink" title="中介者模式"></a>中介者模式</h1><blockquote>
+<p>代理模式和中介者模式的区别在于：代理模式往往是一对一的，但中介模式往往是一对多。<br>解除对象与对象之间的紧耦合关系。增加一个中介者对象后，所有的 相关对象都通过中介者对象来通信，而不是互相引用，所以当一个对象发生改变时，只需要通知 中介者对象即可。中介者使各对象之间耦合松散，而且可以独立地改变它们之间的交互。中介者<br>模式使网状的多对多关系变成了相对简单的一对多关系（类似于观察者模式，但是单向的，由中介者统一管理。）</p>
+</blockquote>
+<pre><code class="js">class A &#123;
+  constructor() &#123;
+    this.number = 0;
+  &#125;
+  setNumber(num, m) &#123;
+    this.number = num;
+    if (m) &#123;
+      m.setB();
+    &#125;
+  &#125;
+&#125;
+class B &#123;
+  constructor() &#123;
+    this.number = 0;
+  &#125;
+  setNumber(num, m) &#123;
+    this.number = num;
+    if (m) &#123;
+      m.setA();
+    &#125;
+  &#125;
+&#125;
+class Mediator &#123;
+  constructor(a, b) &#123;
+    this.a = a;
+    this.b = b;
+  &#125;
+  setA() &#123;
+    let number = this.b.number;
+    this.a.setNumber(number / 10);
+  &#125;
+  setB() &#123;
+    let number = this.a.number;
+    this.b.setNumber(number / 10);
+  &#125;
+&#125;
+let a = new A();
+let b = new B();
+let m = new Mediator(a, b);
+a.setNumber(10, m);
+console.log(a.number, b.number);
+b.setNumber(10, m);
+console.log(a.number, b.number);
+</code></pre>
+<ul>
+<li>场景例子<br>系统中对象之间存在比较复杂的引用关系，导致它们之间的依赖关系结构混乱而且难以复用该对象<br>想通过一个中间类来封装多个类中的行为，而又不想生成太多的子类。</li>
+<li>优点<br>使各对象之间耦合松散，而且可以独立地改变它们之间的交互<br>中介者和对象一对多的关系取代了对象之间的网状多对多的关系<br>如果对象之间的复杂耦合度导致维护很困难，而且耦合度随项目变化增速很快，就需要中介者重构代码</li>
+<li>缺点<br>系统中会新增一个中介者对象，因 为对象之间交互的复杂性，转移成了中介者对象的复杂性，使得中介者对象经常是巨大的。中介 者对象自身往往就是一个难以维护的对象。</li>
+</ul>
+<h1 id="解释器模式"><a href="#解释器模式" class="headerlink" title="解释器模式"></a>解释器模式</h1><p>给定一个语言, 定义它的文法的一种表示，并定义一个解释器, 该解释器使用该表示来解释语言中的句子。</p>
+<pre><code class="js">class Context &#123;
+  constructor() &#123;
+    this._list = []; // 存放 终结符表达式
+    this._sum = 0; // 存放 非终结符表达式(运算结果)
+  &#125;
+  get sum() &#123;
+    return this._sum;
+  &#125;
+  set sum(newValue) &#123;
+    this._sum = newValue;
+  &#125;
+  add(expression) &#123;
+    this._list.push(expression);
+  &#125;
+  get list() &#123;
+    return [...this._list];
+  &#125;
+&#125;
+class PlusExpression &#123;
+  interpret(context) &#123;
+    if (!(context instanceof Context)) &#123;
+      throw new Error(&quot;TypeError&quot;);
+    &#125;
+    context.sum = ++context.sum;
+  &#125;
+&#125;
+class MinusExpression &#123;
+  interpret(context) &#123;
+    if (!(context instanceof Context)) &#123;
+      throw new Error(&quot;TypeError&quot;);
+    &#125;
+    context.sum = --context.sum;
+  &#125;
+&#125;
+/** 以下是测试代码 **/
+const context = new Context();
+// 依次添加: 加法 | 加法 | 减法 表达式
+context.add(new PlusExpression());
+context.add(new PlusExpression());
+context.add(new MinusExpression());
+// 依次执行: 加法 | 加法 | 减法 表达式
+context.list.forEach((expression) =&gt; expression.interpret(context));
+console.log(context.sum);
+</code></pre>
+<ul>
+<li>优点<br>易于改变和扩展文法。<br>由于在解释器模式中使用类来表示语言的文法规则，因此可以通过继承等机制来改变或扩展文法</li>
+<li>缺点<br>执行效率较低，在解释器模式中使用了大量的循环和递归调用，因此在解释较为复杂的句子时其速度慢<br>对于复杂的文法比较难维护</li>
+</ul>
+<h1 id="访问者模式"><a href="#访问者模式" class="headerlink" title="访问者模式"></a>访问者模式</h1><p>表示一个作用于某对象结构中的各元素的操作。它使你可以在不改变各元素的类的前提下定义作用于这些元素的新操作。</p>
+<pre><code class="js">// 访问者
+class Visitor &#123;
+  constructor() &#123;&#125;
+  visitConcreteElement(ConcreteElement) &#123;
+    ConcreteElement.operation();
+  &#125;
+&#125;
+// 元素类
+class ConcreteElement &#123;
+  constructor() &#123;&#125;
+  operation() &#123;
+    console.log(&quot;ConcreteElement.operation invoked&quot;);
+  &#125;
+  accept(visitor) &#123;
+    visitor.visitConcreteElement(this);
+  &#125;
+&#125;
+// client
+let visitor = new Visitor();
+let element = new ConcreteElement();
+element.accept(visitor);
+</code></pre>
+<ul>
+<li>场景例子<br>对象结构中对象对应的类很少改变，但经常需要在此对象结构上定义新的操作<br>需要对一个对象结构中的对象进行很多不同的并且不相关的操作，而需要避免让这些操作”污染”这些对象的类，也不希望在增加新操作时修改这些类。</li>
+<li>优点<br>符合单一职责原则<br>优秀的扩展性<br>灵活性</li>
+<li>缺点<br>具体元素对访问者公布细节，违反了迪米特原则<br>违反了依赖倒置原则，依赖了具体类，没有依赖抽象。<br>具体元素变更比较困难</li>
+</ul>
+<h1 id="设计原则"><a href="#设计原则" class="headerlink" title="设计原则"></a>设计原则</h1><h2 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h2><h4 id="开放封闭原则"><a href="#开放封闭原则" class="headerlink" title="开放封闭原则"></a>开放封闭原则</h4><blockquote>
+<p>开放封闭原则的核心是：对扩展开放，对修改封闭。</p>
+</blockquote>
+<ul>
+<li>对扩展开放意味着：软件实体（如类、模块、函数等）应该易于扩展，即：不修改现有代码的基础上添加新的功能</li>
+<li>对修改封闭意味着：软件实体应该避免修改，尤其是已经经过测试并被证明是稳定的代码</li>
+</ul>
+<h4 id="单一功能原则"><a href="#单一功能原则" class="headerlink" title="单一功能原则"></a>单一功能原则</h4><blockquote>
+<p>单一功能原则的核心是：一个类应该只有一个引起他变化的原因，它强调的是类的职责应该清晰明确，一个类只负责一项任务或功能，这样做的目的是为了降低类的复杂性，增加代码的可维护性和可复用性。</p>
+</blockquote>
+<h4 id="里氏替换原则"><a href="#里氏替换原则" class="headerlink" title="里氏替换原则"></a>里氏替换原则</h4><blockquote>
+<p>里氏替换原则是实现开放封闭原则的方式之一，里氏替换原则通俗来讲就是：子类可以扩展父类的功能，但不能改变父类原有的功能。也就是说：子类继承父类时，除添加新的方法完成新增功能外，尽量不要重写父类的方法。</p>
+</blockquote>
+<h4 id="最少知识原则"><a href="#最少知识原则" class="headerlink" title="最少知识原则"></a>最少知识原则</h4><blockquote>
+<p>最少知识原则又称迪米特法则，意思是：如果两个软件实体无须直接通信，那么就不应当发生直接的相互调用，可以通过第三方转发该调用。其目的是降低类之间的耦合度，提高模块的相对独立性。<br>最少知识原则降低了类的耦合性，提高了模块的独立性，从而提升了模块的可复用率和系统的扩展性。但是过度使用则会使系统产生大量的中介类，从而增加系统的复杂性。</p>
+</blockquote>
+<h4 id="合成复用原则"><a href="#合成复用原则" class="headerlink" title="合成复用原则"></a>合成复用原则</h4><blockquote>
+<p>类的复用分为两种：继承复用和合成复用</p>
+</blockquote>
+<ul>
+<li>继承复用的优点：简单清晰，易于实现</li>
+<li>继承复用的缺点：破坏了类的封装性（继承会将父类的实现细节暴露给子类，因此这种复用又称为白箱复用）、子类与父类的耦合度高，父类的实现改变会导致子类的实现改变。</li>
+<li>合成复用的优点：维持了类的封装性（对象内部细节对外部是不可见的，因此又称为黑盒复用）、新类和旧类之间耦合度低、复用的灵活性高</li>
+<li>合成复用的缺点：实现复杂、代码量多<blockquote>
+<p>合成复用原则是通过将已有的对象纳入新对象中，作为新对象的成员对象来实现的，新对象可以调用已有对象的功能，从而达到复用。</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="面向接口"><a href="#面向接口" class="headerlink" title="面向接口"></a>面向接口</h2><h4 id="依赖倒置原则"><a href="#依赖倒置原则" class="headerlink" title="依赖倒置原则"></a>依赖倒置原则</h4><blockquote>
+<p>依赖倒置原则：程序要依赖于抽象接口，而不要依赖于具体的实现，也就是说高层模块不应该依赖于底层模块，两者都应该依赖于抽象；抽象不应该依赖于细节，细节应该依赖抽象。<br>依赖倒置原则的核心是：通过面向接口的编程来降低类之间的耦合性。<br><code>依赖倒置</code>是面向接口领域的软件设计原则，<code>依赖反转</code>是遵守依赖倒置原则而提出的一种设计模式，而<code>依赖注入</code>是为了实现依赖反转的一种手段和方式。</p>
+</blockquote>
+<h4 id="接口隔离原则"><a href="#接口隔离原则" class="headerlink" title="接口隔离原则"></a>接口隔离原则</h4><blockquote>
+<p>接口隔离原则要求将臃肿庞大的接口进行拆分，拆分为更小的更具体的接口，小的接口之间相互隔离。<br>接口隔离原则的核心是：提高内聚，减少对外交互，使接口用最少的方法完成最多的事情。</p>
+</blockquote>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>设计原则是软件设计模式必须尽量遵循的原则，各种原则要求的侧重点不同。其中：</p>
+<ul>
+<li>开闭原则是总纲，它告诉我们要对扩展开放，对修改关闭；</li>
+<li>里氏替换原则告诉我们不要破坏继承体系；</li>
+<li>依赖倒置原则告诉我们要面向接口编程；</li>
+<li>单一职责原则告诉我们实现类要职责单一；</li>
+<li>接口隔离原则告诉我们在设计接口的时候要精简单一；</li>
+<li>最少知识原则告诉我们要降低耦合度；</li>
+<li>合成复用原则告诉我们要优先使用组合或者聚合关系复用，少用继承关系复用。</li>
+</ul>
+
+      <div class="tags">
+          <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B8%8E%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/" rel="tag"><i class="ic i-tag"></i> 设计模式与设计原则</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2024-07-23 10:30:37" itemprop="dateModified" datetime="2024-07-23T10:30:37+08:00">2024-07-23</time>
+  </span>
+  <span id="2024/07/07/设计模式原则/" class="item leancloud_visitors" data-flag-title="设计模式与设计原则" title="阅读次数">
+      <span class="icon">
+        <i class="ic i-eye"></i>
+      </span>
+      <span class="text">阅读次数</span>
+      <span class="leancloud-visitors-count"></span>
+      <span class="text">次</span>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="dmq 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="dmq 支付宝">
+        <p>支付宝</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>dmq <i class="ic i-at"><em>@</em></i>杜明清的个人博客
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="https://dmqweb.cn/2024/07/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%8E%9F%E5%88%99/" title="设计模式与设计原则">https://dmqweb.cn/2024/07/07/设计模式原则/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2024/05/27/OSI%E4%B8%83%E5%B1%82%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9E%8B/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;s3.uuu.ovh&#x2F;imgs&#x2F;2024&#x2F;04&#x2F;28&#x2F;91b1bdcfda8d22da.webp" title="OSI七层网络模型">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> OSI七层网络模型</span>
+  <h3>OSI七层网络模型</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2024/07/07/gitlab-cicd/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;s3.uuu.ovh&#x2F;imgs&#x2F;2024&#x2F;04&#x2F;04&#x2F;025bf3f9fc1cf452.webp" title="gitlab cicd">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> gitlab cicd</span>
+  <h3>gitlab cicd</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#23-%E7%A7%8D%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F"><span class="toc-number">1.</span> <span class="toc-text">23 种设计模式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E5%9E%8B"><span class="toc-number">1.1.</span> <span class="toc-text">创建型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E6%9E%84%E5%9E%8B"><span class="toc-number">1.2.</span> <span class="toc-text">结构型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A1%8C%E4%B8%BA%E5%9E%8B"><span class="toc-number">1.3.</span> <span class="toc-text">行为型</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F"><span class="toc-number">2.</span> <span class="toc-text">工厂模式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F"><span class="toc-number">3.</span> <span class="toc-text">单例模式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F0"><span class="toc-number">4.</span> <span class="toc-text">适配器模式0</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%A3%85%E9%A5%B0%E8%80%85%E6%A8%A1%E5%BC%8F"><span class="toc-number">5.</span> <span class="toc-text">装饰者模式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F"><span class="toc-number">6.</span> <span class="toc-text">代理模式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F"><span class="toc-number">7.</span> <span class="toc-text">外观模式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%91%E5%B8%83-amp-%E8%AE%A2%E9%98%85"><span class="toc-number">8.</span> <span class="toc-text">发布 &amp; 订阅</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%8A%B6%E6%80%81%E6%A8%A1%E5%BC%8F"><span class="toc-number">9.</span> <span class="toc-text">状态模式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%A8%A1%E5%BC%8F"><span class="toc-number">10.</span> <span class="toc-text">迭代器模式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F"><span class="toc-number">11.</span> <span class="toc-text">桥接模式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BB%84%E5%90%88%E6%A8%A1%E5%BC%8F"><span class="toc-number">12.</span> <span class="toc-text">组合模式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F"><span class="toc-number">13.</span> <span class="toc-text">原型模式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F"><span class="toc-number">14.</span> <span class="toc-text">策略模式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%AB%E5%85%83%E6%A8%A1%E5%BC%8F"><span class="toc-number">15.</span> <span class="toc-text">享元模式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F"><span class="toc-number">16.</span> <span class="toc-text">模板方法模式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%81%8C%E8%B4%A3%E9%93%BE%E6%A8%A1%E5%BC%8F"><span class="toc-number">17.</span> <span class="toc-text">职责链模式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F"><span class="toc-number">18.</span> <span class="toc-text">命令模式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A4%87%E5%BF%98%E5%BD%95%E6%A8%A1%E5%BC%8F"><span class="toc-number">19.</span> <span class="toc-text">备忘录模式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%AD%E4%BB%8B%E8%80%85%E6%A8%A1%E5%BC%8F"><span class="toc-number">20.</span> <span class="toc-text">中介者模式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%A7%A3%E9%87%8A%E5%99%A8%E6%A8%A1%E5%BC%8F"><span class="toc-number">21.</span> <span class="toc-text">解释器模式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AE%BF%E9%97%AE%E8%80%85%E6%A8%A1%E5%BC%8F"><span class="toc-number">22.</span> <span class="toc-text">访问者模式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99"><span class="toc-number">23.</span> <span class="toc-text">设计原则</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1"><span class="toc-number">23.1.</span> <span class="toc-text">面向对象</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BC%80%E6%94%BE%E5%B0%81%E9%97%AD%E5%8E%9F%E5%88%99"><span class="toc-number">23.1.0.1.</span> <span class="toc-text">开放封闭原则</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8D%95%E4%B8%80%E5%8A%9F%E8%83%BD%E5%8E%9F%E5%88%99"><span class="toc-number">23.1.0.2.</span> <span class="toc-text">单一功能原则</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%87%8C%E6%B0%8F%E6%9B%BF%E6%8D%A2%E5%8E%9F%E5%88%99"><span class="toc-number">23.1.0.3.</span> <span class="toc-text">里氏替换原则</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%80%E5%B0%91%E7%9F%A5%E8%AF%86%E5%8E%9F%E5%88%99"><span class="toc-number">23.1.0.4.</span> <span class="toc-text">最少知识原则</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%90%88%E6%88%90%E5%A4%8D%E7%94%A8%E5%8E%9F%E5%88%99"><span class="toc-number">23.1.0.5.</span> <span class="toc-text">合成复用原则</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%A2%E5%90%91%E6%8E%A5%E5%8F%A3"><span class="toc-number">23.2.</span> <span class="toc-text">面向接口</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BE%9D%E8%B5%96%E5%80%92%E7%BD%AE%E5%8E%9F%E5%88%99"><span class="toc-number">23.2.0.1.</span> <span class="toc-text">依赖倒置原则</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3%E9%9A%94%E7%A6%BB%E5%8E%9F%E5%88%99"><span class="toc-number">23.2.0.2.</span> <span class="toc-text">接口隔离原则</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">23.3.</span> <span class="toc-text">总结</span></a></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li class="active"><a href="/2024/07/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%8E%9F%E5%88%99/" rel="bookmark" title="设计模式与设计原则">设计模式与设计原则</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="dmq"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">dmq</p>
+  <div class="description" itemprop="description"></div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">80</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">64</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">100</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL2RtcTA/dGFiPXJlcG9zaXRvcmllcw==" title="https:&#x2F;&#x2F;github.com&#x2F;dmq0?tab&#x3D;repositories"><i class="ic i-github"></i></span>
+      <span class="exturl item npm" data-url="aHR0cHM6Ly93d3cubnBtanMuY29tL35kbXEwMDA=" title="https:&#x2F;&#x2F;www.npmjs.com&#x2F;~dmq000"><i class="ic i-file"></i></span>
+      <span class="exturl item zhihu" data-url="aHR0cHM6Ly93d3cuemhpaHUuY29tL3Blb3BsZS9kLTg4LTYxLTgz" title="https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;d-88-61-83"><i class="ic i-zhihu"></i></span>
+      <span class="exturl item music" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPTgwMjc4OTk0OTE=" title="https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;8027899491"><i class="ic i-cloud-music"></i></span>
+      <span class="exturl item weibo" data-url="aHR0cHM6Ly93ZWliby5jb20vdS83NjI1OTAxNzE3" title="https:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;7625901717"><i class="ic i-weibo"></i></span>
+      <span class="exturl item email" data-url="bWFpbHRvOjMyNjc4MDc1MTRAcXEuY29t" title="mailto:3267807514@qq.com"><i class="ic i-envelope"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>介绍</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>友链</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/links/" rel="section"><i class="ic i-magic"></i>工具</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2024/05/27/OSI%E4%B8%83%E5%B1%82%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9E%8B/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2024/07/07/gitlab-cicd/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/JS/" title="分类于 JS">JS</a>
+</div>
+
+    <span><a href="/2024/01/11/webworker/" title="webWorker">webWorker</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/TDD/" title="分类于 TDD">TDD</a>
+</div>
+
+    <span><a href="/2024/03/30/jest/" title="jest">jest</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/webpack/" title="分类于 webpack">webpack</a>
+</div>
+
+    <span><a href="/2023/10/21/webpack/" title="webpack笔记">webpack笔记</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/JS/" title="分类于 JS">JS</a>
+</div>
+
+    <span><a href="/2023/12/21/%E6%9C%80%E5%A4%A7%E5%AE%89%E5%85%A8%E6%95%B0/" title="最大安全数与最大安全整数">最大安全数与最大安全整数</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%BE%AE%E5%89%8D%E7%AB%AF/" title="分类于 微前端">微前端</a>
+</div>
+
+    <span><a href="/2024/05/24/%E5%BE%AE%E5%89%8D%E7%AB%AF/" title="微前端">微前端</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/json-server/" title="分类于 json-server">json-server</a>
+</div>
+
+    <span><a href="/2023/01/09/json-server%E6%95%99%E7%A8%8B/" title="json-server">json-server</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/node-js/" title="分类于 node.js">node.js</a>
+</div>
+
+    <span><a href="/2024/01/02/node.js%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97/" title="node.js内置模块">node.js内置模块</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/" title="分类于 计算机组成原理">计算机组成原理</a>
+</div>
+
+    <span><a href="/2024/01/02/%E7%BC%93%E5%AD%98%E3%80%81%E5%86%85%E5%AD%98%E3%80%81CPU%E7%9F%A5%E8%AF%86%E7%82%B9%E8%A7%A3%E6%9E%90%E7%AC%94%E8%AE%B0/" title="计组知识点">计组知识点</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Sass/" title="分类于 Sass">Sass</a>
+</div>
+
+    <span><a href="/2023/01/10/Sass/" title="Sass笔记">Sass笔记</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/" title="分类于 前端工程化">前端工程化</a>
+</div>
+
+    <span><a href="/2024/03/29/%E5%89%8D%E7%AB%AF%E6%A8%A1%E5%9D%97%E5%8C%96/" title="前端模块化">前端模块化</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2022 – 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">dmq @ Web blog</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">938k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">14:13</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2024/07/07/设计模式原则/',
+    favicon: {
+      show: "科技引领未来",
+      hide: "欢迎与我交流"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//gcore.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+  <script data-pjax>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?9ba187659e850a6910681214f0faa16b";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+</body>
+</html>
