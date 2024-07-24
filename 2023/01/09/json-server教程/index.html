@@ -78,7 +78,7 @@ Web blog = 杜明清的个人博客 = 👻欢迎一起交流学习👻</title>
       <i class="ic i-pen"></i>
     </span>
     <span class="text">本文字数</span>
-    <span>1.6k</span>
+    <span>1.4k</span>
     <span class="text">字</span>
   </span>
   <span class="item" title="阅读时长">
@@ -119,12 +119,12 @@ Web blog = 杜明清的个人博客 = 👻欢迎一起交流学习👻</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://s3.uuu.ovh/imgs/2024/04/05/05d9a07e0d190274.webp"></li>
-          <li class="item" data-background-image="https://s3.uuu.ovh/imgs/2024/04/15/3ad1c5ee17b91ba4.webp"></li>
-          <li class="item" data-background-image="https://s3.uuu.ovh/imgs/2024/04/15/d888a622df52afa7.webp"></li>
-          <li class="item" data-background-image="https://s3.uuu.ovh/imgs/2024/04/07/971b0200f59eab4c.jpg"></li>
+          <li class="item" data-background-image="https://s3.uuu.ovh/imgs/2024/04/28/b9f6c169ea5daebe.webp"></li>
+          <li class="item" data-background-image="https://s3.uuu.ovh/imgs/2024/04/06/ae2b485c961ddd62.jpg"></li>
           <li class="item" data-background-image="https://s3.uuu.ovh/imgs/2024/04/12/65788b6548e9e58f.jpg"></li>
-          <li class="item" data-background-image="https://s3.uuu.ovh/imgs/2024/04/28/9363f420a16ea998.webp"></li>
+          <li class="item" data-background-image="https://s3.uuu.ovh/imgs/2024/04/04/25ef11a84cfafbef.jpg"></li>
+          <li class="item" data-background-image="https://s3.uuu.ovh/imgs/2024/04/28/f7a6eb62965e0dec.webp"></li>
+          <li class="item" data-background-image="https://s3.uuu.ovh/imgs/2024/04/12/4508f1e9b6c8e047.jpg"></li>
         </ul>
       </div>
     </header>
@@ -170,27 +170,32 @@ Web blog = 杜明清的个人博客 = 👻欢迎一起交流学习👻</title>
   <div class="body md" itemprop="articleBody">
     
 
-    <h4 id="0-json-server-搭建本地接口"><a href="#0-json-server-搭建本地接口" class="headerlink" title="0. json-server 搭建本地接口"></a>0. json-server 搭建本地接口</h4><h5 id="0-1-安装-json-server"><a href="#0-1-安装-json-server" class="headerlink" title="0.1 安装 json-server"></a>0.1 安装 json-server</h5><ul>
-<li><p>使用 <strong>npm</strong> &#x3D;&#x3D;全局&#x3D;&#x3D;安装 <strong>json-server</strong></p>
-<pre><code class="bash">npm install -g json-server
-</code></pre>
-</li>
-<li><p>检测是否安装成功</p>
-<pre><code class="bash">json-server -v
-</code></pre>
-</li>
-</ul>
-<h5 id="0-2-准备数据文件（已准备好，这两步不用自己做）"><a href="#0-2-准备数据文件（已准备好，这两步不用自己做）" class="headerlink" title="0.2 准备数据文件（已准备好，这两步不用自己做）"></a>0.2 准备数据文件（已准备好，这两步不用自己做）</h5><ol>
-<li><p>电脑方便找到的任意位置创建一个&#x3D;&#x3D;文件夹&#x3D;&#x3D;，进入到该文件夹里面，创建一个&#x3D;&#x3D;JSON文件&#x3D;&#x3D;</p>
+    <h4 id="0-json-server-搭建本地接口"><a class="anchor" href="#0-json-server-搭建本地接口">#</a> 0. json-server 搭建本地接口</h4>
+<h5 id="01-安装-json-server"><a class="anchor" href="#01-安装-json-server">#</a> 0.1 安装 json-server</h5>
 <ul>
-<li><p>文件夹和JSON文件的名字可以任意设计，但是&#x3D;&#x3D;不能出现中文&#x3D;&#x3D;</p>
+<li>
+<p>使用 <strong>npm</strong> <mark>全局</mark>安装 <strong>json-server</strong></p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token function">npm</span> <span class="token function">install</span> <span class="token parameter variable">-g</span> json-server</pre></td></tr></table></figure></li>
+<li>
+<p>检测是否安装成功</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre>json-server <span class="token parameter variable">-v</span></pre></td></tr></table></figure></li>
+</ul>
+<h5 id="02-准备数据文件已准备好这两步不用自己做"><a class="anchor" href="#02-准备数据文件已准备好这两步不用自己做">#</a> 0.2 准备数据文件（已准备好，这两步不用自己做）</h5>
+<ol>
+<li>
+<p>电脑方便找到的任意位置创建一个<mark>文件夹</mark>，进入到该文件夹里面，创建一个<mark> JSON 文件</mark></p>
+<ul>
+<li>
+<p>文件夹和 JSON 文件的名字可以任意设计，但是<mark>不能出现中文</mark></p>
 </li>
-<li><p>比如：文件夹名字：<code>service/</code>；JSON文件名字：<code>db.json</code></p>
+<li>
+<p>比如：文件夹名字： <code>service/</code> ；JSON 文件名字： <code>db.json</code></p>
 </li>
 </ul>
 </li>
-<li><p>在<code>db.json</code>文件中，准备&#x3D;&#x3D;JSON格式的数据&#x3D;&#x3D;</p>
-<pre><code class="json">&#123;
+<li>
+<p>在 <code>db.json</code>  文件中，准备<mark> JSON 格式的数据</mark></p>
+<pre><code class="language-javascripton">&#123;
   &quot;address&quot;: [
     &#123;
       &quot;id&quot;: 101,
@@ -227,22 +232,23 @@ Web blog = 杜明清的个人博客 = 👻欢迎一起交流学习👻</title>
 </code></pre>
 </li>
 </ol>
-<h5 id="0-3-启动-json-server-本地服务"><a href="#0-3-启动-json-server-本地服务" class="headerlink" title="0.3 启动 json-server 本地服务"></a>0.3 启动 json-server 本地服务</h5><ul>
-<li><p>在<code>service/</code>文件夹下，进入终端，执行启动 json-server 命令</p>
+<h5 id="03-启动-json-server-本地服务"><a class="anchor" href="#03-启动-json-server-本地服务">#</a> 0.3 启动 json-server 本地服务</h5>
+<ul>
+<li>
+<p>在 <code>service/</code>  文件夹下，进入终端，执行启动 json-server 命令</p>
 </li>
-<li><p>&#x3D;&#x3D;第一种&#x3D;&#x3D;：<strong>默认启动方式</strong>，&#x3D;&#x3D;只能在自己的计算机中访问自己的数据，其他计算机无法访问你的数据&#x3D;&#x3D;</p>
-<pre><code class="bash">json-server --watch db.json
-</code></pre>
-<blockquote>
+<li>
+<p><mark>第一种</mark>：<strong>默认启动方式</strong>，<mark>只能在自己的计算机中访问自己的数据，其他计算机无法访问你的数据</mark></p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre>json-server <span class="token parameter variable">--watch</span> db.json</pre></td></tr></table></figure><blockquote>
 <p>测试访问：<span class="exturl" data-url="aHR0cDovL2xvY2FsaG9zdDozMDAwL2FkZHJlc3M=">http://localhost:3000/address</span></p>
 </blockquote>
 </li>
-<li><p>&#x3D;&#x3D;第二种&#x3D;&#x3D;：<strong>自定义启动方式</strong>，在局域环境内，&#x3D;&#x3D;其他计算机也可以访问你计算机中的数据&#x3D;&#x3D;</p>
+<li>
+<p><mark>第二种</mark>：<strong>自定义启动方式</strong>，在局域环境内，<mark>其他计算机也可以访问你计算机中的数据</mark></p>
 <ul>
-<li><p>命令规范：<code>json-server --host 本机IP地址 db.json --port 端口号</code></p>
-<pre><code class="bash">json-server --host 192.168.28.95 db.json --port 5000
-</code></pre>
-<blockquote>
+<li>
+<p>命令规范： <code>json-server --host 本机IP地址 db.json --port 端口号</code></p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre>json-server <span class="token parameter variable">--host</span> <span class="token number">192.168</span>.28.95 db.json <span class="token parameter variable">--port</span> <span class="token number">5000</span></pre></td></tr></table></figure><blockquote>
 <p>测试访问：<span class="exturl" data-url="aHR0cDovLzE5Mi4xNjguMjguOTU6NTAwMC9hZGRyZXNz">http://192.168.28.95:5000/address</span></p>
 </blockquote>
 </li>
@@ -263,7 +269,7 @@ Web blog = 杜明清的个人博客 = 👻欢迎一起交流学习👻</title>
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">更新于</span>
-    <time title="修改时间：2024-07-09 13:16:59" itemprop="dateModified" datetime="2024-07-09T13:16:59+08:00">2024-07-09</time>
+    <time title="修改时间：2024-07-24 14:35:27" itemprop="dateModified" datetime="2024-07-24T14:35:27+08:00">2024-07-24</time>
   </span>
   <span id="2023/01/09/json-server教程/" class="item leancloud_visitors" data-flag-title="json-server" title="阅读次数">
       <span class="icon">
@@ -321,7 +327,7 @@ Web blog = 杜明清的个人博客 = 👻欢迎一起交流学习👻</title>
     <div class="item left">
       
 
-  <a href="/2023/01/08/ajax/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;s3.uuu.ovh&#x2F;imgs&#x2F;2024&#x2F;04&#x2F;28&#x2F;9363f420a16ea998.webp" title="ajax">
+  <a href="/2023/01/08/ajax/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;s3.uuu.ovh&#x2F;imgs&#x2F;2024&#x2F;04&#x2F;04&#x2F;61e9f78d997bc7c9.webp" title="ajax">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> ajax</span>
   <h3>ajax</h3>
@@ -331,7 +337,7 @@ Web blog = 杜明清的个人博客 = 👻欢迎一起交流学习👻</title>
     <div class="item right">
       
 
-  <a href="/2023/01/10/Sass/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;s3.uuu.ovh&#x2F;imgs&#x2F;2024&#x2F;04&#x2F;07&#x2F;be4bd9184664725b.webp" title="Sass笔记">
+  <a href="/2023/01/10/Sass/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;s3.uuu.ovh&#x2F;imgs&#x2F;2024&#x2F;04&#x2F;05&#x2F;8c79eda29fb3b505.jpg" title="Sass笔记">
   <span class="type">下一篇</span>
   <span class="category"><i class="ic i-flag"></i> Sass</span>
   <h3>Sass笔记</h3>
@@ -353,7 +359,7 @@ Web blog = 杜明清的个人博客 = 👻欢迎一起交流学习👻</title>
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="文章目录">
-          <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#0-json-server-%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0%E6%8E%A5%E5%8F%A3"><span class="toc-number">1.</span> <span class="toc-text">0. json-server 搭建本地接口</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#0-1-%E5%AE%89%E8%A3%85-json-server"><span class="toc-number">1.1.</span> <span class="toc-text">0.1 安装 json-server</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#0-2-%E5%87%86%E5%A4%87%E6%95%B0%E6%8D%AE%E6%96%87%E4%BB%B6%EF%BC%88%E5%B7%B2%E5%87%86%E5%A4%87%E5%A5%BD%EF%BC%8C%E8%BF%99%E4%B8%A4%E6%AD%A5%E4%B8%8D%E7%94%A8%E8%87%AA%E5%B7%B1%E5%81%9A%EF%BC%89"><span class="toc-number">1.2.</span> <span class="toc-text">0.2 准备数据文件（已准备好，这两步不用自己做）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#0-3-%E5%90%AF%E5%8A%A8-json-server-%E6%9C%AC%E5%9C%B0%E6%9C%8D%E5%8A%A1"><span class="toc-number">1.3.</span> <span class="toc-text">0.3 启动 json-server 本地服务</span></a></li></ol></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#0-json-server-%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0%E6%8E%A5%E5%8F%A3"><span class="toc-number">1.</span> <span class="toc-text"> 0. json-server 搭建本地接口</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#01-%E5%AE%89%E8%A3%85-json-server"><span class="toc-number">1.1.</span> <span class="toc-text"> 0.1 安装 json-server</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#02-%E5%87%86%E5%A4%87%E6%95%B0%E6%8D%AE%E6%96%87%E4%BB%B6%E5%B7%B2%E5%87%86%E5%A4%87%E5%A5%BD%E8%BF%99%E4%B8%A4%E6%AD%A5%E4%B8%8D%E7%94%A8%E8%87%AA%E5%B7%B1%E5%81%9A"><span class="toc-number">1.2.</span> <span class="toc-text"> 0.2 准备数据文件（已准备好，这两步不用自己做）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#03-%E5%90%AF%E5%8A%A8-json-server-%E6%9C%AC%E5%9C%B0%E6%9C%8D%E5%8A%A1"><span class="toc-number">1.3.</span> <span class="toc-text"> 0.3 启动 json-server 本地服务</span></a></li></ol></li></ol>
       </div>
       <div class="related panel pjax" data-title="系列文章">
         <ul>
@@ -471,50 +477,60 @@ Web blog = 杜明清的个人博客 = 👻欢迎一起交流学习👻</title>
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" title="分类于 操作系统">操作系统</a>
+<a href="/categories/%E5%A4%8D%E6%9D%82%E4%B8%9A%E5%8A%A1%E9%83%A8%E7%BD%B2%E4%B8%8E%E4%BC%98%E5%8C%96/" title="分类于 复杂业务部署与优化">复杂业务部署与优化</a>
 </div>
 
-    <span><a href="/2024/07/23/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" title="操作系统">操作系统</a></span>
+    <span><a href="/2024/04/12/%E5%A4%8D%E6%9D%82%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E4%B8%8A%E7%BA%BF/" title="复杂业务部署与优化">复杂业务部署与优化</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/JS/" title="分类于 JS">JS</a>
+<a href="/categories/%E5%BC%80%E6%BA%90%E5%8D%8F%E8%AE%AE/" title="分类于 开源协议">开源协议</a>
 </div>
 
-    <span><a href="/2024/05/08/%E5%87%BD%E6%95%B0%E9%87%8D%E8%BD%BD/" title="函数重载">函数重载</a></span>
+    <span><a href="/2023/02/02/%E5%BC%80%E6%BA%90%E5%8D%8F%E8%AE%AE/" title="常见开源协议">常见开源协议</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/JS%E8%BF%9B%E9%98%B6/" title="分类于 JS进阶">JS进阶</a>
+<a href="/categories/json-server/" title="分类于 json-server">json-server</a>
 </div>
 
-    <span><a href="/2023/08/02/JS/" title="JS进阶">JS进阶</a></span>
+    <span><a href="/2023/01/09/json-server%E6%95%99%E7%A8%8B/" title="json-server">json-server</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" title="分类于 前端性能优化">前端性能优化</a>
+<a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" title="分类于 数据库">数据库</a>
 </div>
 
-    <span><a href="/2024/03/02/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" title="前端性能优化">前端性能优化</a></span>
+    <span><a href="/2023/12/02/%E6%95%B0%E6%8D%AE%E5%BA%93/" title="数据库">数据库</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/JS/" title="分类于 JS">JS</a>
+<a href="/categories/electron/" title="分类于 electron">electron</a>
 </div>
 
-    <span><a href="/2024/01/11/webworker/" title="webWorker">webWorker</a></span>
+    <span><a href="/2024/05/21/electron/" title="electron">electron</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/ajax/" title="分类于 ajax">ajax</a>
+</div>
+
+    <span><a href="/2023/01/08/ajax/" title="ajax">ajax</a></span>
   </li>
 
       
@@ -534,37 +550,29 @@ Web blog = 杜明清的个人博客 = 👻欢迎一起交流学习👻</title>
 <a href="/categories/JS/" title="分类于 JS">JS</a>
 </div>
 
-    <span><a href="/2023/12/08/DataView/" title="DataView">DataView</a></span>
+    <span><a href="/2024/05/08/%E5%87%BD%E6%95%B0%E9%87%8D%E8%BD%BD/" title="函数重载">函数重载</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/JS%E6%89%8B%E5%86%99%E9%A2%98/" title="分类于 JS手写题">JS手写题</a>
+<a href="/categories/%E5%BA%95%E5%B1%82%E6%9D%82%E8%AE%B0/" title="分类于 底层杂记">底层杂记</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E5%BA%95%E5%B1%82%E6%9D%82%E8%AE%B0/%E5%B7%A5%E5%85%B7%E5%87%BD%E6%95%B0/" title="分类于 工具函数">工具函数</a>
 </div>
 
-    <span><a href="/2023/06/02/JS%E6%89%8B%E5%86%99%E9%A2%98/" title="JS手写题">JS手写题</a></span>
+    <span><a href="/2023/06/02/%E5%BA%95%E5%B1%82%E6%9D%82%E8%AE%B0/" title="底层杂记与工具库函数">底层杂记与工具库函数</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/vue/" title="分类于 vue">vue</a>
+<a href="/categories/esbuild/" title="分类于 esbuild">esbuild</a>
 </div>
 
-    <span><a href="/2023/11/02/vue%E5%8E%9F%E7%90%86/" title="vue源码解读">vue源码解读</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/gitlab-cicd/" title="分类于 gitlab cicd">gitlab cicd</a>
-</div>
-
-    <span><a href="/2024/07/07/gitlab-cicd/" title="gitlab cicd">gitlab cicd</a></span>
+    <span><a href="/2024/05/17/esbuild/" title="esbuild">esbuild</a></span>
   </li>
 
   </ul>
@@ -589,13 +597,13 @@ Web blog = 杜明清的个人博客 = 👻欢迎一起交流学习👻</title>
     <span class="post-meta-item-icon">
       <i class="ic i-chart-area"></i>
     </span>
-    <span title="站点总字数">938k 字</span>
+    <span title="站点总字数">943k 字</span>
 
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="ic i-coffee"></i>
     </span>
-    <span title="站点阅读时长">14:13</span>
+    <span title="站点阅读时长">14:17</span>
   </div>
   <div class="powered-by">
     基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
