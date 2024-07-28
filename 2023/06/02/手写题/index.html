@@ -1,0 +1,1285 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="杜明清的个人博客" href="https://dmqweb.cn/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="杜明清的个人博客" href="https://dmqweb.cn/atom.xml" />
+<link rel="alternate" type="application/json" title="杜明清的个人博客" href="https://dmqweb.cn/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="手写题,手写源码" />
+
+
+<link rel="canonical" href="https://dmqweb.cn/2023/06/02/%E6%89%8B%E5%86%99%E9%A2%98/">
+
+
+
+  <title>
+手写题 - 手写题 |
+Web blog = 杜明清的个人博客 = 👻欢迎一起交流学习👻</title>
+  <meta name="keywords" content="前端开发, HTML, CSS, JavaScript, 博客">
+  <meta name="description" content="探索前端开发的无限可能。本博客提供最新的前端知识库，以及实用的开发技巧和最佳实践。加入我们的社区，共同成长。">
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">手写题
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2023-06-02 12:24:04">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2023-06-02T12:24:04+08:00">2023-06-02</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>17k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>16 分钟</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">Web blog</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://s3.uuu.ovh/imgs/2024/04/04/e805d35284c2d7d5.jpg"></li>
+          <li class="item" data-background-image="https://s3.uuu.ovh/imgs/2024/04/06/936b9e7ccd02d444.jpg"></li>
+          <li class="item" data-background-image="https://s3.uuu.ovh/imgs/2024/04/12/b04c50f26fdc9c19.jpg"></li>
+          <li class="item" data-background-image="https://s3.uuu.ovh/imgs/2024/04/12/f63f09ff2084b1f3.jpg"></li>
+          <li class="item" data-background-image="https://s3.uuu.ovh/imgs/2024/04/28/b9f6c169ea5daebe.webp"></li>
+          <li class="item" data-background-image="https://s3.uuu.ovh/imgs/2024/04/04/3149a0cc49823a9c.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/%E6%89%8B%E5%86%99%E9%A2%98/" itemprop="item" rel="index" title="分类于 手写题"><span itemprop="name">手写题</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="https://dmqweb.cn/2023/06/02/%E6%89%8B%E5%86%99%E9%A2%98/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="dmq">
+    <meta itemprop="description" content="👻欢迎一起交流学习👻, ">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="杜明清的个人博客">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="new关键字"><a href="#new关键字" class="headerlink" title="new关键字"></a>new关键字</h1><p><strong>new关键字实现分为三步：</strong></p>
+<p>1、根据构造函数的原型创建新的对象<br>2、执行构造函数，绑定this指向为新对象，传入参数<br>3、返回执行后的结果</p>
+<pre><code class="javascript">function myNew(constructor,...args)&#123;
+    //创建对象，原型为构造函数的原型对象
+    const obj = Object.create(constructor.prototype);
+    //执行构造函数，传入创建的对象和参数
+    const res = constructor.apply(obj,args); //注意apply方法是函数对象的方法，普通对象不可用
+    return (res &amp;&amp; typeof res === &#39;object&#39;)?res:obj;    
+&#125;
+function A ()&#123;
+    this.name=&#39;sdjf&#39;
+&#125;
+const ab = myNew(A)
+console.log(ab);
+</code></pre>
+<h1 id="手写class"><a href="#手写class" class="headerlink" title="手写class"></a>手写class</h1><pre><code class="javascript">function Example(name) &#123;
+    if(!new.target) throw new TypeError(&quot;该函数应该使用new来调用&quot;);
+    this.name = name
+&#125;
+Object.definePropertie(Example.prototype,&quot;init&quot;,&#123;
+    enumerable:false,
+    value: function () &#123;
+        &#39;use strict&#39;;
+        if(new.target) throw new Error(&quot;init函数不能使用new来调用&quot;);
+        let fn = function () &#123;
+            console.log(this.name);
+        &#125;
+        fn.call(this);
+    &#125;
+&#125;)
+</code></pre>
+<h1 id="闭包的简单使用"><a href="#闭包的简单使用" class="headerlink" title="闭包的简单使用"></a>闭包的简单使用</h1><pre><code class="javascript">//闭包隐藏数据,只提供API操作
+function createCache() &#123;
+  const cache = &#123;&#125;;
+  return &#123;
+    get(key)&#123;
+      return cache[key]
+    &#125;,
+    set(key,val)&#123;
+      cache[key] = val;
+    &#125;
+  &#125;
+&#125;
+</code></pre>
+<h1 id="判断数据类型"><a href="#判断数据类型" class="headerlink" title="判断数据类型"></a>判断数据类型</h1><pre><code class="javascript">function myTypeOf(obj) &#123;
+   // 使用toString
+       const typeMap = &#123;
+           &quot;[object Object]&quot;: &quot;Object&quot;,
+           &quot;[object Array]&quot;: &quot;Array&quot;,
+           &quot;[object String]&quot;: &quot;String&quot;,
+           &quot;[object Number]&quot;: &quot;Number&quot;,
+           &quot;[object Boolean]&quot;: &quot;Boolean&quot;,
+           &quot;[object Function]&quot;: &quot;Function&quot;,
+           &quot;[object Null]&quot;: &quot;Null&quot;, // 注意这里是 &quot;Null&quot; 而不是 &quot;null&quot;
+           &quot;[object Undefined]&quot;: &quot;Undefined&quot;, // 注意这里是 &quot;Undefined&quot; 而不是 &quot;undefined&quot;
+           &quot;[object Symbol]&quot;: &quot;Symbol&quot;,
+           &quot;[object BigInt]&quot;: &quot;BigInt&quot;
+       &#125;;
+   return typeMap[Object.prototype.toString.call(obj)];
+   // 或者根据类型进行判断
+   switch (typeof obj) &#123;
+       case &quot;object&quot;:
+           if(Array.isArray(obj)) return &quot;Array&quot;
+           if(obj === &quot;null&quot;) return &quot;null&quot;;
+           return &quot;Object&quot;;
+       case &quot;number&quot;:
+           return &quot;Number&quot;;
+       case &quot;string&quot;:
+           return &quot;String&quot;;
+       case &quot;undefined&quot;:
+           return &quot;undefined&quot;;
+       case &quot;bigint&quot;:
+           return &quot;BigInt&quot;;
+       case &quot;boolean&quot;:
+           return &quot;Boolean&quot;;
+       case &quot;function&quot;:
+           return &quot;Function&quot;;
+       case &quot;symbol&quot;:
+           return &quot;Symbol&quot;;
+       default:
+           return &quot;unknown&quot;
+   &#125;
+&#125;
+</code></pre>
+<h1 id="数组去重"><a href="#数组去重" class="headerlink" title="数组去重"></a>数组去重</h1><pre><code class="javascript">function unique(arr) &#123;
+   return new Array(...new Set(arr))
+&#125;
+</code></pre>
+<h1 id="数组扁平化-扁平一层"><a href="#数组扁平化-扁平一层" class="headerlink" title="数组扁平化(扁平一层)"></a>数组扁平化(扁平一层)</h1><pre><code class="javascript">function arrFlat(arr) &#123;
+   if(arr.flat)&#123;
+     return arr.flat(); //Array.flat方法默认扁平一层
+   &#125;
+   // 兼容es5版本：
+   const res = [];
+   arr.forEach(item=&gt;&#123;
+       if(Array.isArray(item)) res.push(...item);
+       else res.push(item) 
+   &#125;)
+   return res;
+&#125;
+</code></pre>
+<h1 id="手写对象的-Symbol-iterator-迭代器协议（普通对象不内置迭代器）"><a href="#手写对象的-Symbol-iterator-迭代器协议（普通对象不内置迭代器）" class="headerlink" title="手写对象的[Symbol.iterator]迭代器协议（普通对象不内置迭代器）"></a>手写对象的[Symbol.iterator]迭代器协议（普通对象不内置迭代器）</h1><pre><code class="javascript"> // 内置迭代器的异质对象有：Array，String，Set，Map
+Symbol.myIterator = Symbol(&#39;myIterator&#39;);
+Object.prototype[Symbol.myIterator] = function () &#123;
+   const iterKeys = Object.keys(this);
+   let iterIndex = 0;
+   return &#123;
+       next: ()=&gt; &#123;
+           if (iterIndex &lt; iterKeys.length) &#123;
+               return &#123;
+                   value: this[iterKeys[iterIndex++]],
+                   done: false
+               &#125;;
+           &#125; else &#123;
+               return &#123;
+                   value: undefined,
+                   done: true
+               &#125;;
+           &#125;
+       &#125;
+   &#125;
+&#125;
+</code></pre>
+<h1 id="手写for-of循环（for-of便利前提是对象内置迭代器）"><a href="#手写for-of循环（for-of便利前提是对象内置迭代器）" class="headerlink" title="手写for of循环（for of便利前提是对象内置迭代器）"></a>手写for of循环（for of便利前提是对象内置迭代器）</h1><pre><code class="javascript">function myForOf(obj,fn) &#123;
+   if(!obj[Symbol.iterator]) throw new TypeError(&#39;obj不存在迭代器&#39;)
+   const myIterator = obj[Symbol.iterator]();
+   let cur = myIterator.next();
+   while (!cur.done) &#123;
+       fn(cur.value);
+       cur = myIterator.next();
+   &#125;
+&#125;
+</code></pre>
+<h1 id="手写for-in循环（for-in的前提是对象属性可被枚举，Object-keys也是）"><a href="#手写for-in循环（for-in的前提是对象属性可被枚举，Object-keys也是）" class="headerlink" title="手写for in循环（for in的前提是对象属性可被枚举，Object.keys也是）"></a>手写for in循环（for in的前提是对象属性可被枚举，Object.keys也是）</h1><pre><code class="javascript">function myForIn(obj,fn) &#123;
+   const keys = Object.keys(obj);
+   keys.forEach(item=&gt;&#123;
+       fn(&#123;[item]:obj[item]&#125;);
+   &#125;)
+&#125;
+</code></pre>
+<h1 id="浅拷贝，返回新的对象，丢失原型链"><a href="#浅拷贝，返回新的对象，丢失原型链" class="headerlink" title="浅拷贝，返回新的对象，丢失原型链"></a>浅拷贝，返回新的对象，丢失原型链</h1><pre><code class="javascript">function shallowClone(objLike) &#123;
+   if(typeof objLike !== &#39;object&#39;) return objLike;
+   const res = Array.isArray(objLike)?[]:&#123;&#125;;
+   for(let item in objLike)&#123;
+       if(objLike.hasOwnProperty(item))&#123;
+           res[item] = objLike[item];
+       &#125;
+   &#125;
+   return res;
+&#125;
+</code></pre>
+<h1 id="手写深拷贝"><a href="#手写深拷贝" class="headerlink" title="手写深拷贝"></a>手写深拷贝</h1><pre><code class="javascript">// 是否是对象类型
+const isObject = (obj) =&gt; typeof obj === &#39;object&#39; || typeof obj === &#39;function&#39; &amp;&amp; obj !== null;
+function deepClone(target,map = new WeakMap()) &#123;
+   if(structuredClone) return structuredClone(target);
+   // 兼容structuredClone,因为要进行递归处理，所以需要增加默认参数
+   if(map.get(target)) return target;
+   let constructor = target.constructor; //获取到constructor
+   // 如果是日期或者正则，就新创建一个实例
+   if(/^(RegExp|Date)$/i.test(constructor.name))&#123;
+       return new constructor(target);
+   &#125;
+   if(isObject(target))&#123;
+       map.set(target,true);
+       const cloneTarget = Array.isArray(target) ? []:&#123;&#125;;
+       for(let prop in target)&#123;
+           if(target.hasOwnProperty(prop))&#123;
+               cloneTarget[prop] = deepClone(target[prop],map);
+           &#125;
+       &#125;
+       return cloneTarget;
+   &#125;else &#123;
+       return target;
+   &#125;
+&#125;
+// &gt; 注意：1、原型链不能形成闭环（报错），2、__proto__的值只能是对象或者null，3、一个对象只能又一个[[Prorotype]]，4、__proto__是内部[[Prototype]]的getter/setter。
+</code></pre>
+<h1 id="手写全局事件总线"><a href="#手写全局事件总线" class="headerlink" title="手写全局事件总线"></a>手写全局事件总线</h1><pre><code class="javascript">class EventEmitter&#123;
+   #cache = &#123;&#125;;
+   constructor()&#123;&#125;
+   on(name,fn)&#123;
+       if(this.#cache[name])&#123;
+           this.#cache[name].push(fn);
+       &#125;else&#123;
+           this.#cache[name] = [fn]
+       &#125;
+   &#125;
+   off(name,fn)&#123;
+       if(!this.#cache[name]) return;
+       this.#cache[name] = this.#cache[name].filter(item=&gt;&#123;
+          return item !== fn;
+       &#125;)
+   &#125;
+   emit(name)&#123;
+       this.#cache[name].forEach(item=&gt;&#123;
+           item();
+       &#125;)
+   &#125;
+&#125;
+// 复习CustomEvent、Event和EventTarget（dispatchEvent和addEventListener）
+const sayHiEvent = new CustomEvent(&#39;sayHi&#39;,&#123;
+   detail:&#123;
+       name:&quot;sayHi事件&quot;
+   &#125;
+&#125;)
+const eventTarget = new EventTarget();
+eventTarget.addEventListener(&#39;sayHi&#39;,(e)=&gt;&#123;
+   console.log(e.detail,&#39;e.detail&#39;);
+&#125;)
+// eventTarget.dispatchEvent(sayHiEvent)
+
+//深度思考：为什么eventTarget使用dispatchEvent时，要传入Event事件，而不是type类型？
+//因为一个DOM同一事件不能重复，并且同一事件类型一般要创建很多个事件（用于不同的DOM，因此不能复用同一事件），此时用类型很难对其标识
+</code></pre>
+<h1 id="遍历输出构造类"><a href="#遍历输出构造类" class="headerlink" title="遍历输出构造类"></a>遍历输出构造类</h1><pre><code class="javascript">function consoClass(classFn) &#123;
+   let a = Object.getPrototypeOf(classFn);
+   while (a !== null) &#123;
+       console.log(a);
+       a = Object.getPrototypeOf(a);
+   &#125;
+&#125;
+// HTMLElement--Element--Node--EventTarget--Object--null
+consoClass(HTMLElement)
+</code></pre>
+<h1 id="图片懒加载"><a href="#图片懒加载" class="headerlink" title="图片懒加载"></a>图片懒加载</h1><pre><code class="javascript">const imgList = [...document.querySelectorAll(&quot;image&quot;)];
+const imgLength = imgList.length;
+const imgLazyLoad = (function () &#123;
+   let count = 0;
+   return function () &#123;
+       let deleteIndexList = [];
+       //遍历图片列表
+       imgList.forEach((item,index)=&gt;&#123;
+           let rect = item.getBoundingClientRect();
+           // 如果rect.top小于window.innerHeight，代表以及进入视野之内
+           if(rect.top &lt; 0)&#123;
+               item.src = item.dataset.src;
+               deleteIndexList.push(index);
+           &#125;
+       &#125;)
+       imgList = imgList.filter((item,index)=&gt;!deleteIndexList.includes(index));
+   &#125;
+&#125;)()
+
+document.addEventListener(&quot;scroll&quot;,imgLazyLoad);
+</code></pre>
+<h1 id="函数防抖（多次执行，重新计时）"><a href="#函数防抖（多次执行，重新计时）" class="headerlink" title="函数防抖（多次执行，重新计时）"></a>函数防抖（多次执行，重新计时）</h1><pre><code class="javascript">function debounce(fn,time) &#123;
+   let timer = null;
+   return function () &#123;
+       const bindFn = fn.bind(this,...arguments)
+       clearTimeout(timer);
+       setTimeout(() =&gt; &#123;
+           bindFn();
+       &#125;, time);
+   &#125;
+&#125;
+</code></pre>
+<h1 id="函数节流（固定时间只执行一次）"><a href="#函数节流（固定时间只执行一次）" class="headerlink" title="函数节流（固定时间只执行一次）"></a>函数节流（固定时间只执行一次）</h1><pre><code class="javascript">function th(fn,time) &#123;
+   let timer = null;
+   return function () &#123;
+       if(timer) return;
+       const bindFn = fn.bind(this,...arguments)
+       timer = setTimeout(() =&gt; &#123;
+           bindFn();
+           clearTimeout(timer);
+       &#125;, time);
+   &#125;
+&#125;
+</code></pre>
+<h1 id="函数柯里化"><a href="#函数柯里化" class="headerlink" title="函数柯里化"></a>函数柯里化</h1><pre><code class="javascript">function curry(fn) &#123;
+   //将fn函数进行柯里化
+   return function curried(...args) &#123;
+       if(args.length &gt;= fn.length)&#123;
+           return fn.apply(this,args);
+       &#125;else&#123;
+           return function (...args2) &#123;
+               return curried.apply(this,args.concat(args2))
+           &#125;
+       &#125;
+   &#125;
+&#125;
+</code></pre>
+<h1 id="函数偏函数化"><a href="#函数偏函数化" class="headerlink" title="函数偏函数化"></a>函数偏函数化</h1><pre><code class="javascript">function partial(fn,...args) &#123;
+   return (...arg) =&gt; &#123;
+       return fn(...args,...arg);
+   &#125;
+&#125;
+</code></pre>
+<h1 id="使用jsonp进行跨域get请求"><a href="#使用jsonp进行跨域get请求" class="headerlink" title="使用jsonp进行跨域get请求"></a>使用jsonp进行跨域get请求</h1><pre><code class="javascript">const jsonp = (&#123; url, params, callbackName &#125;) =&gt; &#123;
+   const generateUrl = () =&gt; &#123;
+       let dataSrc = &#39;&#39;
+       for (let key in params) &#123;
+           if (params.hasOwnProperty(key)) &#123;
+               dataSrc += `$&#123;key&#125;=$&#123;params[key]&#125;&amp;`
+           &#125;
+       &#125;
+       dataSrc += `callback=$&#123;callbackName&#125;`
+       return `$&#123;url&#125;?$&#123;dataSrc&#125;`
+   &#125;
+   return new Promise((resolve, reject) =&gt; &#123;
+       const scriptEle = document.createElement(&#39;script&#39;)
+       scriptEle.src = generateUrl()
+       document.body.appendChild(scriptEle)
+       window[callbackName] = data =&gt; &#123;
+           resolve(data)
+           document.removeChild(scriptEle)
+       &#125;
+   &#125;)
+&#125;
+</code></pre>
+<h1 id="AJAX封装get请求JSON数据"><a href="#AJAX封装get请求JSON数据" class="headerlink" title="AJAX封装get请求JSON数据"></a>AJAX封装get请求JSON数据</h1><pre><code class="javascript">
+function getJSON(url) &#123;
+   return new Promise((resolve,reject)=&gt;&#123;
+       const xhr = new XMLHttpRequest();
+       xhr.open(&quot;GET&quot;,url,false);
+       xhr.setRequestHeader(&quot;Accept&quot;,&quot;application/json&quot;);
+       xhr.onreadystatechange = function () &#123;
+           if(xhr.status !== 4) return;
+           if(xhr.status === 200 || xhr.status === 304) &#123;
+               resolve(xhr.responseText);
+           &#125;else &#123;
+               reject(new Error(xhr.responseText));
+           &#125;
+       &#125;
+       xhr.send();
+   &#125;)
+&#125;
+</code></pre>
+<h1 id="实现forEach"><a href="#实现forEach" class="headerlink" title="实现forEach"></a>实现forEach</h1><pre><code class="javascript">Array.prototype.myForEach = function (callback,thisArg) &#123;
+   if(this === null) throw new TypeError(&quot;this is null or not defined&quot;);
+   // 如果回调不是函数
+   if(typeof  callback !== &#39;function&#39;) throw new TypeError(callback + &quot;is not a function&quot;);
+   const superThis = Object(this); //将this进行兼容，确保不是null或undefined
+   const len = superThis.length &gt;&gt;&gt; 0; //确保该函数的参数是正整数或0
+   let k = 0;
+   while (k &lt; len) &#123; //当k小于0进行遍历
+       if(k in superThis)&#123;
+           callback.call(thisArg,superThis[k],k,superThis);
+       &#125;
+       k++;
+   &#125;
+&#125;
+</code></pre>
+<h1 id="实现map"><a href="#实现map" class="headerlink" title="实现map"></a>实现map</h1><pre><code class="javascript">Array.prototype.myMap = function (callback,thisArg) &#123;
+   if(this.null) throw new TypeError(&quot;this is null or defined&quot;);
+   if(typeof callback !== &quot;function&quot;) throw new TypeError(callback.name + &quot;is not a function&quot;);
+   const thisObj = Object(this); //保证thisObj不是null或undefined，使用Object可以传入数组，使用Array需要列出来
+   const len = thisObj.length &gt;&gt;&gt; 0; //无符号右移0，内部全部流程：valueOf、toString、Number，然后无符号左移（去小数）
+   let k =0;res = []
+   while (k &lt; len) &#123;
+       if(k in thisObj)&#123;
+           res[k]=callback.call(thisArg,thisObj[k],k,thisObj);
+       &#125;
+       k++;
+   &#125;
+   return res;
+&#125;
+</code></pre>
+<h1 id="实现filter"><a href="#实现filter" class="headerlink" title="实现filter"></a>实现filter</h1><pre><code class="javascript">
+Array.prototype.myFilter = function (callback,thisArg) &#123;
+   if(this == null) return new TypeError(&quot;this is null or undefined&quot;)
+   if(typeof callback !== &quot;function&quot;) return new TypeError(callback.name + &quot;is not a function&quot;)
+   // 处理filter
+   const thisObj = Object(this);
+   const len = thisObj.length &gt;&gt;&gt; 0;
+   let res = [],k = 0;
+   while (k &lt; len) &#123;
+       if(k in thisObj)&#123;
+           if(callback.call(thisArg,thisObj[k],k,thisObj))&#123;
+               res.push(thisObj[k]);
+           &#125;
+       &#125;
+       k++;
+   &#125;
+   return res;
+&#125;
+</code></pre>
+<h1 id="实现some"><a href="#实现some" class="headerlink" title="实现some"></a>实现some</h1><pre><code class="javascript">Array.prototype.mySome = function (callback,thisArg) &#123;
+   if(this == null) return new TypeError(&quot;this is null or undefined&quot;);
+   if(typeof callback !== &quot;function&quot;) return new TypeError(callback.name + &quot;is not a function&quot;)
+   const thisObj = Object(this);
+   let len = thisObj.length,k = 0;    
+   while (k &lt; len) &#123;
+       if(k in thisObj)&#123;
+           if(callback.call(thisArg,thisObj[k],k,thisObj))&#123;
+               return true;
+           &#125;
+       &#125;
+       k++;
+   &#125;
+   return false;
+&#125;
+</code></pre>
+<h1 id="实现reduce"><a href="#实现reduce" class="headerlink" title="实现reduce"></a>实现reduce</h1><pre><code class="javascript">Array.prototype.myReduce = function (callback,initialValue) &#123;
+   if(this == null) return new TypeError(&quot;this is null or undefined&quot;);
+   if(typeof callback !== &quot;function&quot;) return TypeError(callback.name + &quot;is not a function&quot;);
+   const thisObj = Object(this); //防止null或者undefined
+   const len = thisObj.length;
+   let res,k=0;
+   while (k &lt; len) &#123;
+       if(k in thisObj)&#123;
+           //进行执行
+           initialValue = callback(initialValue,thisObj[k]);
+       &#125;
+       k++;
+   &#125;
+   return initialValue;
+&#125;
+</code></pre>
+<h1 id="手写call、apply-和-bind"><a href="#手写call、apply-和-bind" class="headerlink" title="手写call、apply 和 bind"></a>手写call、apply 和 bind</h1><pre><code class="javascript">Function.prototype.myCall = function (thisContext) &#123;
+    // 将this（函数），绑定this,传入参数
+    thisContext = thisContext || window; //this默认为window
+    const fn = Symbol(thisContext);
+    thisContext[fn] = this; //将this函数挂载到thisContext环境中
+    let args = [...arguments].slice(1);
+    thisContext[fn](...args); //用对象[属性]的方式使用函数（绑定this）
+    delete thisContext[fn]; //最后删除属性
+&#125;
+//小结：使用call绑定this的关键就在于：将this（也就是函数）挂载到thisContext（需要绑定的this上），使用对象[属性]的方式进行执行，从而自动绑定this
+
+Function.prototype.myApply = function (thisContext) &#123;
+    const fn = Symbol(&quot;myApply&quot;);
+    // 将fn绑定到黄经中
+    thisContext[fn] = this;
+    //执行
+    const args = [...arguments].slice(1);
+    thisContext[fn](args);
+    delete thisContext[fn]; //删除属性之后，垃圾回收机制自动回收fn
+&#125;
+
+Function.prototype.myBind = function (thisContext) &#123;
+    // 函数绑定
+    //返会一个函数,绑定this指向，到固定的函数上
+    const thisFn = this;
+    const arg = [...arguments].slice(1); //保存传入的参数
+    return function () &#123;
+        const newArg = [...arguments];
+        return thisFn.apply(thisContext,[...arg,...newArg])
+    &#125;
+&#125;
+</code></pre>
+<h1 id="instanceof"><a href="#instanceof" class="headerlink" title="instanceof"></a>instanceof</h1><pre><code class="javascript">
+function myInstanceOf(left,right) &#123;
+    //判断left是不是right的子类，遍历left的原型链，看是否有right
+    if(typeof left !== &quot;object&quot;) throw new TypeError(&quot;Left-hand side of myInstanceOf is not an object&quot;);
+    if(typeof right !== &quot;object&quot;) throw new TypeError(&quot;Right-hand side of myInstanceOf is not an object&quot;);
+    while (Object.getPrototypeOf(left)) &#123;
+        left = Object.getPrototypeOf(left);
+        if(left === Object.getPrototypeOf(right))&#123;
+            return true;
+        &#125;
+    &#125;
+    return false;
+&#125;
+</code></pre>
+<h1 id="实现Object-create"><a href="#实现Object-create" class="headerlink" title="实现Object.create"></a>实现Object.create</h1><pre><code class="javascript">// 参数一：proto 二：属性对象
+Object.myCreate = function (proto,propertyObj) &#123;
+    if(typeof proto !== &quot;object&quot; &amp;&amp; typeof proto !== &quot;function&quot;)&#123;
+        throw new TypeError(&quot;object prototype may not be an object or null&quot;)
+    &#125;
+    if(propertyObj === null)&#123;
+        new TypeError(&quot;Cannot convert undefined or null to object&quot;);
+    &#125;
+    function F() &#123;&#125;
+    F.prototype = proto;
+    const obj = new F();
+    if(propertyObj !== undefined)&#123;
+        Object.defineProperties(obj,propertyObj)
+    &#125;
+    //模拟Object.create(null)
+    if(proto === null)&#123;
+        obj.__proto__ = null;
+    &#125;
+    return obj;
+&#125;
+</code></pre>
+<h1 id="实现Object-assign"><a href="#实现Object-assign" class="headerlink" title="实现Object.assign"></a>实现Object.assign</h1><pre><code class="javascript">Object.myAssign = function (target,...source) &#123;
+    if(target == null)&#123;
+        throw new TypeError(&quot;Cannot convert undefined or null to object&quot;)
+    &#125;
+    // 确保是一个对象类型
+    let resObj = Object(target);
+    source.forEach(item=&gt;&#123;
+        if(item != null)&#123;
+            //如果key属性是在
+            for(let key in item)&#123;
+                //如果key是原型上的方法
+                if(item.hasOwnProperty(key))&#123;
+                    resObj[key] = item[key];
+                &#125;
+            &#125;
+        &#125;
+    &#125;)
+    return resObj;
+&#125;
+</code></pre>
+<h1 id="Promise-实现"><a href="#Promise-实现" class="headerlink" title="Promise 实现"></a>Promise 实现</h1><pre><code class="javascript">const PENDING = Symbol.for(&#39;pending&#39;);
+const FULFILLED = Symbol.for(&#39;fulfilled&#39;);
+const REJECTED = Symbol.for(&#39;rejected&#39;);
+const resolvemyPromise = (myPromise2, x, resolve, reject) =&gt; &#123;
+  if (myPromise2 === x) &#123;
+    return reject(
+      new TypeError(&quot;Chaining cycle detected for myPromise #&lt;myPromise&gt;&quot;)
+    );
+  &#125;
+  let called;
+  if ((typeof x === &quot;object&quot; &amp;&amp; x != null) || typeof x === &quot;function&quot;) &#123;
+    try &#123;
+      let then = x.then;
+      if (typeof then === &quot;function&quot;) &#123;
+        then.call(
+          x,
+          (y) =&gt; &#123;
+            if (called) return;
+            called = true;
+            resolvemyPromise(myPromise2, y, resolve, reject);
+          &#125;,
+          (r) =&gt; &#123;
+            if (called) return;
+            called = true;
+            reject(r);
+          &#125;
+        );
+      &#125; else &#123;
+        resolve(x);
+      &#125;
+    &#125; catch (e) &#123;
+      if (called) return;
+      called = true;
+      reject(e);
+    &#125;
+  &#125; else &#123;
+    resolve(x);
+  &#125;
+&#125;;
+class myPromise &#123;
+  constructor(executor) &#123;
+    this.status = PENDING; //状态
+    this.value = undefined; //值
+    this.reason = undefined; //原因
+    this.onResolvedCallbacks = []; //成功回调数组
+    this.onRejectedCallbacks = []; //失败回调数组
+    let resolve = (value) =&gt; &#123;
+      if (value instanceof myPromise) &#123;
+        return value.then(resolve, reject);
+      &#125;
+      if (this.status === PENDING) &#123;
+        this.status = FULFILLED;
+        this.value = value;
+        this.onResolvedCallbacks.forEach((fn) =&gt; fn());
+      &#125;
+    &#125;;
+    let reject = (reason) =&gt; &#123;
+      if (this.status === PENDING) &#123;
+        this.status = REJECTED;
+        this.reason = reason;
+        this.onRejectedCallbacks.forEach((fn) =&gt; fn());
+      &#125;
+    &#125;;
+    try &#123;
+      executor(resolve, reject);
+    &#125; catch (error) &#123;
+      reject(error);
+    &#125;
+  &#125;
+  then(onFulfilled, onRejected) &#123;
+    onFulfilled = typeof onFulfilled === &quot;function&quot; ? onFulfilled : (v) =&gt; v;
+    onRejected =
+      typeof onRejected === &quot;function&quot;
+        ? onRejected
+        : (err) =&gt; &#123;
+            throw err;
+          &#125;;
+    return new myPromise((resolve, reject) =&gt; &#123;
+      if (this.status === FULFILLED) &#123;
+        setTimeout(() =&gt; &#123;
+          try &#123;
+            let x = onFulfilled(this.value);
+            resolvemyPromise(myPromise2, x, resolve, reject);
+          &#125; catch (e) &#123;
+            reject(e);
+          &#125;
+        &#125;, 0);
+      &#125;
+      if (this.status === REJECTED) &#123;
+        setTimeout(() =&gt; &#123;
+          try &#123;
+            let x = onRejected(this.reason);
+            resolvemyPromise(myPromise2, x, resolve, reject);
+          &#125; catch (e) &#123;
+            reject(e);
+          &#125;
+        &#125;, 0);
+      &#125;
+      if (this.status === PENDING) &#123;
+        this.onResolvedCallbacks.push(() =&gt; &#123;
+          setTimeout(() =&gt; &#123;
+            try &#123;
+              let x = onFulfilled(this.value);
+              resolvemyPromise(myPromise2, x, resolve, reject);
+            &#125; catch (e) &#123;
+              reject(e);
+            &#125;
+          &#125;, 0);
+        &#125;);
+        this.onRejectedCallbacks.push(() =&gt; &#123;
+          setTimeout(() =&gt; &#123;
+            try &#123;
+              let x = onRejected(this.reason);
+              resolvemyPromise(myPromise2, x, resolve, reject);
+            &#125; catch (e) &#123;
+              reject(e);
+            &#125;
+          &#125;, 0);
+        &#125;);
+      &#125;
+    &#125;);
+  &#125;
+  catch(errCallback) &#123;
+    return this.then(null, errCallback);
+  &#125;
+  finally(callback) &#123;
+    return this.then(
+      (value) =&gt; &#123;
+        return myPromise.resolve(callback()).then(() =&gt; value);
+      &#125;,
+      (reason) =&gt; &#123;
+        return myPromise.resolve(callback()).then(() =&gt; &#123;
+          throw reason;
+        &#125;);
+      &#125;
+    );
+  &#125;
+  static resolve(data) &#123;
+    return new myPromise((resolve, reject) =&gt; &#123;
+      resolve(data);
+    &#125;);
+  &#125;
+  static reject(reason) &#123;
+    return new myPromise((resolve, reject) =&gt; &#123;
+      reject(reason);
+    &#125;);
+  &#125;
+  static all(values) &#123;
+    if (!Array.isArray(values)) &#123;
+      const type = typeof values;
+      return new TypeError(`TypeError: $&#123;type&#125; $&#123;values&#125; is not iterable`);
+    &#125;
+    return new myPromise((resolve, reject) =&gt; &#123;
+      let resultArr = [];
+      let orderIndex = 0;
+      const processResultByKey = (value, index) =&gt; &#123;
+        resultArr[index] = value;
+        if (++orderIndex === values.length) &#123;
+          resolve(resultArr);
+        &#125;
+      &#125;;
+      for (let i = 0; i &lt; values.length; i++) &#123;
+        let value = values[i];
+        if (value &amp;&amp; typeof value.then === &quot;function&quot;) &#123;
+          value.then((value) =&gt; &#123;
+            processResultByKey(value, i);
+          &#125;, reject);
+        &#125; else &#123;
+          processResultByKey(value, i);
+        &#125;
+      &#125;
+    &#125;);
+  &#125;
+  static race(myPromises) &#123;
+    return new myPromise((resolve, reject) =&gt; &#123;
+      for (let i = 0; i &lt; myPromises.length; i++) &#123;
+        let val = myPromises[i];
+        if (val &amp;&amp; typeof val.then === &quot;function&quot;) &#123;
+          val.then(resolve, reject);
+        &#125; else &#123;
+          resolve(val);
+        &#125;
+      &#125;
+    &#125;);
+  &#125;
+&#125;
+myPromise.defer = myPromise.deferred = function () &#123;
+  let dtd = &#123;&#125;;
+  dtd.myPromise = new myPromise((resolve, reject) =&gt; &#123;
+    dtd.resolve = resolve;
+    dtd.reject = reject;
+  &#125;);
+  return dtd;
+&#125;;
+export default MyPromise;
+</code></pre>
+<h1 id="vue3封装debounce"><a href="#vue3封装debounce" class="headerlink" title="vue3封装debounce"></a>vue3封装debounce</h1><pre><code class="javascript">// 定义一个返回懒执行响应式数据的函数
+function useDebouncedRef(value,delay=200)&#123;
+    let timeout;
+    return customRef((track,trigger)=&gt;&#123;
+      return &#123;
+        get()&#123;
+          track();
+          return value;
+        &#125;,
+        set(newValue)&#123;
+          clearTimeout(timeout);
+          timeout = setTimeout(()=&gt;&#123;
+            value = newValue
+            trigger();
+          &#125;,delay)
+        &#125;
+      &#125;
+    &#125;)
+&#125;
+</code></pre>
+
+      <div class="tags">
+          <a href="/tags/%E6%89%8B%E5%86%99%E9%A2%98/" rel="tag"><i class="ic i-tag"></i> 手写题</a>
+          <a href="/tags/%E6%89%8B%E5%86%99%E6%BA%90%E7%A0%81/" rel="tag"><i class="ic i-tag"></i> 手写源码</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2024-07-27 15:03:35" itemprop="dateModified" datetime="2024-07-27T15:03:35+08:00">2024-07-27</time>
+  </span>
+  <span id="2023/06/02/手写题/" class="item leancloud_visitors" data-flag-title="手写题" title="阅读次数">
+      <span class="icon">
+        <i class="ic i-eye"></i>
+      </span>
+      <span class="text">阅读次数</span>
+      <span class="leancloud-visitors-count"></span>
+      <span class="text">次</span>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="dmq 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="dmq 支付宝">
+        <p>支付宝</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>dmq <i class="ic i-at"><em>@</em></i>杜明清的个人博客
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="https://dmqweb.cn/2023/06/02/%E6%89%8B%E5%86%99%E9%A2%98/" title="手写题">https://dmqweb.cn/2023/06/02/手写题/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2023/06/02/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;s3.uuu.ovh&#x2F;imgs&#x2F;2024&#x2F;04&#x2F;15&#x2F;9d4994abd78e2f72.jpg" title="解决方案">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 解决方案</span>
+  <h3>解决方案</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2023/06/02/%E5%BA%95%E5%B1%82%E6%9D%82%E8%AE%B0/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;s3.uuu.ovh&#x2F;imgs&#x2F;2024&#x2F;04&#x2F;25&#x2F;1276fcec5eb7990e.webp" title="底层杂记与工具库函数">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 工具函数</span>
+  <h3>底层杂记与工具库函数</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#new%E5%85%B3%E9%94%AE%E5%AD%97"><span class="toc-number">1.</span> <span class="toc-text">new关键字</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%89%8B%E5%86%99class"><span class="toc-number">2.</span> <span class="toc-text">手写class</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%97%AD%E5%8C%85%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8"><span class="toc-number">3.</span> <span class="toc-text">闭包的简单使用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%A4%E6%96%AD%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">4.</span> <span class="toc-text">判断数据类型</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D"><span class="toc-number">5.</span> <span class="toc-text">数组去重</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E6%89%81%E5%B9%B3%E5%8C%96-%E6%89%81%E5%B9%B3%E4%B8%80%E5%B1%82"><span class="toc-number">6.</span> <span class="toc-text">数组扁平化(扁平一层)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%89%8B%E5%86%99%E5%AF%B9%E8%B1%A1%E7%9A%84-Symbol-iterator-%E8%BF%AD%E4%BB%A3%E5%99%A8%E5%8D%8F%E8%AE%AE%EF%BC%88%E6%99%AE%E9%80%9A%E5%AF%B9%E8%B1%A1%E4%B8%8D%E5%86%85%E7%BD%AE%E8%BF%AD%E4%BB%A3%E5%99%A8%EF%BC%89"><span class="toc-number">7.</span> <span class="toc-text">手写对象的[Symbol.iterator]迭代器协议（普通对象不内置迭代器）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%89%8B%E5%86%99for-of%E5%BE%AA%E7%8E%AF%EF%BC%88for-of%E4%BE%BF%E5%88%A9%E5%89%8D%E6%8F%90%E6%98%AF%E5%AF%B9%E8%B1%A1%E5%86%85%E7%BD%AE%E8%BF%AD%E4%BB%A3%E5%99%A8%EF%BC%89"><span class="toc-number">8.</span> <span class="toc-text">手写for of循环（for of便利前提是对象内置迭代器）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%89%8B%E5%86%99for-in%E5%BE%AA%E7%8E%AF%EF%BC%88for-in%E7%9A%84%E5%89%8D%E6%8F%90%E6%98%AF%E5%AF%B9%E8%B1%A1%E5%B1%9E%E6%80%A7%E5%8F%AF%E8%A2%AB%E6%9E%9A%E4%B8%BE%EF%BC%8CObject-keys%E4%B9%9F%E6%98%AF%EF%BC%89"><span class="toc-number">9.</span> <span class="toc-text">手写for in循环（for in的前提是对象属性可被枚举，Object.keys也是）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B5%85%E6%8B%B7%E8%B4%9D%EF%BC%8C%E8%BF%94%E5%9B%9E%E6%96%B0%E7%9A%84%E5%AF%B9%E8%B1%A1%EF%BC%8C%E4%B8%A2%E5%A4%B1%E5%8E%9F%E5%9E%8B%E9%93%BE"><span class="toc-number">10.</span> <span class="toc-text">浅拷贝，返回新的对象，丢失原型链</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%89%8B%E5%86%99%E6%B7%B1%E6%8B%B7%E8%B4%9D"><span class="toc-number">11.</span> <span class="toc-text">手写深拷贝</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%89%8B%E5%86%99%E5%85%A8%E5%B1%80%E4%BA%8B%E4%BB%B6%E6%80%BB%E7%BA%BF"><span class="toc-number">12.</span> <span class="toc-text">手写全局事件总线</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%81%8D%E5%8E%86%E8%BE%93%E5%87%BA%E6%9E%84%E9%80%A0%E7%B1%BB"><span class="toc-number">13.</span> <span class="toc-text">遍历输出构造类</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%BE%E7%89%87%E6%87%92%E5%8A%A0%E8%BD%BD"><span class="toc-number">14.</span> <span class="toc-text">图片懒加载</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E9%98%B2%E6%8A%96%EF%BC%88%E5%A4%9A%E6%AC%A1%E6%89%A7%E8%A1%8C%EF%BC%8C%E9%87%8D%E6%96%B0%E8%AE%A1%E6%97%B6%EF%BC%89"><span class="toc-number">15.</span> <span class="toc-text">函数防抖（多次执行，重新计时）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E8%8A%82%E6%B5%81%EF%BC%88%E5%9B%BA%E5%AE%9A%E6%97%B6%E9%97%B4%E5%8F%AA%E6%89%A7%E8%A1%8C%E4%B8%80%E6%AC%A1%EF%BC%89"><span class="toc-number">16.</span> <span class="toc-text">函数节流（固定时间只执行一次）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E6%9F%AF%E9%87%8C%E5%8C%96"><span class="toc-number">17.</span> <span class="toc-text">函数柯里化</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E5%81%8F%E5%87%BD%E6%95%B0%E5%8C%96"><span class="toc-number">18.</span> <span class="toc-text">函数偏函数化</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8jsonp%E8%BF%9B%E8%A1%8C%E8%B7%A8%E5%9F%9Fget%E8%AF%B7%E6%B1%82"><span class="toc-number">19.</span> <span class="toc-text">使用jsonp进行跨域get请求</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#AJAX%E5%B0%81%E8%A3%85get%E8%AF%B7%E6%B1%82JSON%E6%95%B0%E6%8D%AE"><span class="toc-number">20.</span> <span class="toc-text">AJAX封装get请求JSON数据</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0forEach"><span class="toc-number">21.</span> <span class="toc-text">实现forEach</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0map"><span class="toc-number">22.</span> <span class="toc-text">实现map</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0filter"><span class="toc-number">23.</span> <span class="toc-text">实现filter</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0some"><span class="toc-number">24.</span> <span class="toc-text">实现some</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0reduce"><span class="toc-number">25.</span> <span class="toc-text">实现reduce</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%89%8B%E5%86%99call%E3%80%81apply-%E5%92%8C-bind"><span class="toc-number">26.</span> <span class="toc-text">手写call、apply 和 bind</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#instanceof"><span class="toc-number">27.</span> <span class="toc-text">instanceof</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0Object-create"><span class="toc-number">28.</span> <span class="toc-text">实现Object.create</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0Object-assign"><span class="toc-number">29.</span> <span class="toc-text">实现Object.assign</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Promise-%E5%AE%9E%E7%8E%B0"><span class="toc-number">30.</span> <span class="toc-text">Promise 实现</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#vue3%E5%B0%81%E8%A3%85debounce"><span class="toc-number">31.</span> <span class="toc-text">vue3封装debounce</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li class="active"><a href="/2023/06/02/%E6%89%8B%E5%86%99%E9%A2%98/" rel="bookmark" title="手写题">手写题</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="dmq"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">dmq</p>
+  <div class="description" itemprop="description"></div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">80</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">64</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">100</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL2RtcTA/dGFiPXJlcG9zaXRvcmllcw==" title="https:&#x2F;&#x2F;github.com&#x2F;dmq0?tab&#x3D;repositories"><i class="ic i-github"></i></span>
+      <span class="exturl item npm" data-url="aHR0cHM6Ly93d3cubnBtanMuY29tL35kbXEwMDA=" title="https:&#x2F;&#x2F;www.npmjs.com&#x2F;~dmq000"><i class="ic i-file"></i></span>
+      <span class="exturl item zhihu" data-url="aHR0cHM6Ly93d3cuemhpaHUuY29tL3Blb3BsZS9kLTg4LTYxLTgz" title="https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;d-88-61-83"><i class="ic i-zhihu"></i></span>
+      <span class="exturl item music" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPTgwMjc4OTk0OTE=" title="https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;8027899491"><i class="ic i-cloud-music"></i></span>
+      <span class="exturl item weibo" data-url="aHR0cHM6Ly93ZWliby5jb20vdS83NjI1OTAxNzE3" title="https:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;7625901717"><i class="ic i-weibo"></i></span>
+      <span class="exturl item email" data-url="bWFpbHRvOjMyNjc4MDc1MTRAcXEuY29t" title="mailto:3267807514@qq.com"><i class="ic i-envelope"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>介绍</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>友链</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/links/" rel="section"><i class="ic i-magic"></i>工具</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2023/06/02/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2023/06/02/%E5%BA%95%E5%B1%82%E6%9D%82%E8%AE%B0/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/JS%E8%BF%9B%E9%98%B6/" title="分类于 JS进阶">JS进阶</a>
+</div>
+
+    <span><a href="/2023/08/02/JS/" title="JS进阶">JS进阶</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Linux/" title="分类于 Linux">Linux</a>
+</div>
+
+    <span><a href="/2023/01/22/linux%E6%9C%8D%E5%8A%A1%E5%99%A8/" title="Linux">Linux</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/gitlab-cicd/" title="分类于 gitlab cicd">gitlab cicd</a>
+</div>
+
+    <span><a href="/2024/07/07/gitlab-cicd/" title="gitlab cicd">gitlab cicd</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/JS/" title="分类于 JS">JS</a>
+</div>
+
+    <span><a href="/2023/12/21/%E6%9C%80%E5%A4%A7%E5%AE%89%E5%85%A8%E6%95%B0/" title="最大安全数与最大安全整数">最大安全数与最大安全整数</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" title="分类于 解决方案">解决方案</a>
+</div>
+
+    <span><a href="/2023/06/02/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" title="解决方案">解决方案</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/ajax/" title="分类于 ajax">ajax</a>
+</div>
+
+    <span><a href="/2023/01/08/ajax/" title="ajax">ajax</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/" title="分类于 计算机组成原理">计算机组成原理</a>
+</div>
+
+    <span><a href="/2024/01/02/%E7%BC%93%E5%AD%98%E3%80%81%E5%86%85%E5%AD%98%E3%80%81CPU%E7%9F%A5%E8%AF%86%E7%82%B9%E8%A7%A3%E6%9E%90%E7%AC%94%E8%AE%B0/" title="计组知识点">计组知识点</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%BC%80%E5%8F%91%E6%A8%A1%E5%BC%8F/" title="分类于 开发模式">开发模式</a>
+</div>
+
+    <span><a href="/2024/03/29/TDD/" title="TDD测试驱动开发">TDD测试驱动开发</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/JS/" title="分类于 JS">JS</a>
+</div>
+
+    <span><a href="/2024/01/11/webworker/" title="webWorker">webWorker</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%AE%B9%E5%99%A8%E5%8C%96%E8%BF%90%E7%BB%B4%E6%93%8D%E4%BD%9C/" title="分类于 容器化运维操作">容器化运维操作</a>
+</div>
+
+    <span><a href="/2024/02/02/%E5%AE%B9%E5%99%A8%E5%8C%96%E8%BF%90%E7%BB%B4%E6%93%8D%E4%BD%9C/" title="容器化运维操作">容器化运维操作</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2022 – 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">dmq @ Web blog</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">940k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">14:14</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2023/06/02/手写题/',
+    favicon: {
+      show: "科技引领未来",
+      hide: "欢迎与我交流"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://polyfill.alicdn.com/polyfill.min.js?features=Promise%2CArray.prototype.includes"></script>
+
+<script src="//gcore.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+  <script data-pjax>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?9ba187659e850a6910681214f0faa16b";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+</body>
+</html>
