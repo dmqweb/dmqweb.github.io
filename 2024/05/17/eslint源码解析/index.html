@@ -78,7 +78,7 @@ Web blog = 杜明清的个人博客 = 👻欢迎一起交流学习👻</title>
       <i class="ic i-pen"></i>
     </span>
     <span class="text">本文字数</span>
-    <span>590</span>
+    <span>594</span>
     <span class="text">字</span>
   </span>
   <span class="item" title="阅读时长">
@@ -119,12 +119,12 @@ Web blog = 杜明清的个人博客 = 👻欢迎一起交流学习👻</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://s3.uuu.ovh/imgs/2024/03/29/a93636ae09845d36.jpg"></li>
-          <li class="item" data-background-image="https://s3.uuu.ovh/imgs/2024/04/25/37c45c250c8e6e2b.jpg"></li>
-          <li class="item" data-background-image="https://s3.uuu.ovh/imgs/2024/04/12/8740e71363c6800c.jpg"></li>
-          <li class="item" data-background-image="https://s3.uuu.ovh/imgs/2024/04/13/ba4d76fc0767aeef.jpg"></li>
-          <li class="item" data-background-image="https://s3.uuu.ovh/imgs/2024/04/12/61baca9d80b5756d.jpg"></li>
-          <li class="item" data-background-image="https://s3.uuu.ovh/imgs/2024/04/13/7056b573eacc540d.jpg"></li>
+          <li class="item" data-background-image="https://s3.uuu.ovh/imgs/2024/04/04/4b93d7d24397b567.jpg"></li>
+          <li class="item" data-background-image="https://s3.uuu.ovh/imgs/2024/04/06/d8aa12b30683676e.jpg"></li>
+          <li class="item" data-background-image="https://s3.uuu.ovh/imgs/2024/04/06/936b9e7ccd02d444.jpg"></li>
+          <li class="item" data-background-image="https://s3.uuu.ovh/imgs/2024/04/28/91b1bdcfda8d22da.webp"></li>
+          <li class="item" data-background-image="https://s3.uuu.ovh/imgs/2024/04/12/35b09cafcea9fd29.webp"></li>
+          <li class="item" data-background-image="https://s3.uuu.ovh/imgs/2024/03/29/5c162f03529c2f38.jpg"></li>
         </ul>
       </div>
     </header>
@@ -170,19 +170,24 @@ Web blog = 杜明清的个人博客 = 👻欢迎一起交流学习👻</title>
   <div class="body md" itemprop="articleBody">
     
 
-    <h1 id="eslint知识点"><a href="#eslint知识点" class="headerlink" title="eslint知识点"></a>eslint知识点</h1><h3 id="extends与plugins"><a href="#extends与plugins" class="headerlink" title="extends与plugins"></a>extends与plugins</h3><ol>
-<li>plugins本质是为了加强eslint的扩展性，使我们可以直接使用别人写好的eslint规则，方便快速用于项目中。</li>
-<li>官方规定npm包的扩展必须以eslint-config-开头，插件以eslint-plugin-开头，在使用过程中可以省略这个开头。</li>
-<li>eslint-config-文件是我们共享的一些配置文件，里面就是一个JS对象，其中包含一些配置信息，而eslint-plugin-文件是我们自定义的集合规则，可以导入和使用。</li>
-<li>一个插件能带来：<ul>
-<li>额外的规则，如<code>&#123;&quot;rules&quot;: &#123;&quot;react/boolean-prop-naming&quot;: &quot;warning&quot;&#125;&#125;</code>。</li>
-<li>环境，如<code>&#123;&quot;env&quot;: &#123;&quot;jest/global&quot;: true&#125;&#125;</code>。</li>
-<li>配置，如<code>&#123;&quot;extends&quot;: [&quot;plugin:react/recommended&quot;]&#125;</code>。</li>
-<li>预处理器，如<code>&#123;&quot;process&quot;: &quot;a-plugin/a-processor&quot;&#125;</code>。</li>
+    <h1 id="eslint知识点"><a class="anchor" href="#eslint知识点">#</a> eslint 知识点</h1>
+<h3 id="extends与plugins"><a class="anchor" href="#extends与plugins">#</a> extends 与 plugins</h3>
+<ol>
+<li>plugins 本质是为了加强 eslint 的扩展性，使我们可以直接使用别人写好的 eslint 规则，方便快速用于项目中。</li>
+<li>官方规定 npm 包的扩展必须以 eslint-config - 开头，插件以 eslint-plugin - 开头，在使用过程中可以省略这个开头。</li>
+<li>eslint-config - 文件是我们共享的一些配置文件，里面就是一个 JS 对象，其中包含一些配置信息，而 eslint-plugin - 文件是我们自定义的集合规则，可以导入和使用。</li>
+<li>一个插件能带来：
+<ul>
+<li>额外的规则，如 <code>&#123;&quot;rules&quot;: &#123;&quot;react/boolean-prop-naming&quot;: &quot;warning&quot;&#125;&#125;</code> 。</li>
+<li>环境，如 <code>&#123;&quot;env&quot;: &#123;&quot;jest/global&quot;: true&#125;&#125;</code> 。</li>
+<li>配置，如 <code>&#123;&quot;extends&quot;: [&quot;plugin:react/recommended&quot;]&#125;</code> 。</li>
+<li>预处理器，如 <code>&#123;&quot;process&quot;: &quot;a-plugin/a-processor&quot;&#125;</code> 。</li>
 </ul>
 </li>
 </ol>
-<h1 id="eslint配置大全"><a href="#eslint配置大全" class="headerlink" title="eslint配置大全"></a><span class="exturl" data-url="aHR0cHM6Ly9qdWVqaW4uY24vcG9zdC82ODQ0OTAzODU5NDg4MjkyODcx">eslint配置大全</span></h1><h1 id="eslint源码分析"><a href="#eslint源码分析" class="headerlink" title="eslint源码分析"></a>eslint源码分析</h1>
+<h1 id="eslint配置大全"><a class="anchor" href="#eslint配置大全">#</a> <span class="exturl" data-url="aHR0cHM6Ly9qdWVqaW4uY24vcG9zdC82ODQ0OTAzODU5NDg4MjkyODcx">eslint 配置大全</span></h1>
+<h1 id="eslint源码分析"><a class="anchor" href="#eslint源码分析">#</a> eslint 源码分析</h1>
+
       <div class="tags">
           <a href="/tags/eslint/" rel="tag"><i class="ic i-tag"></i> eslint</a>
           <a href="/tags/%E6%BA%90%E7%A0%81/" rel="tag"><i class="ic i-tag"></i> 源码</a>
@@ -255,20 +260,20 @@ Web blog = 杜明清的个人博客 = 👻欢迎一起交流学习👻</title>
     <div class="item left">
       
 
-  <a href="/2024/05/17/esbuild/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;s3.uuu.ovh&#x2F;imgs&#x2F;2024&#x2F;04&#x2F;06&#x2F;109323f5add23044.jpg" title="esbuild">
+  <a href="/2024/05/17/whistle%E4%BD%BF%E7%94%A8/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;s3.uuu.ovh&#x2F;imgs&#x2F;2024&#x2F;04&#x2F;05&#x2F;f0ab0ce587c99d2f.webp" title="whistle抓包">
   <span class="type">上一篇</span>
-  <span class="category"><i class="ic i-flag"></i> esbuild</span>
-  <h3>esbuild</h3>
+  <span class="category"><i class="ic i-flag"></i> whistle</span>
+  <h3>whistle抓包</h3>
   </a>
 
     </div>
     <div class="item right">
       
 
-  <a href="/2024/05/17/Blob%E5%92%8CFile/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;s3.uuu.ovh&#x2F;imgs&#x2F;2024&#x2F;04&#x2F;04&#x2F;f480d741324d8eb5.jpg" title="Blob、File和FileReader">
+  <a href="/2024/05/17/esbuild/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;s3.uuu.ovh&#x2F;imgs&#x2F;2024&#x2F;04&#x2F;13&#x2F;7056b573eacc540d.jpg" title="esbuild">
   <span class="type">下一篇</span>
-  <span class="category"><i class="ic i-flag"></i> Blob</span>
-  <h3>Blob、File和FileReader</h3>
+  <span class="category"><i class="ic i-flag"></i> esbuild</span>
+  <h3>esbuild</h3>
   </a>
 
     </div>
@@ -287,7 +292,7 @@ Web blog = 杜明清的个人博客 = 👻欢迎一起交流学习👻</title>
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="文章目录">
-          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#eslint%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="toc-number">1.</span> <span class="toc-text">eslint知识点</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#extends%E4%B8%8Eplugins"><span class="toc-number">1.0.1.</span> <span class="toc-text">extends与plugins</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#eslint%E9%85%8D%E7%BD%AE%E5%A4%A7%E5%85%A8"><span class="toc-number">2.</span> <span class="toc-text">eslint配置大全</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#eslint%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90"><span class="toc-number">3.</span> <span class="toc-text">eslint源码分析</span></a></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#eslint%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="toc-number">1.</span> <span class="toc-text"> eslint 知识点</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#extends%E4%B8%8Eplugins"><span class="toc-number">1.0.1.</span> <span class="toc-text"> extends 与 plugins</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#eslint%E9%85%8D%E7%BD%AE%E5%A4%A7%E5%85%A8"><span class="toc-number">2.</span> <span class="toc-text"> eslint 配置大全</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#eslint%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90"><span class="toc-number">3.</span> <span class="toc-text"> eslint 源码分析</span></a></li></ol>
       </div>
       <div class="related panel pjax" data-title="系列文章">
         <ul>
@@ -378,12 +383,12 @@ Web blog = 杜明清的个人博客 = 👻欢迎一起交流学习👻</title>
 
   <ul id="quick">
     <li class="prev pjax">
-        <a href="/2024/05/17/esbuild/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+        <a href="/2024/05/17/whistle%E4%BD%BF%E7%94%A8/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
     </li>
     <li class="up"><i class="ic i-arrow-up"></i></li>
     <li class="down"><i class="ic i-arrow-down"></i></li>
     <li class="next pjax">
-        <a href="/2024/05/17/Blob%E5%92%8CFile/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+        <a href="/2024/05/17/esbuild/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
     </li>
     <li class="percent"></li>
   </ul>
@@ -405,10 +410,52 @@ Web blog = 杜明清的个人博客 = 👻欢迎一起交流学习👻</title>
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" title="分类于 性能优化">性能优化</a>
+<a href="/categories/%E4%B8%89%E6%96%B9%E5%BA%93/" title="分类于 三方库">三方库</a>
 </div>
 
-    <span><a href="/2024/05/11/%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87/" title="性能指标">性能指标</a></span>
+    <span><a href="/2024/04/16/%E4%B8%89%E6%96%B9%E5%8C%85/" title="三方库">三方库</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/esbuild/" title="分类于 esbuild">esbuild</a>
+</div>
+
+    <span><a href="/2024/05/17/esbuild/" title="esbuild">esbuild</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%BA%95%E5%B1%82%E6%9D%82%E8%AE%B0/" title="分类于 底层杂记">底层杂记</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E5%BA%95%E5%B1%82%E6%9D%82%E8%AE%B0/%E5%B7%A5%E5%85%B7%E5%87%BD%E6%95%B0/" title="分类于 工具函数">工具函数</a>
+</div>
+
+    <span><a href="/2023/06/02/%E5%BA%95%E5%B1%82%E6%9D%82%E8%AE%B0/" title="底层杂记与工具库函数">底层杂记与工具库函数</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/jenkins%E9%85%8D%E5%90%88git-hook%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90/" title="分类于 jenkins配合git hook持续集成">jenkins配合git hook持续集成</a>
+</div>
+
+    <span><a href="/2024/02/02/%E4%BD%BF%E7%94%A8Jenkins%E9%85%8D%E5%90%88github%20hook%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90/" title="jenkins配合git hook持续集成">jenkins配合git hook持续集成</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%A1%86%E6%9E%B6%E9%AB%98%E7%BA%A7/" title="分类于 框架高级">框架高级</a>
+</div>
+
+    <span><a href="/2024/07/26/%E6%A1%86%E6%9E%B6%E9%AB%98%E7%BA%A7/" title="框架高级">框架高级</a></span>
   </li>
 
       
@@ -418,87 +465,47 @@ Web blog = 杜明清的个人博客 = 👻欢迎一起交流学习👻</title>
 <a href="/categories/JS/" title="分类于 JS">JS</a>
 </div>
 
-    <span><a href="/2023/07/02/forEach/" title="forEach">forEach</a></span>
+    <span><a href="/2023/12/21/%E6%9C%80%E5%A4%A7%E5%AE%89%E5%85%A8%E6%95%B0/" title="最大安全数与最大安全整数">最大安全数与最大安全整数</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E8%84%9A%E6%89%8B%E6%9E%B6%E5%BC%80%E5%8F%91/" title="分类于 脚手架开发">脚手架开发</a>
+<a href="/categories/vue/" title="分类于 vue">vue</a>
 </div>
 
-    <span><a href="/2024/04/12/%E8%84%9A%E6%89%8B%E6%9E%B6/" title="脚手架开发">脚手架开发</a></span>
+    <span><a href="/2023/09/02/vue3%E6%BA%90%E7%A0%81%E4%BD%8D%E8%BF%90%E7%AE%97/" title="vue3源码中的位运算">vue3源码中的位运算</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/" title="分类于 自动化测试">自动化测试</a>
+<a href="/categories/JS/" title="分类于 JS">JS</a>
 </div>
 
-    <span><a href="/2024/03/02/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/" title="自动化测试">自动化测试</a></span>
+    <span><a href="/2023/10/02/33%E4%B8%AAJavascript%E6%A6%82%E5%BF%B5/" title="33个JavaScript概念">33个JavaScript概念</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" title="分类于 正则表达式">正则表达式</a>
+<a href="/categories/electron/" title="分类于 electron">electron</a>
 </div>
 
-    <span><a href="/2024/01/10/%E6%AD%A3%E5%88%99/" title="正则理念">正则理念</a></span>
+    <span><a href="/2024/05/21/electron/" title="electron">electron</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" title="分类于 操作系统">操作系统</a>
+<a href="/categories/JS/" title="分类于 JS">JS</a>
 </div>
 
-    <span><a href="/2024/07/23/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" title="操作系统">操作系统</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/Vue/" title="分类于 Vue">Vue</a>
-</div>
-
-    <span><a href="/2023/01/12/Vue%E6%9D%82%E8%AE%B0/" title="Vue使用笔记">Vue使用笔记</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E5%89%8D%E7%AB%AF%E7%9B%91%E6%8E%A7/" title="分类于 前端监控">前端监控</a>
-</div>
-
-    <span><a href="/2024/04/29/%E5%89%8D%E7%AB%AF%E7%9B%91%E6%8E%A7/" title="前端监控">前端监控</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" title="分类于 解决方案">解决方案</a>
-</div>
-
-    <span><a href="/2023/06/02/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" title="解决方案">解决方案</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/HTTP/" title="分类于 HTTP">HTTP</a>
-</div>
-
-    <span><a href="/2023/05/02/HTTP/" title="HTTP">HTTP</a></span>
+    <span><a href="/2023/12/02/%E9%9A%90%E5%BC%8F%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/" title="JS类型转换">JS类型转换</a></span>
   </li>
 
   </ul>
@@ -523,13 +530,13 @@ Web blog = 杜明清的个人博客 = 👻欢迎一起交流学习👻</title>
     <span class="post-meta-item-icon">
       <i class="ic i-chart-area"></i>
     </span>
-    <span title="站点总字数">951k 字</span>
+    <span title="站点总字数">953k 字</span>
 
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="ic i-coffee"></i>
     </span>
-    <span title="站点阅读时长">14:25</span>
+    <span title="站点阅读时长">14:26</span>
   </div>
   <div class="powered-by">
     基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
