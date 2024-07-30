@@ -4703,6 +4703,28 @@ console.log(view)
         <updated>2024-05-17T02:22:13.000Z</updated>
     </entry>
     <entry>
+        <id>https://dmqweb.cn/2024/05/17/eslint%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/</id>
+        <title>eslint源码</title>
+        <link rel="alternate" href="https://dmqweb.cn/2024/05/17/eslint%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/"/>
+        <content type="html">&lt;h1 id=&#34;eslint知识点&#34;&gt;&lt;a href=&#34;#eslint知识点&#34; class=&#34;headerlink&#34; title=&#34;eslint知识点&#34;&gt;&lt;/a&gt;eslint知识点&lt;/h1&gt;&lt;h3 id=&#34;extends与plugins&#34;&gt;&lt;a href=&#34;#extends与plugins&#34; class=&#34;headerlink&#34; title=&#34;extends与plugins&#34;&gt;&lt;/a&gt;extends与plugins&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;plugins本质是为了加强eslint的扩展性，使我们可以直接使用别人写好的eslint规则，方便快速用于项目中。&lt;/li&gt;
+&lt;li&gt;官方规定npm包的扩展必须以eslint-config-开头，插件以eslint-plugin-开头，在使用过程中可以省略这个开头。&lt;/li&gt;
+&lt;li&gt;eslint-config-文件是我们共享的一些配置文件，里面就是一个JS对象，其中包含一些配置信息，而eslint-plugin-文件是我们自定义的集合规则，可以导入和使用。&lt;/li&gt;
+&lt;li&gt;一个插件能带来：&lt;ul&gt;
+&lt;li&gt;额外的规则，如&lt;code&gt;&amp;#123;&amp;quot;rules&amp;quot;: &amp;#123;&amp;quot;react/boolean-prop-naming&amp;quot;: &amp;quot;warning&amp;quot;&amp;#125;&amp;#125;&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;环境，如&lt;code&gt;&amp;#123;&amp;quot;env&amp;quot;: &amp;#123;&amp;quot;jest/global&amp;quot;: true&amp;#125;&amp;#125;&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;配置，如&lt;code&gt;&amp;#123;&amp;quot;extends&amp;quot;: [&amp;quot;plugin:react/recommended&amp;quot;]&amp;#125;&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;预处理器，如&lt;code&gt;&amp;#123;&amp;quot;process&amp;quot;: &amp;quot;a-plugin/a-processor&amp;quot;&amp;#125;&lt;/code&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;eslint配置大全&#34;&gt;&lt;a href=&#34;#eslint配置大全&#34; class=&#34;headerlink&#34; title=&#34;eslint配置大全&#34;&gt;&lt;/a&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9qdWVqaW4uY24vcG9zdC82ODQ0OTAzODU5NDg4MjkyODcx&#34;&gt;eslint配置大全&lt;/span&gt;&lt;/h1&gt;&lt;h1 id=&#34;eslint源码分析&#34;&gt;&lt;a href=&#34;#eslint源码分析&#34; class=&#34;headerlink&#34; title=&#34;eslint源码分析&#34;&gt;&lt;/a&gt;eslint源码分析&lt;/h1&gt;</content>
+        <category term="eslint" scheme="https://dmqweb.cn/categories/eslint/" />
+        <category term="eslint" scheme="https://dmqweb.cn/tags/eslint/" />
+        <category term="源码" scheme="https://dmqweb.cn/tags/%E6%BA%90%E7%A0%81/" />
+        <updated>2024-05-17T01:14:12.000Z</updated>
+    </entry>
+    <entry>
         <id>https://dmqweb.cn/2024/05/17/esbuild/</id>
         <title>esbuild</title>
         <link rel="alternate" href="https://dmqweb.cn/2024/05/17/esbuild/"/>
@@ -4762,28 +4784,6 @@ esbuild.serve(&amp;#123;&amp;#125;,&amp;#123;
         <category term="esbuild" scheme="https://dmqweb.cn/categories/esbuild/" />
         <category term="esbuild" scheme="https://dmqweb.cn/tags/esbuild/" />
         <category term="打包工具" scheme="https://dmqweb.cn/tags/%E6%89%93%E5%8C%85%E5%B7%A5%E5%85%B7/" />
-        <updated>2024-05-17T01:14:12.000Z</updated>
-    </entry>
-    <entry>
-        <id>https://dmqweb.cn/2024/05/17/eslint%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/</id>
-        <title>eslint源码</title>
-        <link rel="alternate" href="https://dmqweb.cn/2024/05/17/eslint%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/"/>
-        <content type="html">&lt;h1 id=&#34;eslint知识点&#34;&gt;&lt;a href=&#34;#eslint知识点&#34; class=&#34;headerlink&#34; title=&#34;eslint知识点&#34;&gt;&lt;/a&gt;eslint知识点&lt;/h1&gt;&lt;h3 id=&#34;extends与plugins&#34;&gt;&lt;a href=&#34;#extends与plugins&#34; class=&#34;headerlink&#34; title=&#34;extends与plugins&#34;&gt;&lt;/a&gt;extends与plugins&lt;/h3&gt;&lt;ol&gt;
-&lt;li&gt;plugins本质是为了加强eslint的扩展性，使我们可以直接使用别人写好的eslint规则，方便快速用于项目中。&lt;/li&gt;
-&lt;li&gt;官方规定npm包的扩展必须以eslint-config-开头，插件以eslint-plugin-开头，在使用过程中可以省略这个开头。&lt;/li&gt;
-&lt;li&gt;eslint-config-文件是我们共享的一些配置文件，里面就是一个JS对象，其中包含一些配置信息，而eslint-plugin-文件是我们自定义的集合规则，可以导入和使用。&lt;/li&gt;
-&lt;li&gt;一个插件能带来：&lt;ul&gt;
-&lt;li&gt;额外的规则，如&lt;code&gt;&amp;#123;&amp;quot;rules&amp;quot;: &amp;#123;&amp;quot;react/boolean-prop-naming&amp;quot;: &amp;quot;warning&amp;quot;&amp;#125;&amp;#125;&lt;/code&gt;。&lt;/li&gt;
-&lt;li&gt;环境，如&lt;code&gt;&amp;#123;&amp;quot;env&amp;quot;: &amp;#123;&amp;quot;jest/global&amp;quot;: true&amp;#125;&amp;#125;&lt;/code&gt;。&lt;/li&gt;
-&lt;li&gt;配置，如&lt;code&gt;&amp;#123;&amp;quot;extends&amp;quot;: [&amp;quot;plugin:react/recommended&amp;quot;]&amp;#125;&lt;/code&gt;。&lt;/li&gt;
-&lt;li&gt;预处理器，如&lt;code&gt;&amp;#123;&amp;quot;process&amp;quot;: &amp;quot;a-plugin/a-processor&amp;quot;&amp;#125;&lt;/code&gt;。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h1 id=&#34;eslint配置大全&#34;&gt;&lt;a href=&#34;#eslint配置大全&#34; class=&#34;headerlink&#34; title=&#34;eslint配置大全&#34;&gt;&lt;/a&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9qdWVqaW4uY24vcG9zdC82ODQ0OTAzODU5NDg4MjkyODcx&#34;&gt;eslint配置大全&lt;/span&gt;&lt;/h1&gt;&lt;h1 id=&#34;eslint源码分析&#34;&gt;&lt;a href=&#34;#eslint源码分析&#34; class=&#34;headerlink&#34; title=&#34;eslint源码分析&#34;&gt;&lt;/a&gt;eslint源码分析&lt;/h1&gt;</content>
-        <category term="eslint" scheme="https://dmqweb.cn/categories/eslint/" />
-        <category term="eslint" scheme="https://dmqweb.cn/tags/eslint/" />
-        <category term="源码" scheme="https://dmqweb.cn/tags/%E6%BA%90%E7%A0%81/" />
         <updated>2024-05-17T01:14:12.000Z</updated>
     </entry>
     <entry>

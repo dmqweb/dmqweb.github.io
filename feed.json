@@ -152,18 +152,6 @@
             ]
         },
         {
-            "id": "https://dmqweb.cn/2024/05/17/esbuild/",
-            "url": "https://dmqweb.cn/2024/05/17/esbuild/",
-            "title": "esbuild",
-            "date_published": "2024-05-17T01:14:12.000Z",
-            "content_html": "<p>关于打包工具：esbuild、webpack和rollup三者的介绍推荐<span class=\"exturl\" data-url=\"aHR0cHM6Ly9qdWVqaW4uY24vcG9zdC83MjI0MDk4NDIyOTM5MjU0ODIx\">这里</span>：</p>\n<p>简单来说就是esbuild打包更快；rollup打包产物更纯净、体积更小，但不支持热更新；webpack功能更全，生态更完善，支持文件类型更多。</p>\n<h1 id=\"介绍\"><a href=\"#介绍\" class=\"headerlink\" title=\"介绍\"></a>介绍</h1><p>Esbuild是一个类webpack的打包工具，速度是webpack的几十倍。其底层基于go语言进行编写，不使用AST，优化了构建流程。js是单线程串行，esbuild是新开了一个进程，使用多线程并行，充分发挥了多核的优势。</p>\n<h1 id=\"作用\"><a href=\"#作用\" class=\"headerlink\" title=\"作用\"></a>作用</h1><p>esbuild最显著的作用就是：快。它也是vite和snowpack底层的打包工具。同时也可以将esbuild打包工具集成到webpack中（使用plugin）。之所以esbuild没有流行起来是因为它绕过了AST，而直接进行构建，使没有很好的过渡到基于babel-loader这样通过AST进行打包的上层工具中。</p>\n<h1 id=\"使用\"><a href=\"#使用\" class=\"headerlink\" title=\"使用\"></a>使用</h1><pre><code class=\"javascript\">const esbuild = require(&#39;esbuild&#39;);\n/**\n * 利用esbuild生成文件\n */\nesbuild.buildSync(&#123;\n    entryPoints:[&#39;vite.config.js&#39;],\n    outfile: &#39;out.js&#39;\n&#125;)\n/**\n * 利用esbuild处理jsx语法\n */\nconsole.log(\n    esbuild.transformSync(&#39;&lt;div&gt;利用esbuild处理jsx语法&lt;/div&gt;&#39;,&#123;\n        jsxFragment:&#39;Fragment&#39;,\n        loader:&#39;jsx&#39;\n    &#125;)\n);\n/**\n * 利用esbuld压缩代码体积\n */\nconsole.log(\n    esbuild.transformSync(&#39;const a = &quot;你好世界&quot;&#39;,&#123;\n        minify: true\n    &#125;)\n);\n/**\n * esbuild内置了一些loader，使用时会根据文件后缀自动执行loader，也可以手动确定loader\n * 支持：js,jsx,ts,tsx,css,text,binary,dataurl,file\n */\nconsole.log(\n    esbuild.buildSync(&#123;\n        entryPoints: [&#39;vite.config.js&#39;],\n        bundle:true,\n        loader: &#123;&#39;.js&#39;:&#39;jsx&#39;&#125;, //默认使用js loader，手动改为jsx-loader\n        outfile: &#39;out.js&#39;,\n    &#125;)\n);\n/**\n * 使用esbuild启动一个web server用于调试（热更新）\n */\nesbuild.serve(&#123;&#125;,&#123;\n    entryPoints: [&#39;vite.config.js&#39;],\n    bundle: true,\n    outfile: &#39;bundle.js&#39;,\n&#125;).then(serve=&gt;&#123;\n    serve.stop();\n&#125;)\n</code></pre>\n",
-            "tags": [
-                "esbuild",
-                "esbuild",
-                "打包工具"
-            ]
-        },
-        {
             "id": "https://dmqweb.cn/2024/05/17/eslint%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/",
             "url": "https://dmqweb.cn/2024/05/17/eslint%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/",
             "title": "eslint源码",
@@ -173,6 +161,18 @@
                 "eslint",
                 "eslint",
                 "源码"
+            ]
+        },
+        {
+            "id": "https://dmqweb.cn/2024/05/17/esbuild/",
+            "url": "https://dmqweb.cn/2024/05/17/esbuild/",
+            "title": "esbuild",
+            "date_published": "2024-05-17T01:14:12.000Z",
+            "content_html": "<p>关于打包工具：esbuild、webpack和rollup三者的介绍推荐<span class=\"exturl\" data-url=\"aHR0cHM6Ly9qdWVqaW4uY24vcG9zdC83MjI0MDk4NDIyOTM5MjU0ODIx\">这里</span>：</p>\n<p>简单来说就是esbuild打包更快；rollup打包产物更纯净、体积更小，但不支持热更新；webpack功能更全，生态更完善，支持文件类型更多。</p>\n<h1 id=\"介绍\"><a href=\"#介绍\" class=\"headerlink\" title=\"介绍\"></a>介绍</h1><p>Esbuild是一个类webpack的打包工具，速度是webpack的几十倍。其底层基于go语言进行编写，不使用AST，优化了构建流程。js是单线程串行，esbuild是新开了一个进程，使用多线程并行，充分发挥了多核的优势。</p>\n<h1 id=\"作用\"><a href=\"#作用\" class=\"headerlink\" title=\"作用\"></a>作用</h1><p>esbuild最显著的作用就是：快。它也是vite和snowpack底层的打包工具。同时也可以将esbuild打包工具集成到webpack中（使用plugin）。之所以esbuild没有流行起来是因为它绕过了AST，而直接进行构建，使没有很好的过渡到基于babel-loader这样通过AST进行打包的上层工具中。</p>\n<h1 id=\"使用\"><a href=\"#使用\" class=\"headerlink\" title=\"使用\"></a>使用</h1><pre><code class=\"javascript\">const esbuild = require(&#39;esbuild&#39;);\n/**\n * 利用esbuild生成文件\n */\nesbuild.buildSync(&#123;\n    entryPoints:[&#39;vite.config.js&#39;],\n    outfile: &#39;out.js&#39;\n&#125;)\n/**\n * 利用esbuild处理jsx语法\n */\nconsole.log(\n    esbuild.transformSync(&#39;&lt;div&gt;利用esbuild处理jsx语法&lt;/div&gt;&#39;,&#123;\n        jsxFragment:&#39;Fragment&#39;,\n        loader:&#39;jsx&#39;\n    &#125;)\n);\n/**\n * 利用esbuld压缩代码体积\n */\nconsole.log(\n    esbuild.transformSync(&#39;const a = &quot;你好世界&quot;&#39;,&#123;\n        minify: true\n    &#125;)\n);\n/**\n * esbuild内置了一些loader，使用时会根据文件后缀自动执行loader，也可以手动确定loader\n * 支持：js,jsx,ts,tsx,css,text,binary,dataurl,file\n */\nconsole.log(\n    esbuild.buildSync(&#123;\n        entryPoints: [&#39;vite.config.js&#39;],\n        bundle:true,\n        loader: &#123;&#39;.js&#39;:&#39;jsx&#39;&#125;, //默认使用js loader，手动改为jsx-loader\n        outfile: &#39;out.js&#39;,\n    &#125;)\n);\n/**\n * 使用esbuild启动一个web server用于调试（热更新）\n */\nesbuild.serve(&#123;&#125;,&#123;\n    entryPoints: [&#39;vite.config.js&#39;],\n    bundle: true,\n    outfile: &#39;bundle.js&#39;,\n&#125;).then(serve=&gt;&#123;\n    serve.stop();\n&#125;)\n</code></pre>\n",
+            "tags": [
+                "esbuild",
+                "esbuild",
+                "打包工具"
             ]
         },
         {
