@@ -1,0 +1,668 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="杜明清的个人博客" href="https://dmqweb.cn/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="杜明清的个人博客" href="https://dmqweb.cn/atom.xml" />
+<link rel="alternate" type="application/json" title="杜明清的个人博客" href="https://dmqweb.cn/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="webpack高级,前端工程化" />
+
+
+<link rel="canonical" href="https://dmqweb.cn/2023/12/21/webpack%E9%AB%98%E7%BA%A7/">
+
+
+
+  <title>
+webpack高级 - webpack高级 |
+Web blog = 杜明清的个人博客 = 👻欢迎一起交流学习👻</title>
+  <meta name="keywords" content="前端开发, HTML, CSS, JavaScript, 博客">
+  <meta name="description" content="探索前端开发的无限可能。本博客提供最新的前端知识库，以及实用的开发技巧和最佳实践。加入我们的社区，共同成长。">
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">webpack高级
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2023-12-21 10:24:04">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2023-12-21T10:24:04+08:00">2023-12-21</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>2.8k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>3 分钟</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">Web blog</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://s3.uuu.ovh/imgs/2024/04/13/a7144f7fc5d49961.jpg"></li>
+          <li class="item" data-background-image="https://s3.uuu.ovh/imgs/2024/04/13/2376b10e610925e4.jpg"></li>
+          <li class="item" data-background-image="https://s3.uuu.ovh/imgs/2024/04/12/65788b6548e9e58f.jpg"></li>
+          <li class="item" data-background-image="https://s3.uuu.ovh/imgs/2024/04/28/91b1bdcfda8d22da.webp"></li>
+          <li class="item" data-background-image="https://s3.uuu.ovh/imgs/2024/04/06/63e9f1e7097ba6fb.jpg"></li>
+          <li class="item" data-background-image="https://s3.uuu.ovh/imgs/2024/04/25/0aebf75866635811.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/webpack%E9%AB%98%E7%BA%A7/" itemprop="item" rel="index" title="分类于 webpack高级"><span itemprop="name">webpack高级</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="https://dmqweb.cn/2023/12/21/webpack%E9%AB%98%E7%BA%A7/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="dmq">
+    <meta itemprop="description" content="👻欢迎一起交流学习👻, ">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="杜明清的个人博客">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="webpack"><a class="anchor" href="#webpack">#</a> webpack</h1>
+<blockquote>
+<p>前端的工程化离不开 webpack, 它是一个现代 JavaScript 应用程序的静态模块打包器，用于 <code>将适合用于开发的代码打包构建为适合用于生产的代码</code></p>
+</blockquote>
+<h1 id="webpackconfigjs"><a class="anchor" href="#webpackconfigjs">#</a> webpack.config.js</h1>
+<figure class="highlight js"><figcaption data-lang="JavaScript"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"path"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token keyword">const</span> <span class="token punctuation">&#123;</span> DefinePlugin <span class="token punctuation">&#125;</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"webpack"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="3"></td><td><pre>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="4"></td><td><pre>    <span class="token literal-property property">mode</span><span class="token operator">:</span> <span class="token string">"development"</span><span class="token punctuation">,</span> <span class="token comment">//development 优化打包速度，production 优化打包结果，none 不做处理</span></pre></td></tr><tr><td data-num="5"></td><td><pre>    <span class="token literal-property property">entry</span><span class="token operator">:</span> <span class="token string">"./src/main.js"</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="6"></td><td><pre>    <span class="token literal-property property">devtool</span><span class="token operator">:</span> <span class="token string">"source-map"</span><span class="token punctuation">,</span> <span class="token comment">// 开启 source-map, 构建后会产生 source-map 文件，但想要浏览器使用还需要主 js 文件添加对应的魔法注释</span></pre></td></tr><tr><td data-num="7"></td><td><pre>    <span class="token literal-property property">output</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="8"></td><td><pre>        <span class="token literal-property property">filename</span><span class="token operator">:</span> <span class="token string">"bundle.js"</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="9"></td><td><pre>        <span class="token literal-property property">path</span><span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span><span class="token string">"output"</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="10"></td><td><pre>    <span class="token punctuation">&#125;</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="11"></td><td><pre>    <span class="token literal-property property">module</span><span class="token operator">:</span><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="12"></td><td><pre>        <span class="token literal-property property">rules</span><span class="token operator">:</span><span class="token punctuation">[</span></pre></td></tr><tr><td data-num="13"></td><td><pre>            <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="14"></td><td><pre>                <span class="token literal-property property">test</span><span class="token operator">:</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\.css</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="15"></td><td><pre>                <span class="token literal-property property">use</span><span class="token operator">:</span><span class="token punctuation">[</span></pre></td></tr><tr><td data-num="16"></td><td><pre>                    <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="17"></td><td><pre>                        <span class="token literal-property property">loader</span><span class="token operator">:</span> <span class="token string">"style-loader"</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="18"></td><td><pre>                        <span class="token literal-property property">optioins</span><span class="token operator">:</span><span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="19"></td><td><pre>                    <span class="token punctuation">&#125;</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="20"></td><td><pre>                    <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="21"></td><td><pre>                        <span class="token literal-property property">loader</span><span class="token operator">:</span> <span class="token string">"css-loader"</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="22"></td><td><pre>                        <span class="token literal-property property">optioins</span><span class="token operator">:</span><span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="23"></td><td><pre>                    <span class="token punctuation">&#125;</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="24"></td><td><pre>                    <span class="token string">"less-loader"</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="25"></td><td><pre>                    <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="26"></td><td><pre>                        <span class="token literal-property property">loader</span><span class="token operator">:</span><span class="token string">"postcss-loader"</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="27"></td><td><pre>                        <span class="token literal-property property">optioins</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="28"></td><td><pre>                            <span class="token literal-property property">plugins</span><span class="token operator">:</span> <span class="token punctuation">[</span></pre></td></tr><tr><td data-num="29"></td><td><pre>                                <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"postcss-preset-env"</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="30"></td><td><pre>                            <span class="token punctuation">]</span></pre></td></tr><tr><td data-num="31"></td><td><pre>                        <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="32"></td><td><pre>                    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="33"></td><td><pre>                <span class="token punctuation">]</span></pre></td></tr><tr><td data-num="34"></td><td><pre>            <span class="token punctuation">&#125;</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="35"></td><td><pre>            <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="36"></td><td><pre>                <span class="token literal-property property">test</span><span class="token operator">:</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\.(ttf|eot|woff2?)$</span><span class="token regex-delimiter">/</span><span class="token regex-flags">i</span></span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="37"></td><td><pre>                <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">"asset/resource"</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="38"></td><td><pre>                <span class="token literal-property property">generate</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="39"></td><td><pre>                    <span class="token literal-property property">filename</span><span class="token operator">:</span> <span class="token string">"img/[name].[hash:6][ext]"</span></pre></td></tr><tr><td data-num="40"></td><td><pre>                <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="41"></td><td><pre>            <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="42"></td><td><pre>        <span class="token punctuation">]</span></pre></td></tr><tr><td data-num="43"></td><td><pre>    <span class="token punctuation">&#125;</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="44"></td><td><pre>    <span class="token literal-property property">plugin</span><span class="token operator">:</span><span class="token punctuation">[</span></pre></td></tr><tr><td data-num="45"></td><td><pre>        <span class="token keyword">new</span> <span class="token class-name">CleanWebpackPlugin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="46"></td><td><pre>        <span class="token keyword">new</span> <span class="token class-name">HtmlWebpackPlugin</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="47"></td><td><pre>            <span class="token literal-property property">title</span><span class="token operator">:</span> <span class="token string">"webpack测试标题"</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="48"></td><td><pre>            <span class="token literal-property property">Template</span><span class="token operator">:</span> <span class="token string">"./public/index.html"</span></pre></td></tr><tr><td data-num="49"></td><td><pre>        <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="50"></td><td><pre>        <span class="token keyword">new</span> <span class="token class-name">DefinePlugin</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="51"></td><td><pre>            <span class="token constant">BASE_URL</span><span class="token operator">:</span> <span class="token string">'"./"'</span></pre></td></tr><tr><td data-num="52"></td><td><pre>        <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="53"></td><td><pre>        <span class="token keyword">new</span> <span class="token class-name">CopyWebpackPlugin</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="54"></td><td><pre>            <span class="token literal-property property">patterns</span><span class="token operator">:</span> <span class="token punctuation">[</span></pre></td></tr><tr><td data-num="55"></td><td><pre>                <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="56"></td><td><pre>                    <span class="token literal-property property">from</span><span class="token operator">:</span> <span class="token string">"public"</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="57"></td><td><pre>                    <span class="token literal-property property">globalOptions</span><span class="token operator">:</span><span class="token punctuation">[</span><span class="token punctuation">]</span></pre></td></tr><tr><td data-num="58"></td><td><pre>                <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="59"></td><td><pre>            <span class="token punctuation">]</span></pre></td></tr><tr><td data-num="60"></td><td><pre>        <span class="token punctuation">&#125;</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="61"></td><td><pre>    <span class="token punctuation">]</span></pre></td></tr><tr><td data-num="62"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr></table></figure><h1 id="mode模式"><a class="anchor" href="#mode模式">#</a> mode 模式</h1>
+<blockquote>
+<p>用于配置构建模式</p>
+</blockquote>
+<h1 id="entry入口"><a class="anchor" href="#entry入口">#</a> entry 入口</h1>
+<blockquote>
+<p>用于配置入口文件</p>
+</blockquote>
+<h1 id="output输出"><a class="anchor" href="#output输出">#</a> output 输出</h1>
+<blockquote>
+<p>用于配置出口文件</p>
+</blockquote>
+<h1 id="devtool工具"><a class="anchor" href="#devtool工具">#</a> devtool 工具</h1>
+<blockquote>
+<p>用于配置开发工具，如:source-map、eval 等，它是由:inline、nosources、cheap、等的组合<br />
+ vue-cli 在开发模式下直接配置的是 source-map, 生产环境直接不生成<br />
+ react 的 cra 在生产环境下根据传入的配置判断是否配置 source-map, 开发环境下配置 cheap-module-source-map</p>
+</blockquote>
+<h3 id="最佳实践"><a class="anchor" href="#最佳实践">#</a> 最佳实践</h3>
+<ul>
+<li>开发阶段：推荐使用 source-map 或者 cheap-module-source-map, 方便本地调试</li>
+<li>测试阶段：推荐使用 source-map 或者 cheap-module-source-map, 方便定位错误</li>
+<li>生成阶段：推荐不生成 source-map (配置为 false 或缺省不写), 因为多余的 source-map 文件加载消耗资源，并且通过 source-map 文件，别人可以还原我们的代码</li>
+</ul>
+<h1 id="optimization优化"><a class="anchor" href="#optimization优化">#</a> optimization 优化</h1>
+<blockquote>
+<p>optimization 字段用于配置优化项，主要有 minimizer 压缩、splitChunks 分包、mergeDuplicateChunks 合并相同模块的 chunk 等选项</p>
+</blockquote>
+<h1 id="resolve解析"><a class="anchor" href="#resolve解析">#</a> resolve 解析</h1>
+<blockquote>
+<p>设置模块如何配解析，主要包括: alias 别名、extensions 后缀、fallback 重定向模块等选项</p>
+</blockquote>
+<h1 id="devserver开发服务器"><a class="anchor" href="#devserver开发服务器">#</a> devServer 开发服务器</h1>
+<blockquote>
+<p>内部使用 webpack-dev-server, 开发服务器，用于快速开发应用程序，主要包括: static 静态文件、compress 压缩、port 端口、devMiddleware 资源配置项、http2 开启 http2 等选项</p>
+</blockquote>
+<h1 id="cache缓存"><a class="anchor" href="#cache缓存">#</a> cache 缓存</h1>
+<blockquote>
+<p>配置使用缓存</p>
+</blockquote>
+<h1 id="targets构建目标"><a class="anchor" href="#targets构建目标">#</a> targets 构建目标</h1>
+<blockquote>
+<p>告知 webpack 为目标 (target) 指定一个环境。默认值为 &quot;browserslist&quot;，如果没有找到 browserslist 的配置，则默认为 &quot;web&quot;</p>
+</blockquote>
+<h1 id="watch监听"><a class="anchor" href="#watch监听">#</a> watch 监听</h1>
+<blockquote>
+<p>监听任何已解析文件的更改</p>
+</blockquote>
+<h1 id="watchoptions"><a class="anchor" href="#watchoptions">#</a> watchOptions</h1>
+<blockquote>
+<p>用来定制 watch 模式的选项：</p>
+</blockquote>
+<h1 id="externals外部链接"><a class="anchor" href="#externals外部链接">#</a> externals 外部链接</h1>
+<blockquote>
+<p>防止将某些 import 的包 (package) 打包到 bundle 中，而是在运行时 (runtime) 再去从外部获取这些扩展依赖 (external dependencies), 例如一些使用 cdn 引用的文件</p>
+</blockquote>
+<h1 id="externalstype外链类型"><a class="anchor" href="#externalstype外链类型">#</a> externalsType 外链类型</h1>
+<blockquote>
+<p>指定 externals 的默认类型。当 external 被设置为 amd，umd，system 以及 jsonp 时，output.libraryTarget 的值也应相同。例如，你只能在 amd 库中使用 amd 的 externals。</p>
+</blockquote>
+<h1 id="performance"><a class="anchor" href="#performance">#</a> performance</h1>
+<blockquote>
+<p>配置如何展示性能提示。例如，如果一个资源超过 250kb，webpack 会对此输出一个警告来通知你。</p>
+</blockquote>
+<h1 id="node"><a class="anchor" href="#node">#</a> node</h1>
+<blockquote>
+<p>这些选项可以配置是否 polyfill 或 mock 某些 Node.js 全局变量。</p>
+</blockquote>
+<h1 id="module模块"><a class="anchor" href="#module模块">#</a> module 模块</h1>
+<blockquote>
+<p>module 字段用于配置模块 (对应的 loader)</p>
+</blockquote>
+<h1 id="loader"><a class="anchor" href="#loader">#</a> loader</h1>
+<blockquote>
+<p>处理对应的模块 (webpack 默认只支持 JS 文件)<br />
+ loader 是一个函数，接收传来的代码字符串作为参数，返回处理后的代码字符串，webpack 中的模块处理是以管道架构方式 (也成为构造者的设计模式) 来进行设计的，并且注意它的处理是逆序进行处理</p>
+</blockquote>
+<h1 id="plugin插件"><a class="anchor" href="#plugin插件">#</a> plugin 插件</h1>
+<blockquote>
+<p>plugin 字段用于配置插件</p>
+</blockquote>
+<h1 id="stats显示"><a class="anchor" href="#stats显示">#</a> stats 显示</h1>
+<blockquote>
+<p>stats 选项让你更精确地控制 bundle 信息该怎么显示。 如果你不希望使用 quiet 或 noInfo 这样的不显示信息，而是又不想得到全部的信息，只是想要获取某部分 bundle 的信息，使用 stats 选项是比较好的折衷方式。</p>
+</blockquote>
+<h1 id="深入源码"><a class="anchor" href="#深入源码">#</a> 深入源码</h1>
+<h1 id="eval函数"><a class="anchor" href="#eval函数">#</a> eval 函数</h1>
+<blockquote>
+<p>webpack 当 mode 为 <code>development</code>  模式下的 <code>devtool</code>  默认是 <code>eval</code> , 这将导致打包后的文件中，JS 代码是通过 eval 函数进行执行的，而不是直接执行的，原因是：通过 eval 函数执行可以 <code>添加上source-map对应的魔法注释</code> ，这样当出现报错时就能准确定位到对应的文件位置</p>
+</blockquote>
+
+      <div class="tags">
+          <a href="/tags/webpack%E9%AB%98%E7%BA%A7/" rel="tag"><i class="ic i-tag"></i> webpack高级</a>
+          <a href="/tags/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/" rel="tag"><i class="ic i-tag"></i> 前端工程化</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2024-07-31 17:37:51" itemprop="dateModified" datetime="2024-07-31T17:37:51+08:00">2024-07-31</time>
+  </span>
+  <span id="2023/12/21/webpack高级/" class="item leancloud_visitors" data-flag-title="webpack高级" title="阅读次数">
+      <span class="icon">
+        <i class="ic i-eye"></i>
+      </span>
+      <span class="text">阅读次数</span>
+      <span class="leancloud-visitors-count"></span>
+      <span class="text">次</span>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="dmq 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="dmq 支付宝">
+        <p>支付宝</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>dmq <i class="ic i-at"><em>@</em></i>杜明清的个人博客
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="https://dmqweb.cn/2023/12/21/webpack%E9%AB%98%E7%BA%A7/" title="webpack高级">https://dmqweb.cn/2023/12/21/webpack高级/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2023/12/11/TS/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;s3.uuu.ovh&#x2F;imgs&#x2F;2024&#x2F;04&#x2F;28&#x2F;91b1bdcfda8d22da.webp" title="typeScript笔记">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> typeScript</span>
+  <h3>typeScript笔记</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2023/12/21/%E6%9C%80%E5%A4%A7%E5%AE%89%E5%85%A8%E6%95%B0/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;s3.uuu.ovh&#x2F;imgs&#x2F;2024&#x2F;04&#x2F;06&#x2F;a2c97e7bd0c6ecd6.webp" title="最大安全数与最大安全整数">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> JS</span>
+  <h3>最大安全数与最大安全整数</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#webpack"><span class="toc-number">1.</span> <span class="toc-text"> webpack</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#webpackconfigjs"><span class="toc-number">2.</span> <span class="toc-text"> webpack.config.js</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#mode%E6%A8%A1%E5%BC%8F"><span class="toc-number">3.</span> <span class="toc-text"> mode 模式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#entry%E5%85%A5%E5%8F%A3"><span class="toc-number">4.</span> <span class="toc-text"> entry 入口</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#output%E8%BE%93%E5%87%BA"><span class="toc-number">5.</span> <span class="toc-text"> output 输出</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#devtool%E5%B7%A5%E5%85%B7"><span class="toc-number">6.</span> <span class="toc-text"> devtool 工具</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5"><span class="toc-number">6.0.1.</span> <span class="toc-text"> 最佳实践</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#optimization%E4%BC%98%E5%8C%96"><span class="toc-number">7.</span> <span class="toc-text"> optimization 优化</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#resolve%E8%A7%A3%E6%9E%90"><span class="toc-number">8.</span> <span class="toc-text"> resolve 解析</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#devserver%E5%BC%80%E5%8F%91%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-number">9.</span> <span class="toc-text"> devServer 开发服务器</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#cache%E7%BC%93%E5%AD%98"><span class="toc-number">10.</span> <span class="toc-text"> cache 缓存</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#targets%E6%9E%84%E5%BB%BA%E7%9B%AE%E6%A0%87"><span class="toc-number">11.</span> <span class="toc-text"> targets 构建目标</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#watch%E7%9B%91%E5%90%AC"><span class="toc-number">12.</span> <span class="toc-text"> watch 监听</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#watchoptions"><span class="toc-number">13.</span> <span class="toc-text"> watchOptions</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#externals%E5%A4%96%E9%83%A8%E9%93%BE%E6%8E%A5"><span class="toc-number">14.</span> <span class="toc-text"> externals 外部链接</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#externalstype%E5%A4%96%E9%93%BE%E7%B1%BB%E5%9E%8B"><span class="toc-number">15.</span> <span class="toc-text"> externalsType 外链类型</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#performance"><span class="toc-number">16.</span> <span class="toc-text"> performance</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#node"><span class="toc-number">17.</span> <span class="toc-text"> node</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#module%E6%A8%A1%E5%9D%97"><span class="toc-number">18.</span> <span class="toc-text"> module 模块</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#loader"><span class="toc-number">19.</span> <span class="toc-text"> loader</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#plugin%E6%8F%92%E4%BB%B6"><span class="toc-number">20.</span> <span class="toc-text"> plugin 插件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#stats%E6%98%BE%E7%A4%BA"><span class="toc-number">21.</span> <span class="toc-text"> stats 显示</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B7%B1%E5%85%A5%E6%BA%90%E7%A0%81"><span class="toc-number">22.</span> <span class="toc-text"> 深入源码</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#eval%E5%87%BD%E6%95%B0"><span class="toc-number">23.</span> <span class="toc-text"> eval 函数</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li class="active"><a href="/2023/12/21/webpack%E9%AB%98%E7%BA%A7/" rel="bookmark" title="webpack高级">webpack高级</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="dmq"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">dmq</p>
+  <div class="description" itemprop="description"></div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">82</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">66</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">102</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL2RtcTA/dGFiPXJlcG9zaXRvcmllcw==" title="https:&#x2F;&#x2F;github.com&#x2F;dmq0?tab&#x3D;repositories"><i class="ic i-github"></i></span>
+      <span class="exturl item npm" data-url="aHR0cHM6Ly93d3cubnBtanMuY29tL35kbXEwMDA=" title="https:&#x2F;&#x2F;www.npmjs.com&#x2F;~dmq000"><i class="ic i-file"></i></span>
+      <span class="exturl item zhihu" data-url="aHR0cHM6Ly93d3cuemhpaHUuY29tL3Blb3BsZS9kLTg4LTYxLTgz" title="https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;d-88-61-83"><i class="ic i-zhihu"></i></span>
+      <span class="exturl item music" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPTgwMjc4OTk0OTE=" title="https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;8027899491"><i class="ic i-cloud-music"></i></span>
+      <span class="exturl item weibo" data-url="aHR0cHM6Ly93ZWliby5jb20vdS83NjI1OTAxNzE3" title="https:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;7625901717"><i class="ic i-weibo"></i></span>
+      <span class="exturl item email" data-url="bWFpbHRvOjMyNjc4MDc1MTRAcXEuY29t" title="mailto:3267807514@qq.com"><i class="ic i-envelope"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>介绍</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>友链</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/links/" rel="section"><i class="ic i-magic"></i>工具</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2023/12/11/TS/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2023/12/21/%E6%9C%80%E5%A4%A7%E5%AE%89%E5%85%A8%E6%95%B0/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/JS/" title="分类于 JS">JS</a>
+</div>
+
+    <span><a href="/2023/09/02/ArrayBuffer/" title="ArrayBuffer">ArrayBuffer</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/" title="分类于 面试题">面试题</a>
+</div>
+
+    <span><a href="/2024/04/30/%E6%B7%B1%E6%8B%B7%E8%B4%9D/" title="深拷贝">深拷贝</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/JS/" title="分类于 JS">JS</a>
+</div>
+
+    <span><a href="/2023/12/21/%E6%9C%80%E5%A4%A7%E5%AE%89%E5%85%A8%E6%95%B0/" title="最大安全数与最大安全整数">最大安全数与最大安全整数</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90%E4%B8%8E%E9%83%A8%E7%BD%B2/" title="分类于 持续集成与部署">持续集成与部署</a>
+</div>
+
+    <span><a href="/2024/02/03/%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90%E4%B8%8E%E6%8C%81%E7%BB%AD%E9%83%A8%E7%BD%B2/" title="持续集成与持续部署">持续集成与持续部署</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/three-js/" title="分类于 three.js">three.js</a>
+</div>
+
+    <span><a href="/2023/10/24/ThreeJS/" title="three.js">three.js</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%89%8D%E7%AB%AF%E7%9B%91%E6%8E%A7/" title="分类于 前端监控">前端监控</a>
+</div>
+
+    <span><a href="/2024/04/29/%E5%89%8D%E7%AB%AF%E7%9B%91%E6%8E%A7/" title="前端监控">前端监控</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/git/" title="分类于 git">git</a>
+</div>
+
+    <span><a href="/2023/04/02/git%E5%92%8Cgithub/" title="git与github">git与github</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/" title="分类于 面试题">面试题</a>
+</div>
+
+    <span><a href="/2023/08/29/%E9%9D%A2%E8%AF%95%E9%A2%98/" title="面试题">面试题</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%BE%AE%E5%89%8D%E7%AB%AF/" title="分类于 微前端">微前端</a>
+</div>
+
+    <span><a href="/2024/05/24/%E5%BE%AE%E5%89%8D%E7%AB%AF/" title="微前端">微前端</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%AE%97%E6%B3%95/" title="分类于 算法">算法</a>
+</div>
+
+    <span><a href="/2023/12/02/%E7%AE%97%E6%B3%95/" title="算法与数据结构">算法与数据结构</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2022 – 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">dmq @ Web blog</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">955k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">14:28</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2023/12/21/webpack高级/',
+    favicon: {
+      show: "科技引领未来",
+      hide: "欢迎与我交流"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://polyfill.alicdn.com/polyfill.min.js?features=Promise%2CArray.prototype.includes"></script>
+<script src="//gcore.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+  <script data-pjax>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?9ba187659e850a6910681214f0faa16b";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+</body>
+</html>
